@@ -1,8 +1,10 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import TopicCard from '../components/UI/TopicCard';
 import { useAllSubjects } from '../hooks/useSubjectData';
 
 const HomePage: React.FC = () => {
+    const navigate = useNavigate();
     const { subjects, loading } = useAllSubjects();
 
     return (
@@ -22,7 +24,7 @@ const HomePage: React.FC = () => {
                                 key={subject.id}
                                 title={subject.label}
                                 description={`包含 ${count} 個主題`}
-                                onClick={() => window.location.href = '/mindmap'}
+                                onClick={() => navigate('/mindmap')}
                             />
                         );
                     })}

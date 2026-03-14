@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Brain } from 'lucide-react';
 
 const Header: React.FC = () => {
@@ -10,9 +11,9 @@ const Header: React.FC = () => {
             </div>
             <nav>
                 <ul className="flex space-x-5 text-sm">
-                    <li><a href="/" className="hover:underline">首頁</a></li>
-                    <li><a href="/mindmap" className="hover:underline">心智圖</a></li>
-                    <li><a href="/topics" className="hover:underline">主題列表</a></li>
+                    <li><Link to="/" className="hover:underline">首頁</Link></li>
+                    <li><Link to="/mindmap" className="hover:underline">心智圖</Link></li>
+                    <li><Link to="/topics" className="hover:underline">主題列表</Link></li>
                 </ul>
             </nav>
         </header>
