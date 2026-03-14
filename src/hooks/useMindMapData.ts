@@ -17,7 +17,7 @@ const useMindMapData = () => {
   useEffect(() => {
     const fetchMindMapData = async () => {
       try {
-        const response = await fetch('/data/mindmaps.json');
+        const response = await fetch(import.meta.env.BASE_URL + 'data/mindmaps.json');
         if (!response.ok) {
           throw new Error('Failed to fetch mind map data');
         }
