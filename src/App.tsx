@@ -12,9 +12,12 @@ const App: React.FC = () => {
     <Router>
       <div className="flex flex-col min-h-screen">
         <Header />
-        <div className="flex flex-grow">
-          <Sidebar />
-          <main className="flex-grow">
+        <div className="flex flex-grow overflow-hidden">
+          {/* Desktop sidebar */}
+          <div className="hidden md:block">
+            <Sidebar />
+          </div>
+          <main className="flex-grow overflow-auto">
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/mindmap" element={<MindMapPage />} />
@@ -23,7 +26,13 @@ const App: React.FC = () => {
             </Routes>
           </main>
         </div>
-        <Footer />
+        {/* Mobile bottom nav */}
+        <div className="md:hidden">
+          <Sidebar />
+        </div>
+        <div className="hidden md:block">
+          <Footer />
+        </div>
       </div>
     </Router>
   );

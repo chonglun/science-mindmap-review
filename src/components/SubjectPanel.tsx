@@ -31,7 +31,7 @@ const SubjectPanel: React.FC<SubjectPanelProps> = ({
   if (!topic) return null;
 
   return (
-    <div className="fixed right-0 top-0 h-full w-96 bg-white shadow-2xl border-l border-gray-200 z-50 overflow-y-auto">
+    <div className="fixed right-0 top-0 h-full w-full sm:w-96 bg-white shadow-2xl border-l border-gray-200 z-50 overflow-y-auto">
       {/* Header */}
       <div className="sticky top-0 bg-white border-b border-gray-200 p-4 flex items-center justify-between">
         <h2 className="text-lg font-bold text-gray-800 truncate pr-2">

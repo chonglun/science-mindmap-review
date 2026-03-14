@@ -8,7 +8,7 @@ const HomePage: React.FC = () => {
     const { subjects, loading } = useAllSubjects();
 
     return (
-        <div className="p-6">
+        <div className="p-4 md:p-6 pb-20 md:pb-6">
             <h1 className="text-2xl font-bold mb-2">國中自然科會考心智圖複習</h1>
             <p className="text-gray-600 mb-6">選擇一個學科，開始用心智圖複習吧！</p>
             {loading ? (

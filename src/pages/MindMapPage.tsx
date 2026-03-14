@@ -37,14 +37,14 @@ const MindMapPage: React.FC = () => {
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center h-[calc(100vh-130px)]">
+      <div className="flex items-center justify-center h-[calc(100vh-96px)] md:h-[calc(100vh-130px)]">
         <p className="text-gray-500 text-lg">載入心智圖資料中...</p>
       </div>
     );
   }
 
   return (
-    <div className="relative h-[calc(100vh-130px)]">
+    <div className="relative h-[calc(100vh-96px)] md:h-[calc(100vh-130px)]">
       <MindMapCanvas
         clickedTopics={clickedTopics}
         onNodeClick={handleNodeClick}
