@@ -18,6 +18,7 @@ const App: React.FC = () => {
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/mindmap" element={<MindMapPage />} />
+              <Route path="/mindmap/:subjectId" element={<MindMapPage />} />
               <Route path="/topics" element={<TopicListPage />} />
             </Routes>
           </main>

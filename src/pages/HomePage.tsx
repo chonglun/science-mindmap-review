@@ -24,7 +24,7 @@ const HomePage: React.FC = () => {
                                 key={subject.id}
                                 title={subject.label}
                                 description={`包含 ${count} 個主題`}
-                                onClick={() => navigate('/mindmap')}
+                                onClick={() => navigate(`/mindmap/${subject.id}`)}
                             />
                         );
                     })}

@@ -1,4 +1,5 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useMemo } from 'react';
+import { useParams } from 'react-router-dom';
 import MindMapCanvas from '../components/MindMap/MindMapCanvas';
 import SubjectPanel from '../components/SubjectPanel';
 import { useUserData } from '../hooks/useUserData';
@@ -13,9 +14,15 @@ interface TopicDetail {
 }
 
 const MindMapPage: React.FC = () => {
+  const { subjectId } = useParams<{ subjectId?: string }>();
   const { clickedTopics, addClickedTopic, toggleBookmark, isBookmarked } = useUserData();
   const { subjects, loading, center } = useAllSubjects();
   const [selectedTopic, setSelectedTopic] = useState<TopicDetail | null>(null);
+
+  const filteredSubjects = useMemo(
+    () => subjectId ? subjects.filter((s) => s.id === subjectId) : subjects,
+    [subjects, subjectId]
+  );
 
   const handleNodeClick = useCallback(
     (nodeId: string) => {
@@ -41,7 +48,7 @@ const MindMapPage: React.FC = () => {
       <MindMapCanvas
         clickedTopics={clickedTopics}
         onNodeClick={handleNodeClick}
-        subjects={subjects}
+        subjects={filteredSubjects}
         center={center}
       />
 
