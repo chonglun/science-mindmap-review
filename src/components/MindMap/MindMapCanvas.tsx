@@ -211,7 +211,9 @@ const MindMapCanvas: React.FC<MindMapCanvasProps> = ({ clickedTopics, onNodeClic
         fitViewOptions={{ padding: 0.3 }}
         proOptions={{ hideAttribution: true }}
       >
-        <MiniMap />
+        <div className="hidden md:block">
+          <MiniMap />
+        </div>
         <Controls />
       </ReactFlow>
     </div>
