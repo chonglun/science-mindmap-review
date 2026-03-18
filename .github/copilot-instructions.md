@@ -81,3 +81,13 @@ src/
 - No test framework is configured (no Jest/Vitest).
 - Node 16+ required for GitHub Actions deploy workflow.
 - Path alias `@` → `src/` is configured in `vite.config.ts`.
+
+## Custom Agents
+
+| Agent | 職責 | 觸發時機 |
+|-------|------|----------|
+| `content-expander` | 擴增學科 JSON 資料 | 新增考題、補充觀念、擴充單元 |
+| `mindmap-developer` | ReactFlow 心智圖開發 | 修改節點、邊、佈局、展開收合 |
+| `ui-developer` | UI 元件與頁面開發 | 修改版面、樣式、響應式、路由 |
+| `code-quality` | 重構與品質改善 | 清理死碼、型別安全、效能優化 |
+| `reviewer` | Code Review（唯讀） | 審查變更、PR review |

@@ -1,5 +1,5 @@
-import React from 'react';
-import { Star, X, BookOpen, Lightbulb, HelpCircle, ExternalLink } from 'lucide-react';
+import React, { useState, useCallback, useRef, useEffect } from 'react';
+import { Star, X, BookOpen, Lightbulb, HelpCircle, ExternalLink, GripVertical } from 'lucide-react';
 
 interface PastExamQuestion {
   year: string;
@@ -22,16 +22,71 @@ interface SubjectPanelProps {
   onClose: () => void;
 }
 
+const MIN_WIDTH = 320;
+const MAX_WIDTH = 800;
+const DEFAULT_WIDTH = 384; // sm:w-96
+
 const SubjectPanel: React.FC<SubjectPanelProps> = ({
   topic,
   isBookmarked,
   onToggleBookmark,
   onClose,
 }) => {
+  const [width, setWidth] = useState(DEFAULT_WIDTH);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
+  const isDragging = useRef(false);
+  const startX = useRef(0);
+  const startWidth = useRef(DEFAULT_WIDTH);
+
+  const handleMouseDown = useCallback((e: React.MouseEvent) => {
+    e.preventDefault();
+    isDragging.current = true;
+    startX.current = e.clientX;
+    startWidth.current = width;
+    document.body.style.cursor = 'col-resize';
+    document.body.style.userSelect = 'none';
+  }, [width]);
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      if (!isDragging.current) return;
+      const delta = startX.current - e.clientX;
+      const newWidth = Math.min(MAX_WIDTH, Math.max(MIN_WIDTH, startWidth.current + delta));
+      setWidth(newWidth);
+    };
+    const handleMouseUp = () => {
+      if (!isDragging.current) return;
+      isDragging.current = false;
+      document.body.style.cursor = '';
+      document.body.style.userSelect = '';
+    };
+    const handleResize = () => setIsMobile(window.innerWidth < 640);
+    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mouseup', handleMouseUp);
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('mouseup', handleMouseUp);
+      window.removeEventListener('resize', handleResize);
+      document.body.style.cursor = '';
+      document.body.style.userSelect = '';
+    };
+  }, []);
+
   if (!topic) return null;
 
   return (
-    <div className="fixed right-0 top-0 h-full w-full sm:w-96 bg-white shadow-2xl border-l border-gray-200 z-50 overflow-y-auto">
+    <div
+      className="fixed right-0 top-0 h-full bg-white shadow-2xl border-l border-gray-200 z-50 overflow-y-auto"
+      style={{ width: isMobile ? '100%' : width }}
+    >
+      {/* Resize handle */}
+      <div
+        onMouseDown={handleMouseDown}
+        className="hidden sm:flex absolute left-0 top-0 h-full w-2 cursor-col-resize items-center justify-center hover:bg-indigo-100 active:bg-indigo-200 transition-colors group z-10"
+      >
+        <GripVertical size={14} className="text-gray-300 group-hover:text-indigo-400" />
+      </div>
       {/* Header */}
       <div className="sticky top-0 bg-white border-b border-gray-200 p-4 flex items-center justify-between">
         <h2 className="text-lg font-bold text-gray-800 truncate pr-2">
