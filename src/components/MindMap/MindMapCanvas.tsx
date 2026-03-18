@@ -13,12 +13,14 @@ const nodeTypes = {
 
 interface MindMapCanvasProps {
   clickedTopics: string[];
+  readTopics: string[];
   onNodeClick: (topicId: string) => void;
+  onToggleRead: (topicId: string) => void;
   subjects: any[];
   center: { id: string; label: string };
 }
 
-const MindMapCanvas: React.FC<MindMapCanvasProps> = ({ clickedTopics, onNodeClick, subjects, center }) => {
+const MindMapCanvas: React.FC<MindMapCanvasProps> = ({ clickedTopics, readTopics, onNodeClick, onToggleRead, subjects, center }) => {
   // Track which nodes are collapsed (subject ids and unit ids)
   const [collapsedNodes, setCollapsedNodes] = useState<Set<string>>(new Set());
 
@@ -76,7 +78,7 @@ const MindMapCanvas: React.FC<MindMapCanvasProps> = ({ clickedTopics, onNodeClic
                   id: topic.id,
                   type: 'subtopic',
                   position: { x: TOPIC_X, y: ty },
-                  data: { label: topic.name, color: subject.color, isClicked: clickedTopics.includes(topic.id) },
+                  data: { label: topic.name, color: subject.color, isClicked: clickedTopics.includes(topic.id), isRead: readTopics.includes(topic.id), onToggleRead, topicId: topic.id },
                 });
                 globalCursorY += NODE_H + TOPIC_GAP;
               });
@@ -126,7 +128,7 @@ const MindMapCanvas: React.FC<MindMapCanvasProps> = ({ clickedTopics, onNodeClic
               id: topic.id,
               type: 'subtopic',
               position: { x: UNIT_X, y: ty },
-              data: { label: topic.name, color: subject.color, isClicked: clickedTopics.includes(topic.id) },
+              data: { label: topic.name, color: subject.color, isClicked: clickedTopics.includes(topic.id), isRead: readTopics.includes(topic.id), onToggleRead, topicId: topic.id },
             });
             unitLayouts.push({ unitId: topic.id, unitY: ty, topicYs: [ty] });
             globalCursorY += NODE_H + TOPIC_GAP;
@@ -189,7 +191,7 @@ const MindMapCanvas: React.FC<MindMapCanvasProps> = ({ clickedTopics, onNodeClic
     });
 
     return { nodes: ns, edges: es };
-  }, [clickedTopics, subjects, center, collapsedNodes]);
+  }, [clickedTopics, readTopics, subjects, center, collapsedNodes, onToggleRead]);
 
   const handleNodeClick = useCallback((_: any, node: Node) => {
     // If node has children (subject or unit with childCount), toggle collapse

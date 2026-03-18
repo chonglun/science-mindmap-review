@@ -15,7 +15,7 @@ interface TopicDetail {
 
 const MindMapPage: React.FC = () => {
   const { subjectId } = useParams<{ subjectId?: string }>();
-  const { clickedTopics, addClickedTopic, toggleBookmark, isBookmarked } = useUserData();
+  const { clickedTopics, readTopics, addClickedTopic, toggleBookmark, toggleReadTopic, isBookmarked } = useUserData();
   const { subjects, loading, center } = useAllSubjects();
   const [selectedTopic, setSelectedTopic] = useState<TopicDetail | null>(null);
 
@@ -47,7 +47,9 @@ const MindMapPage: React.FC = () => {
     <div className="relative h-[calc(100vh-96px)] md:h-[calc(100vh-130px)]">
       <MindMapCanvas
         clickedTopics={clickedTopics}
+        readTopics={readTopics}
         onNodeClick={handleNodeClick}
+        onToggleRead={toggleReadTopic}
         subjects={filteredSubjects}
         center={center}
       />
