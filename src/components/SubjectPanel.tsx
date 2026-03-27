@@ -1,22 +1,9 @@
 import React, { useState, useCallback, useRef, useEffect } from 'react';
 import { Star, X, BookOpen, Lightbulb, HelpCircle, ExternalLink, GripVertical } from 'lucide-react';
-
-interface PastExamQuestion {
-  year: string;
-  question: string;
-  answer: string;
-}
-
-interface TopicDetail {
-  id: string;
-  name: string;
-  hook: string;
-  coreConcepts: string[];
-  pastExamQuestions: PastExamQuestion[];
-}
+import type { Topic } from '../types';
 
 interface SubjectPanelProps {
-  topic: TopicDetail | null;
+  topic: Topic | null;
   isBookmarked: boolean;
   onToggleBookmark: (topicId: string) => void;
   onClose: () => void;

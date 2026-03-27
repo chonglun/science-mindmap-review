@@ -1,0 +1,19 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "npx tsc": true,
+        "npx vite": true,
+        "/^cat src/data/subjects/biology\\.json \\| node -e \"const d=require\\('fs'\\)\\.readFileSync\\('/dev/stdin','utf8'\\); const j=JSON\\.parse\\(d\\); console\\.log\\('Units:', j\\.units\\.length\\); j\\.units\\.forEach\\(u => console\\.log\\('  '\\+u\\.id\\+' '\\+u\\.name\\+' \\('\\+u\\.stage\\+'\\) topics:'\\+u\\.topics\\.length\\)\\)\"$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^for f in physics-chemistry\\.json earth-science\\.json; do echo \"=== \\$f ===\"; cat src/data/subjects/\\$f \\| node -e \"const d=require\\('fs'\\)\\.readFileSync\\('/dev/stdin','utf8'\\); const j=JSON\\.parse\\(d\\); console\\.log\\('Units:', j\\.units\\.length\\); j\\.units\\.forEach\\(u => console\\.log\\('  '\\+u\\.id\\+' '\\+u\\.name\\+' \\('\\+u\\.stage\\+'\\) stars:'\\+\\(\\(u\\.importance\\|\\|\\{\\}\\)\\.stars\\|\\|'\\?'\\)\\+' topics:'\\+u\\.topics\\.length\\)\\)\"; done$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^node -e \"\nconst reg = require\\('\\./src/data/exam-subjects\\.json'\\);\nconsole\\.log\\('Exam subjects:', Object\\.keys\\(reg\\)\\);\nfor \\(const \\[k, v\\] of Object\\.entries\\(reg\\)\\) \\{\n  console\\.log\\('  ' \\+ k \\+ ': center=' \\+ v\\.center\\.label \\+ ', subjects=' \\+ v\\.subjects\\.map\\(s=>s\\.id\\)\\.join\\(', '\\)\\);\n\\}\n// Verify all referenced JSON files exist\nconst fs = require\\('fs'\\);\nfor \\(const \\[k, v\\] of Object\\.entries\\(reg\\)\\) \\{\n  for \\(const s of v\\.subjects\\) \\{\n    const path = '\\./src/data/subjects/' \\+ s\\.id \\+ '\\.json';\n    const exists = fs\\.existsSync\\(path\\);\n    console\\.log\\('  ' \\+ \\(exists \\? '✓' : '✗'\\) \\+ ' ' \\+ path\\);\n    if \\(exists\\) \\{\n      const data = JSON\\.parse\\(fs\\.readFileSync\\(path, 'utf8'\\)\\);\n      const topicCount = \\(data\\.units\\|\\|\\[\\]\\)\\.reduce\\(\\(n,u\\) => n \\+ u\\.topics\\.length, 0\\) \\+ \\(data\\.topics\\|\\|\\[\\]\\)\\.length;\n      console\\.log\\('    units:' \\+ \\(data\\.units\\|\\|\\[\\]\\)\\.length \\+ ' topics:' \\+ topicCount\\);\n    \\}\n  \\}\n\\}\n\"$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "mkdir": true
+    }
+}

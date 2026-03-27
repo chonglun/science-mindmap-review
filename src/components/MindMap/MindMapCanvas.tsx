@@ -4,6 +4,7 @@ import 'reactflow/dist/style.css';
 import TopicNode from './TopicNode';
 import SubtopicNode from './SubtopicNode';
 import UnitNode from './UnitNode';
+import type { SubjectData, Unit, Topic } from '../../types';
 
 const nodeTypes = {
   topic: TopicNode,
@@ -16,7 +17,7 @@ interface MindMapCanvasProps {
   readTopics: string[];
   onNodeClick: (topicId: string) => void;
   onToggleRead: (topicId: string) => void;
-  subjects: any[];
+  subjects: SubjectData[];
   center: { id: string; label: string };
 }
 
@@ -59,19 +60,19 @@ const MindMapCanvas: React.FC<MindMapCanvasProps> = ({ clickedTopics, readTopics
 
     subjects.forEach((subject, si) => {
       const unitLayouts: UnitLayout[] = [];
-      const hasUnits = 'units' in subject && Array.isArray((subject as any).units);
-      const units = hasUnits ? (subject as any).units : null;
-      const flatTopics = !hasUnits ? (subject as any).topics as any[] : null;
+      const hasUnits = !!subject.units;
+      const units = hasUnits ? subject.units! : null;
+      const flatTopics = !hasUnits ? (subject.topics ?? null) : null;
       const subjectCollapsed = collapsedNodes.has(subject.id);
 
       if (units) {
         if (!subjectCollapsed) {
-          units.forEach((unit: any, ui: number) => {
+          units.forEach((unit, ui) => {
             const unitCollapsed = collapsedNodes.has(unit.id);
             const topicYs: number[] = [];
 
             if (!unitCollapsed) {
-              unit.topics.forEach((topic: any, ti: number) => {
+              unit.topics.forEach((topic, ti) => {
                 const ty = globalCursorY;
                 topicYs.push(ty);
                 ns.push({
@@ -102,7 +103,7 @@ const MindMapCanvas: React.FC<MindMapCanvasProps> = ({ clickedTopics, readTopics
 
             // Edges: unit → topics (only if not collapsed)
             if (!unitCollapsed) {
-              unit.topics.forEach((topic: any) => {
+              unit.topics.forEach((topic) => {
                 es.push({
                   id: `e-${unit.id}-${topic.id}`,
                   source: unit.id,
@@ -122,7 +123,7 @@ const MindMapCanvas: React.FC<MindMapCanvasProps> = ({ clickedTopics, readTopics
         }
       } else if (flatTopics) {
         if (!subjectCollapsed) {
-          flatTopics.forEach((topic: any, ti: number) => {
+          flatTopics.forEach((topic, ti) => {
             const ty = globalCursorY;
             ns.push({
               id: topic.id,
@@ -144,7 +145,7 @@ const MindMapCanvas: React.FC<MindMapCanvasProps> = ({ clickedTopics, readTopics
       const allUnitYs = unitLayouts.map((u) => u.unitY);
       const subjectY = (Math.min(...allUnitYs) + Math.max(...allUnitYs)) / 2;
       const subjectChildCount = hasUnits
-        ? units.length
+        ? units!.length
         : (flatTopics?.length ?? 0);
       ns.push({
         id: subject.id,
@@ -193,7 +194,7 @@ const MindMapCanvas: React.FC<MindMapCanvasProps> = ({ clickedTopics, readTopics
     return { nodes: ns, edges: es };
   }, [clickedTopics, readTopics, subjects, center, collapsedNodes, onToggleRead]);
 
-  const handleNodeClick = useCallback((_: any, node: Node) => {
+  const handleNodeClick = useCallback((_: React.MouseEvent, node: Node) => {
     // If node has children (subject or unit with childCount), toggle collapse
     if (node.data.childCount != null) {
       toggleCollapse(node.id);

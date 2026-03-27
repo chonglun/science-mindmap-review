@@ -1,4 +1,5 @@
-import { useState, useEffect, useCallback, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import type { SubjectData, Topic } from '../types';
 
 export interface SubjectMeta {
   id: string;
@@ -11,13 +12,15 @@ export interface SubjectIndex {
   subjects: SubjectMeta[];
 }
 
-// Static import for lightweight index (no topic content)
-import indexData from '../data/subjects/index.json';
+// Static import — lightweight exam-subject registry (no topic content)
+import examSubjectsData from '../data/exam-subjects.json';
+
+export const examSubjectRegistry = examSubjectsData as Record<string, SubjectIndex>;
 
 // Cache loaded subject data in memory to avoid re-importing
-const subjectCache: Record<string, any> = {};
+const subjectCache: Record<string, SubjectData> = {};
 
-async function loadSubject(id: string): Promise<any> {
+async function loadSubject(id: string): Promise<SubjectData> {
   if (subjectCache[id]) return subjectCache[id];
   // Dynamic import — Vite will code-split each JSON into its own chunk
   const mod = await import(`../data/subjects/${id}.json`);
@@ -26,36 +29,46 @@ async function loadSubject(id: string): Promise<any> {
   return data;
 }
 
-export function useSubjectIndex(): SubjectIndex {
-  return indexData;
+export function useSubjectIndex(examSubjectId?: string): SubjectIndex | null {
+  const key = examSubjectId ?? 'science';
+  return examSubjectRegistry[key] ?? null;
 }
 
 /**
- * Lazy-load all subject data. Returns subjects array (full data)
- * once all are loaded, or partial results as they stream in.
+ * Lazy-load all subject data for a given exam subject.
+ * Returns subjects array (full data) once all are loaded.
  */
-export function useAllSubjects() {
-  const [subjects, setSubjects] = useState<any[]>([]);
+export function useAllSubjects(examSubjectId?: string) {
+  const key = examSubjectId ?? 'science';
+  const index = examSubjectRegistry[key];
+
+  const [subjects, setSubjects] = useState<SubjectData[]>([]);
   const [loading, setLoading] = useState(true);
-  const loadedRef = useRef(false);
+  const loadedKeyRef = useRef<string>('');
 
   useEffect(() => {
-    if (loadedRef.current) return;
-    loadedRef.current = true;
-    Promise.all(indexData.subjects.map((s) => loadSubject(s.id))).then((all) => {
+    if (!index) { setLoading(false); return; }
+    if (loadedKeyRef.current === key) return;
+    loadedKeyRef.current = key;
+    setLoading(true);
+    const currentKey = key;
+    Promise.all(index.subjects.map((s) => loadSubject(s.id))).then((all) => {
+      if (loadedKeyRef.current !== currentKey) return; // stale response
       setSubjects(all);
       setLoading(false);
     });
-  }, []);
+  }, [key, index]);
 
-  return { subjects, loading, center: indexData.center };
+  const center = index?.center ?? { id: 'center', label: '' };
+
+  return { subjects, loading, center };
 }
 
 /**
  * Load a single subject's full data on demand.
  */
 export function useSubjectDetail(subjectId: string | null) {
-  const [data, setData] = useState<any>(null);
+  const [data, setData] = useState<SubjectData | null>(null);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -70,16 +83,16 @@ export function useSubjectDetail(subjectId: string | null) {
 /**
  * Find a topic by id across all loaded subjects.
  */
-export function findTopicInSubjects(subjects: any[], topicId: string): any | null {
+export function findTopicInSubjects(subjects: SubjectData[], topicId: string): Topic | null {
   for (const subject of subjects) {
     if (subject.units) {
       for (const unit of subject.units) {
-        const found = unit.topics.find((t: any) => t.id === topicId);
+        const found = unit.topics.find((t) => t.id === topicId);
         if (found) return found;
       }
     }
     if (subject.topics) {
-      const found = subject.topics.find((t: any) => t.id === topicId);
+      const found = subject.topics.find((t) => t.id === topicId);
       if (found) return found;
     }
   }

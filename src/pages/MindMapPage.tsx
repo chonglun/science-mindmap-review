@@ -1,23 +1,22 @@
 import React, { useState, useCallback, useMemo } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Navigate } from 'react-router-dom';
 import MindMapCanvas from '../components/MindMap/MindMapCanvas';
 import SubjectPanel from '../components/SubjectPanel';
 import { useUserData } from '../hooks/useUserData';
 import { useAllSubjects, findTopicInSubjects } from '../hooks/useSubjectData';
-
-interface TopicDetail {
-  id: string;
-  name: string;
-  hook: string;
-  coreConcepts: string[];
-  pastExamQuestions: { year: string; question: string; answer: string }[];
-}
+import { useExamSubjectId } from '../hooks/useExamSubjectId';
+import type { Topic } from '../types';
 
 const MindMapPage: React.FC = () => {
-  const { subjectId } = useParams<{ subjectId?: string }>();
+  const { examSubjectId, subjectId } = useParams<{ examSubjectId: string; subjectId?: string }>();
+  const { isAvailable } = useExamSubjectId();
   const { clickedTopics, readTopics, addClickedTopic, toggleBookmark, toggleReadTopic, isBookmarked } = useUserData();
-  const { subjects, loading, center } = useAllSubjects();
-  const [selectedTopic, setSelectedTopic] = useState<TopicDetail | null>(null);
+  const { subjects, loading, center } = useAllSubjects(examSubjectId);
+  const [selectedTopic, setSelectedTopic] = useState<Topic | null>(null);
+
+  if (examSubjectId && !isAvailable) {
+    return <Navigate to="/" replace />;
+  }
 
   const filteredSubjects = useMemo(
     () => subjectId ? subjects.filter((s) => s.id === subjectId) : subjects,

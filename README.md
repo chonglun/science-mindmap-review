@@ -1,63 +1,48 @@
-# Junior High School Natural Science Exam Mind Map Review Website
+# 國中會考心智圖複習網站
 
-This project is a web application designed to help junior high school students review natural science topics through interactive mind maps. The application is built using React with Vite, TypeScript, and Tailwind CSS, and utilizes the `reactflow` library for rendering mind maps.
+互動式心智圖複習網站，涵蓋國中自然科（生物、理化、地球科學）與社會科（歷史、地理、公民與社會）。透過 ReactFlow 心智圖瀏覽各單元主題，查看生活聯想、核心觀念與歷屆考題，並以 localStorage 追蹤閱讀與收藏進度。
+
+Built with React 18 + TypeScript 5 + Vite 5 + Tailwind CSS 3 + ReactFlow 11.
 
 ## Project Structure
 
 ```
 science-mindmap-review
-├── public
-│   └── data
-│       └── mindmaps.json
 ├── src
 │   ├── main.tsx
 │   ├── App.tsx
 │   ├── index.css
-│   ├── vite-env.d.ts
 │   ├── components
-│   │   ├── Layout
-│   │   │   ├── Header.tsx
-│   │   │   ├── Sidebar.tsx
-│   │   │   └── Footer.tsx
-│   │   ├── MindMap
-│   │   │   ├── MindMapCanvas.tsx
-│   │   │   ├── TopicNode.tsx
-│   │   │   ├── SubtopicNode.tsx
-│   │   │   ├── ConceptNode.tsx
-│   │   │   └── CustomEdge.tsx
-│   │   └── UI
-│   │       ├── SearchBar.tsx
-│   │       ├── TopicCard.tsx
-│   │       └── ProgressTracker.tsx
+│   │   ├── Layout/          # Header, Sidebar, Footer
+│   │   ├── MindMap/          # MindMapCanvas, TopicNode, UnitNode, SubtopicNode, CustomEdge
+│   │   ├── SubjectPanel.tsx  # Resizable detail panel
+│   │   └── UI/              # SearchBar, TopicCard, ProgressTracker
 │   ├── pages
-│   │   ├── HomePage.tsx
-│   │   ├── MindMapPage.tsx
-│   │   └── TopicListPage.tsx
+│   │   ├── SubjectSelectionPage.tsx  # Landing page (/)
+│   │   ├── HomePage.tsx              # Subject cards (/subject/:examSubjectId)
+│   │   ├── MindMapPage.tsx           # Mind map view (/mindmap/:examSubjectId/:subjectId?)
+│   │   └── TopicListPage.tsx         # Flat topic list (/topics/:examSubjectId)
 │   ├── hooks
-│   │   ├── useMindMapData.ts
-│   │   └── useProgress.ts
+│   │   ├── useSubjectData.ts   # Dynamic import + cache for subject JSON
+│   │   ├── useExamSubjectId.ts # Route-aware exam subject context
+│   │   └── useUserData.ts      # localStorage: clicked/bookmarked/read topics
 │   ├── types
-│   │   └── index.ts
-│   ├── utils
-│   │   ├── layoutHelper.ts
-│   │   └── mindmapTransform.ts
+│   │   └── index.ts            # SubjectData, Unit, Topic, PastExamQuestion
 │   └── data
-│       ├── biology.ts
-│       ├── chemistry.ts
-│       ├── physics.ts
-│       └── earthScience.ts
+│       ├── exam-subjects.json         # Exam subject registry
+│       └── subjects/
+│           ├── index.json             # Subject metadata
+│           ├── biology.json
+│           ├── physics-chemistry.json
+│           ├── earth-science.json
+│           ├── history.json
+│           ├── geography.json
+│           └── civics.json
 ├── index.html
 ├── package.json
-├── tsconfig.json
-├── tsconfig.node.json
 ├── vite.config.ts
 ├── tailwind.config.ts
-├── postcss.config.js
-├── eslint.config.js
-├── .github
-│   └── workflows
-│       └── deploy.yml
-└── README.md
+└── .github/workflows/deploy.yml
 ```
 
 ## Getting Started
@@ -66,7 +51,7 @@ To get started with the project, follow these steps:
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/yourusername/science-mindmap-review.git
+   git clone https://github.com/chonglun/science-mindmap-review.git
    cd science-mindmap-review
    ```
 
@@ -85,10 +70,13 @@ To get started with the project, follow these steps:
 
 ## Features
 
-- Interactive mind maps for various natural science topics.
-- Search functionality to quickly find topics.
-- Progress tracking to monitor learning.
-- Responsive design using Tailwind CSS.
+- 五大會考科目架構（自然科、社會科已上線；國文、英文、數學即將推出）
+- ReactFlow 互動式心智圖：四層展開（中心 → 學科 → 單元 → 主題），可收合展開
+- 主題詳情面板：生活聯想、核心觀念、歷屆考題
+- 閱讀進度追蹤（localStorage）：已讀 ✓、收藏 ☆
+- 可調整寬度的側邊詳情面板
+- 響應式設計：桌面側邊欄 + 手機底部 Tab Bar
+- GitHub Pages 自動部署（GitHub Actions）
 
 ## Deployment
 

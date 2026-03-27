@@ -1,0 +1,18 @@
+{
+  "science": {
+    "center": { "id": "science-center", "label": "國中自然" },
+    "subjects": [
+      { "id": "biology", "label": "生物", "color": "#22c55e" },
+      { "id": "physics-chemistry", "label": "理化", "color": "#3b82f6" },
+      { "id": "earth-science", "label": "地球科學", "color": "#f59e0b" }
+    ]
+  },
+  "social": {
+    "center": { "id": "social-center", "label": "國中社會" },
+    "subjects": [
+      { "id": "history", "label": "歷史", "color": "#ef4444" },
+      { "id": "geography", "label": "地理", "color": "#06b6d4" },
+      { "id": "civics", "label": "公民與社會", "color": "#a855f7" }
+    ]
+  }
+}
