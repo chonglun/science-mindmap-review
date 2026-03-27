@@ -4,6 +4,8 @@ import type { Topic } from '../types';
 
 interface SubjectPanelProps {
   topic: Topic | null;
+  /** Parent path, e.g. "生物 > 生命的特性與細胞" */
+  topicPath?: string;
   isBookmarked: boolean;
   onToggleBookmark: (topicId: string) => void;
   onClose: () => void;
@@ -15,6 +17,7 @@ const DEFAULT_WIDTH = 384; // sm:w-96
 
 const SubjectPanel: React.FC<SubjectPanelProps> = ({
   topic,
+  topicPath = '',
   isBookmarked,
   onToggleBookmark,
   onClose,
@@ -131,7 +134,7 @@ const SubjectPanel: React.FC<SubjectPanelProps> = ({
                 <span className="mt-1 w-1.5 h-1.5 rounded-full bg-blue-400 shrink-0" />
                 <span className="flex-1">{concept}</span>
                 <a
-                  href={`https://www.google.com/search?q=${encodeURIComponent(concept + ' 國中自然')}&udm=50`}
+                  href={`https://www.google.com/search?q=${encodeURIComponent(`${topicPath} > ${topic.name}：${concept} 協助我學習並幫助我記憶`)}&udm=50`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="shrink-0 mt-0.5 text-blue-400 hover:text-blue-600 transition-colors"
@@ -161,7 +164,7 @@ const SubjectPanel: React.FC<SubjectPanelProps> = ({
                     {q.year}
                   </span>
                   <a
-                    href={`https://www.google.com/search?q=${encodeURIComponent(q.question + ' 國中自然')}&udm=50`}
+                    href={`https://www.google.com/search?q=${encodeURIComponent(`${topicPath} > ${topic.name}：${q.question} 協助我學習並幫助我記憶`)}&udm=50`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-purple-400 hover:text-purple-600 transition-colors"

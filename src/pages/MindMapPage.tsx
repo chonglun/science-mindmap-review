@@ -3,7 +3,7 @@ import { useParams, Navigate } from 'react-router-dom';
 import MindMapCanvas from '../components/MindMap/MindMapCanvas';
 import SubjectPanel from '../components/SubjectPanel';
 import { useUserData } from '../hooks/useUserData';
-import { useAllSubjects, findTopicInSubjects } from '../hooks/useSubjectData';
+import { useAllSubjects, findTopicWithPath } from '../hooks/useSubjectData';
 import { useExamSubjectId } from '../hooks/useExamSubjectId';
 import type { Topic } from '../types';
 
@@ -13,6 +13,7 @@ const MindMapPage: React.FC = () => {
   const { clickedTopics, readTopics, addClickedTopic, toggleBookmark, toggleReadTopic, isBookmarked } = useUserData();
   const { subjects, loading, center } = useAllSubjects(examSubjectId);
   const [selectedTopic, setSelectedTopic] = useState<Topic | null>(null);
+  const [topicPath, setTopicPath] = useState<string>('');
 
   if (examSubjectId && !isAvailable) {
     return <Navigate to="/" replace />;
@@ -25,10 +26,11 @@ const MindMapPage: React.FC = () => {
 
   const handleNodeClick = useCallback(
     (nodeId: string) => {
-      const topic = findTopicInSubjects(subjects, nodeId);
-      if (topic) {
+      const result = findTopicWithPath(subjects, nodeId);
+      if (result) {
         addClickedTopic(nodeId);
-        setSelectedTopic(topic);
+        setSelectedTopic(result.topic);
+        setTopicPath(result.path);
       }
     },
     [addClickedTopic, subjects]
@@ -55,6 +57,7 @@ const MindMapPage: React.FC = () => {
 
       <SubjectPanel
         topic={selectedTopic}
+        topicPath={topicPath}
         isBookmarked={selectedTopic ? isBookmarked(selectedTopic.id) : false}
         onToggleBookmark={toggleBookmark}
         onClose={() => setSelectedTopic(null)}

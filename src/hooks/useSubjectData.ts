@@ -80,20 +80,23 @@ export function useSubjectDetail(subjectId: string | null) {
   return { data, loading };
 }
 
-/**
- * Find a topic by id across all loaded subjects.
- */
-export function findTopicInSubjects(subjects: SubjectData[], topicId: string): Topic | null {
+export interface TopicWithPath {
+  topic: Topic;
+  /** e.g. "生物 > 生命的特性與細胞" */
+  path: string;
+}
+
+export function findTopicWithPath(subjects: SubjectData[], topicId: string): TopicWithPath | null {
   for (const subject of subjects) {
     if (subject.units) {
       for (const unit of subject.units) {
         const found = unit.topics.find((t) => t.id === topicId);
-        if (found) return found;
+        if (found) return { topic: found, path: `${subject.label} > ${unit.name}` };
       }
     }
     if (subject.topics) {
       const found = subject.topics.find((t) => t.id === topicId);
-      if (found) return found;
+      if (found) return { topic: found, path: subject.label };
     }
   }
   return null;
