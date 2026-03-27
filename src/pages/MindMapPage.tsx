@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useMemo } from 'react';
+import React, { useState, useCallback } from 'react';
 import { useParams, Navigate } from 'react-router-dom';
 import MindMapCanvas from '../components/MindMap/MindMapCanvas';
 import SubjectPanel from '../components/SubjectPanel';
@@ -19,10 +19,7 @@ const MindMapPage: React.FC = () => {
     return <Navigate to="/" replace />;
   }
 
-  const filteredSubjects = useMemo(
-    () => subjectId ? subjects.filter((s) => s.id === subjectId) : subjects,
-    [subjects, subjectId]
-  );
+  const filteredSubjects = subjects;
 
   const handleNodeClick = useCallback(
     (nodeId: string) => {
@@ -53,6 +50,7 @@ const MindMapPage: React.FC = () => {
         onToggleRead={toggleReadTopic}
         subjects={filteredSubjects}
         center={center}
+        focusSubjectId={subjectId}
       />
 
       <SubjectPanel

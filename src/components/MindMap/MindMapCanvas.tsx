@@ -1,5 +1,5 @@
-import React, { useMemo, useState, useCallback } from 'react';
-import { ReactFlow, MiniMap, Controls, Node, Edge } from 'reactflow';
+import React, { useMemo, useState, useCallback, useEffect, useRef } from 'react';
+import { ReactFlow, MiniMap, Controls, Node, Edge, useReactFlow, ReactFlowProvider } from 'reactflow';
 import 'reactflow/dist/style.css';
 import TopicNode from './TopicNode';
 import SubtopicNode from './SubtopicNode';
@@ -19,9 +19,10 @@ interface MindMapCanvasProps {
   onToggleRead: (topicId: string) => void;
   subjects: SubjectData[];
   center: { id: string; label: string };
+  focusSubjectId?: string;
 }
 
-const MindMapCanvas: React.FC<MindMapCanvasProps> = ({ clickedTopics, readTopics, onNodeClick, onToggleRead, subjects, center }) => {
+const MindMapCanvasInner: React.FC<MindMapCanvasProps> = ({ clickedTopics, readTopics, onNodeClick, onToggleRead, subjects, center, focusSubjectId }) => {
   // Track which nodes are collapsed (subject ids and unit ids)
   const [collapsedNodes, setCollapsedNodes] = useState<Set<string>>(new Set());
 
@@ -194,6 +195,44 @@ const MindMapCanvas: React.FC<MindMapCanvasProps> = ({ clickedTopics, readTopics
     return { nodes: ns, edges: es };
   }, [clickedTopics, readTopics, subjects, center, collapsedNodes, onToggleRead]);
 
+  // Collect node IDs belonging to the focused subject (subject + its units + their topics)
+  const focusNodeIds = useMemo(() => {
+    if (!focusSubjectId) return null;
+    const ids = new Set<string>();
+    subjects.forEach((subject) => {
+      if (subject.id !== focusSubjectId) return;
+      ids.add(subject.id);
+      if (subject.units) {
+        subject.units.forEach((unit) => {
+          ids.add(unit.id);
+          unit.topics.forEach((t) => ids.add(t.id));
+        });
+      }
+      if (subject.topics) {
+        subject.topics.forEach((t) => ids.add(t.id));
+      }
+    });
+    return ids.size > 0 ? ids : null;
+  }, [focusSubjectId, subjects]);
+
+  // Auto-focus: zoom to the focused subject's nodes after layout
+  const { fitView } = useReactFlow();
+  const prevFocusRef = useRef(focusSubjectId);
+
+  useEffect(() => {
+    if (!focusNodeIds) return;
+    // Small delay to ensure ReactFlow has rendered the nodes
+    const timer = setTimeout(() => {
+      fitView({
+        padding: 0.15,
+        duration: 400,
+        nodes: nodes.filter((n) => focusNodeIds.has(n.id)),
+      });
+    }, 50);
+    prevFocusRef.current = focusSubjectId;
+    return () => clearTimeout(timer);
+  }, [focusNodeIds, fitView, nodes, focusSubjectId]);
+
   const handleNodeClick = useCallback((_: React.MouseEvent, node: Node) => {
     // If node has children (subject or unit with childCount), toggle collapse
     if (node.data.childCount != null) {
@@ -222,5 +261,11 @@ const MindMapCanvas: React.FC<MindMapCanvasProps> = ({ clickedTopics, readTopics
     </div>
   );
 };
+
+const MindMapCanvas: React.FC<MindMapCanvasProps> = (props) => (
+  <ReactFlowProvider>
+    <MindMapCanvasInner {...props} />
+  </ReactFlowProvider>
+);
 
 export default MindMapCanvas;

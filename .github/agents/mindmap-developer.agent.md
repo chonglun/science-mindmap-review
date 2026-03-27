@@ -11,11 +11,10 @@ tools: [read, edit, search, execute]
 
 ```
 src/components/MindMap/
-├── MindMapCanvas.tsx    # 畫布主元件：節點/邊建構、佈局算法、展開收合
+├── MindMapCanvas.tsx    # 畫布主元件：節點/邊建構、佈局算法、展開收合、ReactFlowProvider 包裹
 ├── TopicNode.tsx        # 科目層節點（彩色圓角，含展開/收合箭頭）
 ├── UnitNode.tsx         # 單元層節點（白底色框，含重要度星級、展開/收合）
 ├── SubtopicNode.tsx     # 主題層葉節點（白底，已讀綠框 ✓）
-├── ConceptNode.tsx      # 觀念節點（如有）
 └── CustomEdge.tsx       # 自定義邊線
 ```
 
@@ -35,9 +34,11 @@ const nodeTypes = { topic: TopicNode, unit: UnitNode, subtopic: SubtopicNode };
 新增節點類型時必須同步更新此 map。
 
 ### 資料流
-- `subjects: any[]` 從 `useSubjectData` 動態載入，含 `units[].topics[]`
+- `subjects: SubjectData[]` 從 `useSubjectData` 動態載入，含 `units[].topics[]`
+- `focusSubjectId?: string` 用於自動聚焦至指定科目節點（透過 `useReactFlow().fitView()`）
 - `clickedTopics: string[]` 標記已讀狀態
 - 節點點擊：`onNodeClick` 回傳 topicId 給 `MindMapPage` 開啟側面板
+- `MindMapCanvas` 匯出元件已包裹 `ReactFlowProvider`，內部 `MindMapCanvasInner` 使用 `useReactFlow()`
 
 ## ReactFlow v11 注意事項
 

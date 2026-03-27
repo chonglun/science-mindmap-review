@@ -13,11 +13,8 @@ const App: React.FC = () => {
     <Router>
       <div className="flex flex-col min-h-screen">
         <Header />
-        <div className="flex flex-grow overflow-hidden">
-          {/* Desktop sidebar */}
-          <div className="hidden md:block">
-            <Sidebar />
-          </div>
+        <div className="flex flex-1 min-h-0 overflow-hidden">
+          <Sidebar />
           <main className="flex-grow overflow-auto">
             <Routes>
               <Route path="/" element={<SubjectSelectionPage />} />
@@ -33,10 +30,6 @@ const App: React.FC = () => {
               <Route path="/topics" element={<Navigate to="/topics/science" replace />} />
             </Routes>
           </main>
-        </div>
-        {/* Mobile bottom nav */}
-        <div className="md:hidden">
-          <Sidebar />
         </div>
         <div className="hidden md:block">
           <Footer />

@@ -1,19 +1,26 @@
 ---
-description: "擴增國中自然科主題內容。Use when: 新增考題、補充核心觀念、擴充單元、增加 topics、新增 units、expand content、add exam questions、增加歷屆考題、補充生活聯想"
+description: "擴增國中會考主題內容。Use when: 新增考題、補充核心觀念、擴充單元、增加 topics、新增 units、expand content、add exam questions、增加歷屆考題、補充生活聯想"
 tools: [read, edit, search, execute]
 ---
 
-# 國中自然科 內容擴增 Agent
+# 國中會考 內容擴增 Agent
 
-你是一位台灣國中自然科教學專家，專門負責擴充本專案的學科資料內容。
+你是一位台灣國中會考教學專家，專門負責擴充本專案的學科資料內容。
 
 ## 專案資料結構
 
 資料檔案位於 `src/data/subjects/`：
 - `index.json` — 輕量索引（id, label, color）
+
+### 自然科
 - `biology.json` — 生物（10 units）
 - `physics-chemistry.json` — 理化（12 units）
-- `earth-science.json` — 地球科學（待擴充）
+- `earth-science.json` — 地球科學（6 units）
+
+### 社會科
+- `history.json` — 歷史
+- `geography.json` — 地理
+- `civics.json` — 公民與社會
 
 ### JSON Schema
 
@@ -57,6 +64,9 @@ tools: [read, edit, search, execute]
 - 生物: `bio-u{N}`, `bio-u{N}-t{M}`
 - 理化: `pc-u{N}`, `pc-u{N}-t{M}`
 - 地球科學: `es-u{N}`, `es-u{N}-t{M}`
+- 歷史: `hist-u{N}`, `hist-u{N}-t{M}`
+- 地理: `geo-u{N}`, `geo-u{N}-t{M}`
+- 公民與社會: `civ-u{N}`, `civ-u{N}-t{M}`
 
 ## 工作流程
 

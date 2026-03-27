@@ -15,13 +15,12 @@ tools: [read, edit, search, execute]
 
 | 項目 | 位置 | 說明 |
 |------|------|------|
-| 型別不嚴謹 | 全域 | 大量使用 `any`，尤其是 subject 資料、hooks 回傳值 |
-| 未使用的檔案 | `src/hooks/useMindMapData.ts` | 被 `useSubjectData` 取代，但仍存在 |
-| 未使用的檔案 | `src/hooks/useProgress.ts` | 未被任何頁面引用 |
-| 未使用的檔案 | `src/utils/layoutHelper.ts` | 佈局邏輯已內嵌在 MindMapCanvas |
-| 未使用的檔案 | `src/utils/mindmapTransform.ts` | 轉換邏輯已內嵌在 MindMapCanvas |
-| 未使用的型別 | `src/types/index.ts` | 定義了 interface 但沒被引用 |
 | 舊資料檔 | `src/data/biology.ts` 等 `.ts` 檔 | 已遷移至 `subjects/*.json`，但舊檔可能殘留 |
+
+> 先前已清理完成的技術債（供參考）：
+> - `any` 型別 → 已全部替換為正確型別（`SubjectData`, `Unit`, `Topic` 等）
+> - 未使用的檔案（`useMindMapData.ts`, `useProgress.ts`, `layoutHelper.ts`, `mindmapTransform.ts`, `ConceptNode.tsx`, `topics.json`）→ 已刪除
+> - `src/types/index.ts` → 型別已更新至正確定義
 
 ### 效能關注點
 

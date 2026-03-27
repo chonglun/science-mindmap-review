@@ -14,14 +14,15 @@ src/
 ├── App.tsx                      # HashRouter 路由設定、版面骨架
 ├── index.css                    # Tailwind 全域樣式
 ├── pages/
-│   ├── HomePage.tsx             # 首頁：科目卡片 grid
+│   ├── SubjectSelectionPage.tsx # 選科首頁 (/)
+│   ├── HomePage.tsx             # 科目卡片 grid (/subject/:examSubjectId)
 │   ├── MindMapPage.tsx          # 心智圖頁：Canvas + SubjectPanel
 │   └── TopicListPage.tsx        # 主題列表頁：所有 unit/topic 展開
 ├── components/
 │   ├── SubjectPanel.tsx         # 右側滑出面板（主題詳情、考題、書籤）
 │   ├── Layout/
 │   │   ├── Header.tsx           # 頂部導覽列（Indigo 色）
-│   │   ├── Sidebar.tsx          # 桌面側邊欄 + 手機底部 Tab
+│   │   ├── Sidebar.tsx          # 桌面可收合側邊欄 + 手機底部 Tab
 │   │   └── Footer.tsx           # 頁尾（僅桌面）
 │   └── UI/
 │       ├── SearchBar.tsx        # 搜尋元件
@@ -30,7 +31,7 @@ src/
 └── hooks/
     ├── useUserData.ts           # localStorage 狀態（已讀、書籤）
     ├── useSubjectData.ts        # 動態載入科目 JSON 資料
-    └── useProgress.ts           # 進度計算
+    └── useExamSubjectId.ts      # 路由感知的考試科目 ID
 ```
 
 ## 技術規範

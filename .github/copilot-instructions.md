@@ -1,9 +1,9 @@
-# Copilot Instructions — 國中自然科會考心智圖複習網站
+# Copilot Instructions — 國中會考心智圖複習網站
 
 ## Project Overview
 
-Interactive mind-map review site for Taiwan junior-high Natural Science exam (會考自然科).
-Students explore Biology (生物), Physics & Chemistry (理化), and Earth Science (地球科學) through a ReactFlow-based mind map, view topic details (life-hooks, core concepts, past exam questions) in a resizable side panel, and track read / bookmarked topics via localStorage.
+Interactive mind-map review site for Taiwan junior-high exam (國中會考). Covers Natural Science and Social Studies; more subjects planned.
+Students explore subjects (Biology, Physics & Chemistry, Earth Science, History, Geography, Civics) through a ReactFlow-based mind map, view topic details (life-hooks, core concepts, past exam questions) in a resizable side panel, and track read / bookmarked topics via localStorage.
 
 ## Tech Stack
 
@@ -31,31 +31,35 @@ npx tsc --noEmit # Type-check without emitting
 ```
 src/
 ├── components/
-│   ├── Layout/             # Header, Sidebar, Footer (app shell)
+│   ├── Layout/             # Header, Sidebar (collapsible), Footer (app shell)
 │   ├── MindMap/
-│   │   ├── MindMapCanvas   # Builds 4-level node/edge graph from subjects prop
+│   │   ├── MindMapCanvas   # 4-level node/edge graph; ReactFlowProvider wrapper; focusSubjectId auto-focus
 │   │   ├── TopicNode       # Center + Subject-level nodes (colored bg)
 │   │   ├── UnitNode        # Unit-level nodes (importance stars, stage label)
 │   │   ├── SubtopicNode    # Leaf topic nodes (green border + ✓ when read)
-│   │   ├── ConceptNode     # (unused — legacy placeholder)
 │   │   └── CustomEdge      # Colored animated edges
 │   ├── SubjectPanel.tsx    # Resizable right-side detail panel (hook, concepts, exam Qs)
 │   └── UI/                 # SearchBar, TopicCard, ProgressTracker
-├── pages/                  # SubjectSelectionPage (/), HomePage (/subject/:examSubjectId), MindMapPage (/mindmap/:examSubjectId/:subjectId?), TopicListPage (/topics/:examSubjectId)
+├── pages/
+│   ├── SubjectSelectionPage.tsx  # Landing page (/)
+│   ├── HomePage.tsx              # Subject cards (/subject/:examSubjectId)
+│   ├── MindMapPage.tsx           # Mind map view (/mindmap/:examSubjectId/:subjectId?)
+│   └── TopicListPage.tsx         # Flat topic list (/topics/:examSubjectId)
 ├── hooks/
 │   ├── useSubjectData.ts   # Dynamic import + cache for subject JSON (code splitting)
-│   ├── useUserData.ts      # localStorage: clicked / bookmarked / read topics
-│   ├── useMindMapData.ts   # ReactFlow node/edge generation
-│   └── useProgress.ts      # Overall completion percentage
+│   ├── useExamSubjectId.ts # Route-aware exam subject context extraction
+│   └── useUserData.ts      # localStorage: clicked / bookmarked / read topics
 ├── data/
-│   ├── subjects/
-│   │   ├── index.json      # Lightweight metadata (id, label, color per subject)
-│   │   ├── biology.json    # Full Biology data (units → topics → hooks + exam Qs)
-│   │   ├── physics-chemistry.json
-│   │   └── earth-science.json
-│   └── topics.json         # Legacy combined format (prefer subjects/ files)
-├── types/                  # ⚠️ Types are outdated — real data shape differs
-└── utils/                  # layoutHelper.ts & mindmapTransform.ts (both unused legacy)
+│   ├── exam-subjects.json  # Exam subject registry (自然科, 社會科, etc.)
+│   └── subjects/
+│       ├── index.json             # Lightweight metadata (id, label, color per subject)
+│       ├── biology.json           # 生物 (10 units)
+│       ├── physics-chemistry.json # 理化 (12 units)
+│       ├── earth-science.json     # 地球科學 (6 units)
+│       ├── history.json           # 歷史
+│       ├── geography.json         # 地理
+│       └── civics.json            # 公民與社會
+└── types/                  # SubjectData, Unit, Topic, PastExamQuestion, UnitImportance
 ```
 
 ## Data Architecture
@@ -75,8 +79,9 @@ index.json (static import — metadata only)
           └─ pastExamQuestions[] → { year, question, options?, answer, explanation? }
 ```
 
+- **Exam subject registry**: `exam-subjects.json` maps exam categories (自然科, 社會科) to their constituent subjects.
 - **Code splitting**: `useSubjectData` hook loads subject JSON via `import()` on demand; results cached in module-level `Record`. Vite auto-generates separate chunks.
-- **Dual structure**: Subjects may have nested `units[]` or flat `topics[]`. Always handle both paths (see `findTopicInSubjects`).
+- **Dual structure**: Subjects may have nested `units[]` or flat `topics[]`. Always handle both paths (see `findTopicWithPath`).
 - **Adding/changing subject data**: Edit the individual `src/data/subjects/<id>.json` file. No other files need updating unless the schema changes.
 
 ### localStorage Keys
@@ -107,6 +112,7 @@ index.json (static import — metadata only)
 - **Collapse/expand**: Tracked via `collapsedNodes` Set. Collapsed children are excluded from the node array (not hidden via CSS). Positions recalculate dynamically.
 - Node click: if `node.data.childCount != null` → toggle collapse; otherwise → open detail panel.
 - Subject node colors come from subject data. Read topics show green border + ✓ badge.
+- **Auto-focus**: `MindMapCanvas` accepts `focusSubjectId` prop; wraps inner component in `ReactFlowProvider` and uses `useReactFlow().fitView()` to animate focus to selected subject nodes.
 
 ### Language
 - UI labels, topic content, and exam questions are all in **Traditional Chinese (繁體中文)**.
@@ -115,8 +121,6 @@ index.json (static import — metadata only)
 ## Pitfalls & Gotchas
 
 - **ReactFlow v11 only** — do NOT use `@xyflow/react` or v12 imports.
-- **Types are stale**: `src/types/index.ts` defines `MindMap`, `Topic`, `Progress` that don't match the actual data shape. Prefer inline types or update them.
-- **Unused legacy files**: `utils/layoutHelper.ts`, `utils/mindmapTransform.ts`, `MindMap/ConceptNode.tsx` — not wired into the app.
 - No test framework configured (no Jest/Vitest).
 - Path alias `@` → `src/` in `vite.config.ts`.
 - Vite base path is `/science-mindmap-review/` for GitHub Pages.
