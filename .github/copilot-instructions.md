@@ -129,3 +129,9 @@ index.json (static import — metadata only)
 ## Custom Agents
 
 See `.github/agents/` — five specialized agents are defined for content expansion, mind-map development, UI work, code quality, and code review.
+
+## Skills
+
+See `.github/skills/`:
+- **expand-json-data** — Anti-timeout pattern for generating large JSON data files with Chinese content.
+- **deploy-to-github** — Pre-flight checks (build verification, documentation sync) before committing and pushing to GitHub.

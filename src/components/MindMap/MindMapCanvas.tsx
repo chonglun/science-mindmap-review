@@ -215,21 +215,31 @@ const MindMapCanvasInner: React.FC<MindMapCanvasProps> = ({ clickedTopics, readT
     return ids.size > 0 ? ids : null;
   }, [focusSubjectId, subjects]);
 
-  // Auto-focus: zoom to the focused subject's nodes after layout
+  // Auto-focus: fit view on initial mount, or zoom to focused subject when focusSubjectId changes.
+  // IMPORTANT: must NOT re-trigger when nodes change (e.g. clicking a topic updates isClicked).
   const { fitView } = useReactFlow();
-  const prevFocusRef = useRef(focusSubjectId);
+  const hasInitialFit = useRef(false);
+  const prevFocusRef = useRef<string | undefined>(undefined);
 
   useEffect(() => {
-    if (!focusNodeIds) return;
-    // Small delay to ensure ReactFlow has rendered the nodes
-    const timer = setTimeout(() => {
-      fitView({
-        padding: 0.15,
-        duration: 400,
-        nodes: nodes.filter((n) => focusNodeIds.has(n.id)),
-      });
-    }, 50);
+    // Skip if already fitted and focusSubjectId hasn't changed
+    if (hasInitialFit.current && prevFocusRef.current === focusSubjectId) return;
+    if (nodes.length === 0) return;
+
+    hasInitialFit.current = true;
     prevFocusRef.current = focusSubjectId;
+
+    const timer = setTimeout(() => {
+      if (focusNodeIds) {
+        fitView({
+          padding: 0.15,
+          duration: 400,
+          nodes: nodes.filter((n) => focusNodeIds.has(n.id)),
+        });
+      } else {
+        fitView({ padding: 0.3, duration: 400 });
+      }
+    }, 50);
     return () => clearTimeout(timer);
   }, [focusNodeIds, fitView, nodes, focusSubjectId]);
 
@@ -249,8 +259,6 @@ const MindMapCanvasInner: React.FC<MindMapCanvasProps> = ({ clickedTopics, readT
         edges={edges}
         nodeTypes={nodeTypes}
         onNodeClick={handleNodeClick}
-        fitView
-        fitViewOptions={{ padding: 0.3 }}
         proOptions={{ hideAttribution: true }}
       >
         <div className="hidden md:block">
