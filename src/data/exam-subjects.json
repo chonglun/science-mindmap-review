@@ -14,5 +14,11 @@
       { "id": "geography", "label": "地理", "color": "#06b6d4" },
       { "id": "civics", "label": "公民與社會", "color": "#a855f7" }
     ]
+  },
+  "chinese": {
+    "center": { "id": "chinese-center", "label": "國中國文" },
+    "subjects": [
+      { "id": "chinese", "label": "國文", "color": "#e11d48" }
+    ]
   }
 }

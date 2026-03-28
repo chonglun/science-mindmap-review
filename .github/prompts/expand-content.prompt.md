@@ -20,6 +20,9 @@ argument-hint: "例如：幫理化的電與磁補充歷屆考題、幫歷史臺�
 - [geography.json](../../src/data/subjects/geography.json) — 地理
 - [civics.json](../../src/data/subjects/civics.json) — 公民與社會
 
+### 國文科
+- [chinese.json](../../src/data/subjects/chinese.json) — 國文
+
 ## JSON Schema
 
 每個 subject 有 `units[]`，每個 unit 有 `topics[]`：

@@ -37,7 +37,8 @@ science-mindmap-review
 │           ├── earth-science.json
 │           ├── history.json
 │           ├── geography.json
-│           └── civics.json
+│           ├── civics.json
+│           └── chinese.json
 ├── index.html
 ├── package.json
 ├── vite.config.ts

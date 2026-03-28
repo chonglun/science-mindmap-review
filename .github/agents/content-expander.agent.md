@@ -22,6 +22,9 @@ tools: [read, edit, search, execute]
 - `geography.json` — 地理
 - `civics.json` — 公民與社會
 
+### 國文科
+- `chinese.json` — 國文（3 units）
+
 ### JSON Schema
 
 ```json
