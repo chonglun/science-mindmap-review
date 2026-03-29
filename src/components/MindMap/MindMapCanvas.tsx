@@ -43,7 +43,7 @@ const MindMapCanvasInner: React.FC<MindMapCanvasProps> = ({ clickedTopics, readT
 
     // Layout constants (left-to-right, 4 levels)
     const NODE_H = 44;
-    const UNIT_NODE_H = 68; // multi-line unit nodes (badges + label + stage)
+    const UNIT_NODE_H = 90; // multi-line unit nodes (badges + label with year + stage)
     const TOPIC_GAP = 10;
     const UNIT_GAP = 30;
     const SUBJECT_GAP = 50;
