@@ -13,7 +13,11 @@ interface UnitNodeProps {
   };
 }
 
-const STAR_COLORS: Record<number, string> = { 3: '#ef4444', 2: '#f59e0b', 1: '#22c55e' };
+const STAR_COLORS: Record<number, string> = { 5: '#ef4444', 4: '#ef4444', 3: '#ef4444', 2: '#f59e0b', 1: '#22c55e' };
+
+function isTopImportance(stars: number): boolean {
+  return stars >= 4;
+}
 
 const UnitNode: React.FC<UnitNodeProps> = ({ data }) => {
   const borderColor = data.color ?? '#6366f1';
@@ -29,11 +33,11 @@ const UnitNode: React.FC<UnitNodeProps> = ({ data }) => {
       {/* Row 1: badges */}
       {imp && (
         <div className="flex items-center gap-1 mb-0.5">
-          {imp.stars === 3 && (
+          {isTopImportance(imp.stars) && (
             <span className="text-xs bg-red-500 text-white px-1.5 py-0.5 rounded-full leading-none">🔥 必考</span>
           )}
           <span className="text-xs" style={{ color: STAR_COLORS[imp.stars] || '#6b7280' }} title={`${imp.level}（${imp.tip}）`}>
-            {'★'.repeat(imp.stars)}
+            {'★'.repeat(Math.min(imp.stars, 5))}
           </span>
         </div>
       )}

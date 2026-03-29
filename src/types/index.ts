@@ -7,6 +7,21 @@ export interface PastExamQuestion {
   explanation?: string;
 }
 
+/** Strategy content for exam preparation — topic level. */
+export interface ExamStrategy {
+  examinerThinking: string;
+  solvingSteps: string[];
+  thinkingRules: string[];
+}
+
+/** Unit-level strategy overview. */
+export interface UnitStrategy {
+  examinerPerspective: string;
+  scoringTips: string[];
+  commonTraps: string[];
+  thinkingPath: string;
+}
+
 /** A leaf-level topic inside a unit (or directly under a flat subject). */
 export interface Topic {
   id: string;
@@ -14,6 +29,7 @@ export interface Topic {
   hook: string;
   coreConcepts: string[];
   pastExamQuestions: PastExamQuestion[];
+  examStrategy?: ExamStrategy;
 }
 
 /** Importance metadata attached to a unit. */
@@ -30,6 +46,7 @@ export interface Unit {
   stage: string;
   importance?: UnitImportance;
   topics: Topic[];
+  unitStrategy?: UnitStrategy;
 }
 
 /**

@@ -25,6 +25,9 @@ tools: [read, edit, search, execute]
 ### 國文科
 - `chinese.json` — 國文（3 units）
 
+### 數學科
+- `math.json` — 數學（13 units）
+
 ### JSON Schema
 
 ```json
@@ -70,6 +73,7 @@ tools: [read, edit, search, execute]
 - 歷史: `hist-u{N}`, `hist-u{N}-t{M}`
 - 地理: `geo-u{N}`, `geo-u{N}-t{M}`
 - 公民與社會: `civ-u{N}`, `civ-u{N}-t{M}`
+- 數學: `math-u{N}`, `math-u{N}-t{M}`
 
 ## 工作流程
 

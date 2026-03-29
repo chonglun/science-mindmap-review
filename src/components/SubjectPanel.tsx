@@ -1,11 +1,13 @@
 import React, { useState, useCallback, useRef, useEffect } from 'react';
-import { Star, X, BookOpen, Lightbulb, HelpCircle, ExternalLink, GripVertical } from 'lucide-react';
-import type { Topic } from '../types';
+import { Star, X, BookOpen, Lightbulb, HelpCircle, ExternalLink, GripVertical, Target, AlertTriangle, Route } from 'lucide-react';
+import type { Topic, UnitStrategy } from '../types';
 
 interface SubjectPanelProps {
   topic: Topic | null;
   /** Parent path, e.g. "生物 > 生命的特性與細胞" */
   topicPath?: string;
+  /** Unit-level strategy from the parent unit. */
+  unitStrategy?: UnitStrategy;
   isBookmarked: boolean;
   onToggleBookmark: (topicId: string) => void;
   onClose: () => void;
@@ -18,6 +20,7 @@ const DEFAULT_WIDTH = 384; // sm:w-96
 const SubjectPanel: React.FC<SubjectPanelProps> = ({
   topic,
   topicPath = '',
+  unitStrategy,
   isBookmarked,
   onToggleBookmark,
   onClose,
@@ -146,6 +149,83 @@ const SubjectPanel: React.FC<SubjectPanelProps> = ({
             ))}
           </ul>
         </section>
+
+        {/* 解題策略 */}
+        {topic.examStrategy && (
+          <section>
+            <div className="flex items-center gap-2 mb-2">
+              <Target size={18} className="text-rose-500" />
+              <h3 className="font-semibold text-rose-700">解題策略</h3>
+            </div>
+            <div className="space-y-3">
+              <div className="bg-rose-50 rounded-lg p-3">
+                <p className="text-xs font-medium text-rose-600 mb-1">🧠 出題者思維</p>
+                <p className="text-sm text-gray-700 leading-relaxed">{topic.examStrategy.examinerThinking}</p>
+              </div>
+              <div className="bg-orange-50 rounded-lg p-3">
+                <p className="text-xs font-medium text-orange-600 mb-1">📋 解題 SOP</p>
+                <ol className="space-y-1 ml-4 list-decimal">
+                  {topic.examStrategy.solvingSteps.map((step, i) => (
+                    <li key={i} className="text-sm text-gray-700">{step}</li>
+                  ))}
+                </ol>
+              </div>
+              <div className="bg-emerald-50 rounded-lg p-3">
+                <p className="text-xs font-medium text-emerald-600 mb-1">💡 核心思考法則</p>
+                <ul className="space-y-1">
+                  {topic.examStrategy.thinkingRules.map((rule, i) => (
+                    <li key={i} className="flex items-start gap-2 text-sm text-gray-700">
+                      <span className="mt-1 w-1.5 h-1.5 rounded-full bg-emerald-400 shrink-0" />
+                      <span>{rule}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* 單元策略總覽 */}
+        {unitStrategy && (
+          <section>
+            <div className="flex items-center gap-2 mb-2">
+              <Route size={18} className="text-violet-500" />
+              <h3 className="font-semibold text-violet-700">單元策略總覽</h3>
+            </div>
+            <div className="space-y-3">
+              <div className="bg-violet-50 rounded-lg p-3">
+                <p className="text-xs font-medium text-violet-600 mb-1">🎯 出題者觀點</p>
+                <p className="text-sm text-gray-700 leading-relaxed">{unitStrategy.examinerPerspective}</p>
+              </div>
+              <div className="bg-sky-50 rounded-lg p-3">
+                <p className="text-xs font-medium text-sky-600 mb-1">⚡ 搶分技巧</p>
+                <ul className="space-y-1">
+                  {unitStrategy.scoringTips.map((tip, i) => (
+                    <li key={i} className="flex items-start gap-2 text-sm text-gray-700">
+                      <span className="mt-1 w-1.5 h-1.5 rounded-full bg-sky-400 shrink-0" />
+                      <span>{tip}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="bg-amber-50 rounded-lg p-3">
+                <p className="text-xs font-medium text-amber-600 mb-1"><AlertTriangle size={12} className="inline -mt-0.5 mr-0.5" />常見陷阱</p>
+                <ul className="space-y-1">
+                  {unitStrategy.commonTraps.map((trap, i) => (
+                    <li key={i} className="flex items-start gap-2 text-sm text-gray-700">
+                      <span className="mt-1 w-1.5 h-1.5 rounded-full bg-amber-400 shrink-0" />
+                      <span>{trap}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="bg-teal-50 rounded-lg p-3">
+                <p className="text-xs font-medium text-teal-600 mb-1">🧭 思考路徑</p>
+                <p className="text-sm text-gray-700 leading-relaxed">{unitStrategy.thinkingPath}</p>
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* 歷屆考題 */}
         <section>

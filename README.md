@@ -1,6 +1,6 @@
 # 國中會考心智圖複習網站
 
-互動式心智圖複習網站，涵蓋國中會考五大科目。目前已上線自然科（生物、理化、地球科學）與社會科（歷史、地理、公民與社會），國文、英文、數學即將推出。透過 ReactFlow 心智圖瀏覽各單元主題，查看生活聯想、核心觀念與歷屆考題，並以 localStorage 追蹤閱讀與收藏進度。
+互動式心智圖複習網站，涵蓋國中會考五大科目。目前已上線自然科（生物、理化、地球科學）、社會科（歷史、地理、公民與社會）、國文與數學，英文即將推出。透過 ReactFlow 心智圖瀏覽各單元主題，查看生活聯想、核心觀念與歷屆考題，並以 localStorage 追蹤閱讀與收藏進度。
 
 Built with React 18 + TypeScript 5 + Vite 5 + Tailwind CSS 3 + ReactFlow 11.
 
@@ -27,7 +27,7 @@ science-mindmap-review
 │   │   ├── useExamSubjectId.ts # Route-aware exam subject context
 │   │   └── useUserData.ts      # localStorage: clicked/bookmarked/read topics
 │   ├── types
-│   │   └── index.ts            # SubjectData, Unit, Topic, PastExamQuestion
+│   │   └── index.ts            # SubjectData, Unit, Topic, PastExamQuestion, ExamStrategy, UnitStrategy
 │   └── data
 │       ├── exam-subjects.json         # Exam subject registry
 │       └── subjects/
@@ -38,7 +38,8 @@ science-mindmap-review
 │           ├── history.json
 │           ├── geography.json
 │           ├── civics.json
-│           └── chinese.json
+│           ├── chinese.json
+│           └── math.json
 ├── index.html
 ├── package.json
 ├── vite.config.ts

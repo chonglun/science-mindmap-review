@@ -59,8 +59,9 @@ src/
 │       ├── history.json           # 歷史
 │       ├── geography.json         # 地理
 │       ├── civics.json            # 公民與社會
-│       └── chinese.json           # 國文 (3 units)
-└── types/                  # SubjectData, Unit, Topic, PastExamQuestion, UnitImportance
+│       ├── chinese.json           # 國文 (3 units)
+│       └── math.json              # 數學 (13 units)
+└── types/                  # SubjectData, Unit, Topic, PastExamQuestion, UnitImportance, ExamStrategy, UnitStrategy
 ```
 
 ## Data Architecture

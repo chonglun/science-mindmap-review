@@ -20,5 +20,11 @@
     "subjects": [
       { "id": "chinese", "label": "國文", "color": "#e11d48" }
     ]
+  },
+  "math": {
+    "center": { "id": "math-center", "label": "國中數學" },
+    "subjects": [
+      { "id": "math", "label": "數學", "color": "#8b5cf6" }
+    ]
   }
 }

@@ -5,7 +5,7 @@ import SubjectPanel from '../components/SubjectPanel';
 import { useUserData } from '../hooks/useUserData';
 import { useAllSubjects, findTopicWithPath } from '../hooks/useSubjectData';
 import { useExamSubjectId } from '../hooks/useExamSubjectId';
-import type { Topic } from '../types';
+import type { Topic, UnitStrategy } from '../types';
 
 const MindMapPage: React.FC = () => {
   const { examSubjectId, subjectId } = useParams<{ examSubjectId: string; subjectId?: string }>();
@@ -14,6 +14,7 @@ const MindMapPage: React.FC = () => {
   const { subjects, loading, center } = useAllSubjects(examSubjectId);
   const [selectedTopic, setSelectedTopic] = useState<Topic | null>(null);
   const [topicPath, setTopicPath] = useState<string>('');
+  const [selectedUnitStrategy, setSelectedUnitStrategy] = useState<UnitStrategy | undefined>(undefined);
 
   if (examSubjectId && !isAvailable) {
     return <Navigate to="/" replace />;
@@ -28,6 +29,7 @@ const MindMapPage: React.FC = () => {
         addClickedTopic(nodeId);
         setSelectedTopic(result.topic);
         setTopicPath(result.path);
+        setSelectedUnitStrategy(result.unitStrategy);
       }
     },
     [addClickedTopic, subjects]
@@ -56,6 +58,7 @@ const MindMapPage: React.FC = () => {
       <SubjectPanel
         topic={selectedTopic}
         topicPath={topicPath}
+        unitStrategy={selectedUnitStrategy}
         isBookmarked={selectedTopic ? isBookmarked(selectedTopic.id) : false}
         onToggleBookmark={toggleBookmark}
         onClose={() => setSelectedTopic(null)}

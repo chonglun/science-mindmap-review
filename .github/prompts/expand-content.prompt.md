@@ -23,6 +23,9 @@ argument-hint: "例如：幫理化的電與磁補充歷屆考題、幫歷史臺�
 ### 國文科
 - [chinese.json](../../src/data/subjects/chinese.json) — 國文
 
+### 數學科
+- [math.json](../../src/data/subjects/math.json) — 數學
+
 ## JSON Schema
 
 每個 subject 有 `units[]`，每個 unit 有 `topics[]`：
@@ -32,7 +35,7 @@ unit: { id, name, stage, importance: {stars, level, tip}, topics[] }
 topic: { id, name, hook, coreConcepts[], pastExamQuestions[{year, question, answer}] }
 ```
 
-ID 規則：生物 `bio-u{N}-t{M}`、理化 `pc-u{N}-t{M}`、地科 `es-u{N}-t{M}`、歷史 `hist-u{N}-t{M}`、地理 `geo-u{N}-t{M}`、公民 `civ-u{N}-t{M}`
+ID 規則：生物 `bio-u{N}-t{M}`、理化 `pc-u{N}-t{M}`、地科 `es-u{N}-t{M}`、歷史 `hist-u{N}-t{M}`、地理 `geo-u{N}-t{M}`、公民 `civ-u{N}-t{M}`、數學 `math-u{N}-t{M}`
 
 ## 工作流程
 

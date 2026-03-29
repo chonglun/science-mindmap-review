@@ -84,6 +84,8 @@ export interface TopicWithPath {
   topic: Topic;
   /** e.g. "生物 > 生命的特性與細胞" */
   path: string;
+  /** Unit-level strategy (if the topic belongs to a unit with strategy data). */
+  unitStrategy?: import('../types').UnitStrategy;
 }
 
 export function findTopicWithPath(subjects: SubjectData[], topicId: string): TopicWithPath | null {
@@ -91,7 +93,7 @@ export function findTopicWithPath(subjects: SubjectData[], topicId: string): Top
     if (subject.units) {
       for (const unit of subject.units) {
         const found = unit.topics.find((t) => t.id === topicId);
-        if (found) return { topic: found, path: `${subject.label} > ${unit.name}` };
+        if (found) return { topic: found, path: `${subject.label} > ${unit.name}`, unitStrategy: unit.unitStrategy };
       }
     }
     if (subject.topics) {
