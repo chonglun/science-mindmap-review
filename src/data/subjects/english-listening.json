@@ -9,7 +9,7 @@
       "stage": "七～八年級",
       "importance": {
         "stars": 2,
-        "level": "基礎必備",
+        "level": "中出題率",
         "tip": "辨識句意約10題，是聽力最容易得分的部分"
       },
       "unitStrategy": {
@@ -173,7 +173,7 @@
       "stage": "七～九年級",
       "importance": {
         "stars": 3,
-        "level": "高頻重點",
+        "level": "高出題率",
         "tip": "基本問答約10題，考日常對話反應，是最常見的聽力題型"
       },
       "unitStrategy": {
@@ -456,7 +456,7 @@
       "stage": "八～九年級",
       "importance": {
         "stars": 3,
-        "level": "高頻重點",
+        "level": "高出題率",
         "tip": "言談理解約10題，是聽力最難的部分，需要理解整段對話的意思"
       },
       "unitStrategy": {

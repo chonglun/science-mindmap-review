@@ -9,7 +9,7 @@
       "stage": "八～九年級",
       "importance": {
         "stars": 3,
-        "level": "最高出題率",
+        "level": "高出題率",
         "tip": "克漏字占約10-15題，是得分效率最高的題型"
       },
       "unitStrategy": {
@@ -113,7 +113,7 @@
                 "bought"
               ],
               "answer": "C",
-              "explanation": "下雨了所以出門前「帶」了傳。brought(bring的過去式)表示帶。bought是買。"
+              "explanation": "下雨了所以出門前「帶」了傘。brought(bring的過去式)表示帶。bought是買。"
             },
             {
               "year": "111年",
@@ -275,7 +275,7 @@
       "stage": "八～九年級",
       "importance": {
         "stars": 3,
-        "level": "最高出題率",
+        "level": "高出題率",
         "tip": "閱讀測驗占約12-18題，是英文程度分級的主要依據"
       },
       "unitStrategy": {
@@ -320,7 +320,7 @@
             {
               "year": "108年",
               "question": "What is the main idea of the second paragraph?",
-              "answer": "回到第二段找主題句（通常是第一句），抝要該段的核心觀點。",
+              "answer": "回到第二段找主題句（通常是第一句），摘要該段的核心觀點。",
               "explanation": "單段主旨題的答案通常在該段的第一句或最後一句。"
             }
           ],
@@ -367,7 +367,7 @@
               "year": "108年",
               "question": "What did the girl do FIRST in the morning?",
               "answer": "找文章中描述早上活動的段落，按時間順序找出第一件事。注意 first/then/after that 等時間詞。",
-              "explanation": "排序題要找文中的時間順序詞，不能懑感覺作答。"
+              "explanation": "排序題要找文中的時間順序詞，不能憑感覺作答。"
             }
           ],
           "examStrategy": {
@@ -713,7 +713,7 @@
       "stage": "九年級總複習",
       "importance": {
         "stars": 2,
-        "level": "實戰必備",
+        "level": "低出題率",
         "tip": "掌握答題技巧可以在同樣程度下多拿2-3分"
       },
       "unitStrategy": {

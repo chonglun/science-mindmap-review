@@ -9,7 +9,7 @@
       "stage": "七年級",
       "importance": {
         "stars": 2,
-        "level": "基礎必備",
+        "level": "中出題率",
         "tip": "詞類觀念是文法基礎，雖不直接出題但影響所有文法判斷"
       },
       "unitStrategy": {
@@ -291,7 +291,7 @@
       "stage": "七～九年級",
       "importance": {
         "stars": 3,
-        "level": "最高出題率",
+        "level": "高出題率",
         "tip": "時態題幾乎每年出3-5題，是文法題的絕對核心"
       },
       "unitStrategy": {
@@ -1329,7 +1329,7 @@
       "stage": "九年級",
       "importance": {
         "stars": 2,
-        "level": "中高出題率",
+        "level": "中出題率",
         "tip": "不定詞/動名詞、使役動詞每年1-2題"
       },
       "unitStrategy": {
