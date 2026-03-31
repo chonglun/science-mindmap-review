@@ -25,9 +25,7 @@ src/
 │   │   ├── Sidebar.tsx          # 桌面可收合側邊欄 + 手機底部 Tab
 │   │   └── Footer.tsx           # 頁尾（僅桌面）
 │   └── UI/
-│       ├── SearchBar.tsx        # 搜尋元件
-│       ├── TopicCard.tsx        # 科目/主題卡片
-│       └── ProgressTracker.tsx  # 進度追蹤
+│       └── TopicCard.tsx        # 科目/主題卡片
 └── hooks/
     ├── useUserData.ts           # localStorage 狀態（已讀、書籤）
     ├── useSubjectData.ts        # 動態載入科目 JSON 資料

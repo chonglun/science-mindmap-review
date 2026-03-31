@@ -10,8 +10,6 @@ tools: [read, edit, search, execute]
 ## 專案資料結構
 
 資料檔案位於 `src/data/subjects/`：
-- `index.json` — 輕量索引（id, label, color）
-
 ### 自然科
 - `biology.json` — 生物（10 units）
 - `physics-chemistry.json` — 理化（12 units）

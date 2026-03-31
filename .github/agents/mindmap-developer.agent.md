@@ -14,8 +14,7 @@ src/components/MindMap/
 ├── MindMapCanvas.tsx    # 畫布主元件：節點/邊建構、佈局算法、展開收合、ReactFlowProvider 包裹
 ├── TopicNode.tsx        # 科目層節點（彩色圓角，含展開/收合箭頭）
 ├── UnitNode.tsx         # 單元層節點（白底色框，含重要度星級、展開/收合）
-├── SubtopicNode.tsx     # 主題層葉節點（白底，已讀綠框 ✓）
-└── CustomEdge.tsx       # 自定義邊線
+└── SubtopicNode.tsx     # 主題層葉節點（白底，已讀綠框 ✓）
 ```
 
 ## 關鍵架構

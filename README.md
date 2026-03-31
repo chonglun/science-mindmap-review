@@ -54,10 +54,10 @@ src/
 │   │   ├── MindMapCanvas.tsx        # 4 層節點/邊圖形；ReactFlowProvider 包裹
 │   │   ├── TopicNode.tsx            # 中心 + 科目層節點（彩色背景）
 │   │   ├── UnitNode.tsx             # 單元層節點（重要度星級、學期標籤）
-│   │   ├── SubtopicNode.tsx         # 葉層主題節點（已讀綠框 ✓）
-│   │   └── CustomEdge.tsx           # 彩色動畫邊線
+│   │   └── SubtopicNode.tsx         # 葉層主題節點（已讀綠框 ✓）
 │   ├── SubjectPanel.tsx             # 可調寬度右側詳情面板
-│   └── UI/                          # SearchBar, TopicCard, ProgressTracker
+│   └── UI/
+│       └── TopicCard.tsx            # 科目/主題卡片
 ├── pages/
 │   ├── SubjectSelectionPage.tsx     # 選科首頁 (/)
 │   ├── HomePage.tsx                 # 科目卡片 (/subject/:examSubjectId)

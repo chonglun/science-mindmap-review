@@ -20,8 +20,6 @@ const MindMapPage: React.FC = () => {
     return <Navigate to="/" replace />;
   }
 
-  const filteredSubjects = subjects;
-
   const handleNodeClick = useCallback(
     (nodeId: string) => {
       const result = findTopicWithPath(subjects, nodeId);
@@ -50,7 +48,7 @@ const MindMapPage: React.FC = () => {
         readTopics={readTopics}
         onNodeClick={handleNodeClick}
         onToggleRead={toggleReadTopic}
-        subjects={filteredSubjects}
+        subjects={subjects}
         center={center}
         focusSubjectId={subjectId}
       />

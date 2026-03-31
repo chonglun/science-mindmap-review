@@ -36,10 +36,10 @@ src/
 │   │   ├── MindMapCanvas   # 4-level node/edge graph; ReactFlowProvider wrapper; focusSubjectId auto-focus
 │   │   ├── TopicNode       # Center + Subject-level nodes (colored bg)
 │   │   ├── UnitNode        # Unit-level nodes (importance stars, stage label)
-│   │   ├── SubtopicNode    # Leaf topic nodes (green border + ✓ when read)
-│   │   └── CustomEdge      # Colored animated edges
+│   │   └── SubtopicNode    # Leaf topic nodes (green border + ✓ when read)
 │   ├── SubjectPanel.tsx    # Resizable right-side detail panel (hook, concepts, exam Qs)
-│   └── UI/                 # SearchBar, TopicCard, ProgressTracker
+│   └── UI/
+│       └── TopicCard.tsx   # Subject/topic card component
 ├── pages/
 │   ├── SubjectSelectionPage.tsx  # Landing page (/)
 │   ├── HomePage.tsx              # Subject cards (/subject/:examSubjectId)
@@ -52,7 +52,6 @@ src/
 ├── data/
 │   ├── exam-subjects.json  # Exam subject registry (自然科, 社會科, etc.)
 │   └── subjects/
-│       ├── index.json             # Legacy metadata (自然科 only); new code uses exam-subjects.json
 │       ├── biology.json           # 生物 (10 units)
 │       ├── physics-chemistry.json # 理化 (12 units)
 │       ├── earth-science.json     # 地球科學 (6 units)
@@ -73,8 +72,8 @@ src/
 ### Hierarchy: center → subjects → units → topics
 
 ```
-index.json (static import — metadata only)
-  └─ subjects[] → { id, label, color }
+exam-subjects.json (static import — exam subject registry)
+  └─ examSubjects[] → { id, label, subjects[] → { id, label, color } }
 
 <subject>.json (dynamic import — loaded on demand, cached)
   └─ units[]
@@ -135,7 +134,7 @@ index.json (static import — metadata only)
 
 ## Custom Agents
 
-See `.github/agents/` — six specialized agents are defined for content expansion, mind-map development, UI work, code quality, code review, and documentation.
+See `.github/agents/` — seven specialized agents are defined for content expansion, mind-map development, UI work, code quality, code review, documentation, and **domain expert review** (學科內容審查).
 
 ## Skills
 

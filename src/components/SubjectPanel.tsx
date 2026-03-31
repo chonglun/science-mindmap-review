@@ -254,13 +254,23 @@ const SubjectPanel: React.FC<SubjectPanelProps> = ({
                   </a>
                 </div>
                 <p className="text-sm text-gray-800 mb-2">{q.question}</p>
+                {q.options && q.options.length > 0 && (
+                  <ul className="mb-2 space-y-0.5">
+                    {q.options.map((opt, oi) => (
+                      <li key={oi} className="text-sm text-gray-600 pl-2">{opt}</li>
+                    ))}
+                  </ul>
+                )}
                 <details className="group">
                   <summary className="text-xs text-blue-600 cursor-pointer hover:text-blue-800 select-none">
                     顯示答案
                   </summary>
-                  <p className="mt-1.5 text-sm text-green-700 bg-green-50 rounded p-2">
-                    {q.answer}
-                  </p>
+                  <div className="mt-1.5 text-sm text-green-700 bg-green-50 rounded p-2">
+                    <p>{q.answer}</p>
+                    {q.explanation && (
+                      <p className="mt-1 text-gray-600 text-xs border-t border-green-100 pt-1">{q.explanation}</p>
+                    )}
+                  </div>
                 </details>
               </div>
             ))}

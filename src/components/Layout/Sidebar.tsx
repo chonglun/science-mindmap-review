@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Leaf, Atom, Globe, ArrowLeft, BookOpen, MapPin, Scale, PanelLeftClose, PanelLeftOpen, type LucideIcon } from 'lucide-react';
+import { Leaf, Atom, Globe, ArrowLeft, BookOpen, MapPin, Scale, PanelLeftClose, PanelLeftOpen, Languages, Calculator, Pen, BookOpenCheck, Headphones, FileText, type LucideIcon } from 'lucide-react';
 import { useExamSubjectId } from '../../hooks/useExamSubjectId';
 
 const subjectsByExam: Record<string, { id: string; label: string; icon: LucideIcon; color: string; bg: string }[]> = {
@@ -13,6 +13,18 @@ const subjectsByExam: Record<string, { id: string; label: string; icon: LucideIc
     { id: 'history', label: '歷史', icon: BookOpen, color: 'text-red-400', bg: 'bg-red-900/30' },
     { id: 'geography', label: '地理', icon: MapPin, color: 'text-cyan-400', bg: 'bg-cyan-900/30' },
     { id: 'civics', label: '公民與社會', icon: Scale, color: 'text-purple-400', bg: 'bg-purple-900/30' },
+  ],
+  chinese: [
+    { id: 'chinese', label: '國文', icon: Pen, color: 'text-rose-400', bg: 'bg-rose-900/30' },
+  ],
+  english: [
+    { id: 'english-vocabulary', label: '字彙與片語', icon: Languages, color: 'text-violet-400', bg: 'bg-violet-900/30' },
+    { id: 'english-grammar', label: '文法句型', icon: BookOpenCheck, color: 'text-blue-400', bg: 'bg-blue-900/30' },
+    { id: 'english-reading', label: '閱讀與題型', icon: FileText, color: 'text-cyan-400', bg: 'bg-cyan-900/30' },
+    { id: 'english-listening', label: '聽力測驗', icon: Headphones, color: 'text-amber-400', bg: 'bg-amber-900/30' },
+  ],
+  math: [
+    { id: 'math', label: '數學', icon: Calculator, color: 'text-violet-400', bg: 'bg-violet-900/30' },
   ],
 };
 
