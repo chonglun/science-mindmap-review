@@ -22,7 +22,7 @@ export const examSubjectRegistry = examSubjectsData as Record<string, SubjectInd
 // Cache loaded subject data in memory to avoid re-importing
 const subjectCache: Record<string, SubjectData> = {};
 
-async function loadSubject(id: string): Promise<SubjectData> {
+export async function loadSubject(id: string): Promise<SubjectData> {
   if (subjectCache[id]) return subjectCache[id];
   // Dynamic import — Vite will code-split each JSON into its own chunk
   const mod = await import(`../data/subjects/${id}.json`);

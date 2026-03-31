@@ -49,7 +49,7 @@ src/
 ├── main.tsx                         # 應用程式入口
 ├── index.css                        # Tailwind 全域樣式
 ├── components/
-│   ├── Layout/                      # Header, Sidebar (可收合), Footer
+│   ├── Layout/                      # Header, SearchBar, Sidebar (可收合), Footer
 │   ├── MindMap/
 │   │   ├── MindMapCanvas.tsx        # 4 層節點/邊圖形；ReactFlowProvider 包裹
 │   │   ├── TopicNode.tsx            # 中心 + 科目層節點（彩色背景）
@@ -66,6 +66,7 @@ src/
 ├── hooks/
 │   ├── useSubjectData.ts            # 動態載入科目 JSON + 記憶體快取
 │   ├── useExamSubjectId.ts          # 路由感知的考試科目 ID
+│   ├── useSearch.ts                 # 跨科主題搜尋
 │   └── useUserData.ts              # localStorage 狀態管理
 ├── types/
 │   └── index.ts                     # SubjectData, Unit, Topic, PastExamQuestion 等型別

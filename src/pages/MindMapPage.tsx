@@ -1,5 +1,5 @@
-import React, { useState, useCallback } from 'react';
-import { useParams, Navigate } from 'react-router-dom';
+import React, { useState, useCallback, useEffect, useRef } from 'react';
+import { useParams, Navigate, useSearchParams } from 'react-router-dom';
 import MindMapCanvas from '../components/MindMap/MindMapCanvas';
 import SubjectPanel from '../components/SubjectPanel';
 import { useUserData } from '../hooks/useUserData';
@@ -9,12 +9,32 @@ import type { Topic, UnitStrategy } from '../types';
 
 const MindMapPage: React.FC = () => {
   const { examSubjectId, subjectId } = useParams<{ examSubjectId: string; subjectId?: string }>();
+  const [searchParams, setSearchParams] = useSearchParams();
   const { isAvailable } = useExamSubjectId();
   const { clickedTopics, readTopics, addClickedTopic, toggleBookmark, toggleReadTopic, isBookmarked } = useUserData();
   const { subjects, loading, center } = useAllSubjects(examSubjectId);
   const [selectedTopic, setSelectedTopic] = useState<Topic | null>(null);
   const [topicPath, setTopicPath] = useState<string>('');
   const [selectedUnitStrategy, setSelectedUnitStrategy] = useState<UnitStrategy | undefined>(undefined);
+  const [focusTopicId, setFocusTopicId] = useState<string | undefined>(undefined);
+
+  // Auto-select topic from ?topic= query param (e.g. from search)
+  const topicParam = searchParams.get('topic');
+  const processedTopicRef = useRef<string | null>(null);
+  useEffect(() => {
+    if (!topicParam || subjects.length === 0 || processedTopicRef.current === topicParam) return;
+    processedTopicRef.current = topicParam;
+    const result = findTopicWithPath(subjects, topicParam);
+    if (result) {
+      addClickedTopic(topicParam);
+      setSelectedTopic(result.topic);
+      setTopicPath(result.path);
+      setSelectedUnitStrategy(result.unitStrategy);
+      setFocusTopicId(topicParam);
+    }
+    // Clear the query param to avoid re-triggering
+    setSearchParams({}, { replace: true });
+  }, [topicParam, subjects, addClickedTopic, setSearchParams]);
 
   if (examSubjectId && !isAvailable) {
     return <Navigate to="/" replace />;
@@ -22,6 +42,7 @@ const MindMapPage: React.FC = () => {
 
   const handleNodeClick = useCallback(
     (nodeId: string) => {
+      setFocusTopicId(undefined);
       const result = findTopicWithPath(subjects, nodeId);
       if (result) {
         addClickedTopic(nodeId);
@@ -51,6 +72,7 @@ const MindMapPage: React.FC = () => {
         subjects={subjects}
         center={center}
         focusSubjectId={subjectId}
+        focusTopicId={focusTopicId}
       />
 
       <SubjectPanel
@@ -59,7 +81,7 @@ const MindMapPage: React.FC = () => {
         unitStrategy={selectedUnitStrategy}
         isBookmarked={selectedTopic ? isBookmarked(selectedTopic.id) : false}
         onToggleBookmark={toggleBookmark}
-        onClose={() => setSelectedTopic(null)}
+        onClose={() => { setSelectedTopic(null); setFocusTopicId(undefined); }}
       />
     </div>
   );

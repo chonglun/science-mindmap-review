@@ -21,7 +21,8 @@ src/
 ├── components/
 │   ├── SubjectPanel.tsx         # 右側滑出面板（主題詳情、考題、書籤）
 │   ├── Layout/
-│   │   ├── Header.tsx           # 頂部導覽列（Indigo 色）
+│   │   ├── Header.tsx           # 頂部導覽列（Indigo 色，含搜尋）
+│   │   ├── SearchBar.tsx        # 全科搜尋元件（下拉結果列表）
 │   │   ├── Sidebar.tsx          # 桌面可收合側邊欄 + 手機底部 Tab
 │   │   └── Footer.tsx           # 頁尾（僅桌面）
 │   └── UI/
@@ -29,7 +30,8 @@ src/
 └── hooks/
     ├── useUserData.ts           # localStorage 狀態（已讀、書籤）
     ├── useSubjectData.ts        # 動態載入科目 JSON 資料
-    └── useExamSubjectId.ts      # 路由感知的考試科目 ID
+    ├── useExamSubjectId.ts      # 路由感知的考試科目 ID
+    └── useSearch.ts             # 跨科搜尋邏輯與結果管理
 ```
 
 ## 技術規範

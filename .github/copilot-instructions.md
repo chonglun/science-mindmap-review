@@ -31,9 +31,9 @@ npx tsc --noEmit # Type-check without emitting
 ```
 src/
 ├── components/
-│   ├── Layout/             # Header, Sidebar (collapsible), Footer (app shell)
+│   ├── Layout/             # Header, SearchBar, Sidebar (collapsible), Footer (app shell)
 │   ├── MindMap/
-│   │   ├── MindMapCanvas   # 4-level node/edge graph; ReactFlowProvider wrapper; focusSubjectId auto-focus
+│   │   ├── MindMapCanvas   # 4-level node/edge graph; ReactFlowProvider wrapper; focusSubjectId/focusTopicId auto-focus
 │   │   ├── TopicNode       # Center + Subject-level nodes (colored bg)
 │   │   ├── UnitNode        # Unit-level nodes (importance stars, stage label)
 │   │   └── SubtopicNode    # Leaf topic nodes (green border + ✓ when read)
@@ -48,6 +48,7 @@ src/
 ├── hooks/
 │   ├── useSubjectData.ts   # Dynamic import + cache for subject JSON (code splitting)
 │   ├── useExamSubjectId.ts # Route-aware exam subject context extraction
+│   ├── useSearch.ts        # Global topic search across all exam subjects
 │   └── useUserData.ts      # localStorage: clicked / bookmarked / read topics
 ├── data/
 │   ├── exam-subjects.json  # Exam subject registry (自然科, 社會科, etc.)
@@ -118,7 +119,7 @@ exam-subjects.json (static import — exam subject registry)
 - **Collapse/expand**: Tracked via `collapsedNodes` Set. Collapsed children are excluded from the node array (not hidden via CSS). Positions recalculate dynamically.
 - Node click: if `node.data.childCount != null` → toggle collapse; otherwise → open detail panel.
 - Subject node colors come from subject data. Read topics show green border + ✓ badge.
-- **Auto-focus**: `MindMapCanvas` accepts `focusSubjectId` prop; wraps inner component in `ReactFlowProvider` and uses `useReactFlow().fitView()` to animate focus to selected subject nodes.
+- **Auto-focus**: `MindMapCanvas` accepts `focusSubjectId` and `focusTopicId` props; wraps inner component in `ReactFlowProvider` and uses `useReactFlow().fitView()` to animate focus to selected subject or topic nodes.
 
 ### Language
 - UI labels, topic content, and exam questions are all in **Traditional Chinese (繁體中文)**.

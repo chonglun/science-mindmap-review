@@ -20,11 +20,35 @@ interface MindMapCanvasProps {
   subjects: SubjectData[];
   center: { id: string; label: string };
   focusSubjectId?: string;
+  focusTopicId?: string;
 }
 
-const MindMapCanvasInner: React.FC<MindMapCanvasProps> = ({ clickedTopics, readTopics, onNodeClick, onToggleRead, subjects, center, focusSubjectId }) => {
+const MindMapCanvasInner: React.FC<MindMapCanvasProps> = ({ clickedTopics, readTopics, onNodeClick, onToggleRead, subjects, center, focusSubjectId, focusTopicId }) => {
   // Track which nodes are collapsed (subject ids and unit ids)
   const [collapsedNodes, setCollapsedNodes] = useState<Set<string>>(new Set());
+
+  // Auto-expand parent nodes when focusTopicId is set (from search navigation)
+  useEffect(() => {
+    if (!focusTopicId) return;
+    setCollapsedNodes((prev) => {
+      if (prev.size === 0) return prev; // nothing to expand
+      const next = new Set(prev);
+      for (const subject of subjects) {
+        if (subject.units) {
+          for (const unit of subject.units) {
+            if (unit.topics.some((t) => t.id === focusTopicId)) {
+              next.delete(subject.id);
+              next.delete(unit.id);
+            }
+          }
+        }
+        if (subject.topics?.some((t) => t.id === focusTopicId)) {
+          next.delete(subject.id);
+        }
+      }
+      return next;
+    });
+  }, [focusTopicId, subjects]);
 
   const toggleCollapse = useCallback((nodeId: string) => {
     setCollapsedNodes((prev) => {
@@ -215,22 +239,30 @@ const MindMapCanvasInner: React.FC<MindMapCanvasProps> = ({ clickedTopics, readT
     return ids.size > 0 ? ids : null;
   }, [focusSubjectId, subjects]);
 
-  // Auto-focus: fit view on initial mount, or zoom to focused subject when focusSubjectId changes.
+  // Auto-focus: fit view on initial mount, or zoom to focused subject/topic when focus changes.
   // IMPORTANT: must NOT re-trigger when nodes change (e.g. clicking a topic updates isClicked).
   const { fitView } = useReactFlow();
   const hasInitialFit = useRef(false);
   const prevFocusRef = useRef<string | undefined>(undefined);
+  const prevTopicFocusRef = useRef<string | undefined>(undefined);
 
   useEffect(() => {
-    // Skip if already fitted and focusSubjectId hasn't changed
-    if (hasInitialFit.current && prevFocusRef.current === focusSubjectId) return;
+    const focusChanged = prevFocusRef.current !== focusSubjectId || prevTopicFocusRef.current !== focusTopicId;
+    if (hasInitialFit.current && !focusChanged) return;
     if (nodes.length === 0) return;
 
     hasInitialFit.current = true;
     prevFocusRef.current = focusSubjectId;
+    prevTopicFocusRef.current = focusTopicId;
 
     const timer = setTimeout(() => {
-      if (focusNodeIds) {
+      if (focusTopicId) {
+        // Focus on single topic node (from search)
+        const topicNode = nodes.filter((n) => n.id === focusTopicId);
+        if (topicNode.length > 0) {
+          fitView({ padding: 0.5, duration: 400, nodes: topicNode });
+        }
+      } else if (focusNodeIds) {
         fitView({
           padding: 0.15,
           duration: 400,
@@ -241,7 +273,7 @@ const MindMapCanvasInner: React.FC<MindMapCanvasProps> = ({ clickedTopics, readT
       }
     }, 50);
     return () => clearTimeout(timer);
-  }, [focusNodeIds, fitView, nodes, focusSubjectId]);
+  }, [focusNodeIds, fitView, nodes, focusSubjectId, focusTopicId]);
 
   const handleNodeClick = useCallback((_: React.MouseEvent, node: Node) => {
     // If node has children (subject or unit with childCount), toggle collapse
