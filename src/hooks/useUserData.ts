@@ -71,11 +71,6 @@ export function useUserData() {
     );
   }, []);
 
-  const isClicked = useCallback(
-    (topicId: string) => clickedTopics.includes(topicId),
-    [clickedTopics]
-  );
-
   const isBookmarked = useCallback(
     (topicId: string) => bookmarkedTopics.includes(topicId),
     [bookmarkedTopics]
@@ -89,20 +84,11 @@ export function useUserData() {
     );
   }, []);
 
-  const isRead = useCallback(
-    (topicId: string) => readTopics.includes(topicId),
-    [readTopics]
-  );
-
   return {
-    clickedTopics,
-    bookmarkedTopics,
     readTopics,
     addClickedTopic,
     toggleBookmark,
     toggleReadTopic,
-    isClicked,
     isBookmarked,
-    isRead,
   };
 }

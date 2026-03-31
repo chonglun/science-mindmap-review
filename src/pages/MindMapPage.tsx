@@ -11,7 +11,7 @@ const MindMapPage: React.FC = () => {
   const { examSubjectId, subjectId } = useParams<{ examSubjectId: string; subjectId?: string }>();
   const [searchParams, setSearchParams] = useSearchParams();
   const { isAvailable } = useExamSubjectId();
-  const { clickedTopics, readTopics, addClickedTopic, toggleBookmark, toggleReadTopic, isBookmarked } = useUserData();
+  const { readTopics, addClickedTopic, toggleBookmark, toggleReadTopic, isBookmarked } = useUserData();
   const { subjects, loading, center } = useAllSubjects(examSubjectId);
   const [selectedTopic, setSelectedTopic] = useState<Topic | null>(null);
   const [topicPath, setTopicPath] = useState<string>('');
@@ -34,6 +34,8 @@ const MindMapPage: React.FC = () => {
     }
     // Clear the query param to avoid re-triggering
     setSearchParams({}, { replace: true });
+    // Allow the same topic to be re-searched later (safe because topicParam is already cleared above)
+    processedTopicRef.current = null;
   }, [topicParam, subjects, addClickedTopic, setSearchParams]);
 
   if (examSubjectId && !isAvailable) {
@@ -65,7 +67,6 @@ const MindMapPage: React.FC = () => {
   return (
     <div className="relative h-[calc(100vh-96px)] md:h-[calc(100vh-130px)]">
       <MindMapCanvas
-        clickedTopics={clickedTopics}
         readTopics={readTopics}
         onNodeClick={handleNodeClick}
         onToggleRead={toggleReadTopic}

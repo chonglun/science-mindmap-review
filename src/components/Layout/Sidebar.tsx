@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Leaf, Atom, Globe, ArrowLeft, BookOpen, MapPin, Scale, PanelLeftClose, PanelLeftOpen, Languages, Calculator, Pen, BookOpenCheck, Headphones, FileText, type LucideIcon } from 'lucide-react';
+import React, { useState, useRef } from 'react';
+import { Link, useMatch } from 'react-router-dom';
+import { Leaf, Atom, Globe, ArrowLeft, BookOpen, MapPin, Scale, PanelLeftClose, PanelLeftOpen, Languages, Calculator, Pen, BookOpenCheck, Headphones, FileText, Search, type LucideIcon } from 'lucide-react';
 import { useExamSubjectId } from '../../hooks/useExamSubjectId';
+import SidebarSearch from './SidebarSearch';
 
 const subjectsByExam: Record<string, { id: string; label: string; icon: LucideIcon; color: string; bg: string }[]> = {
   science: [
@@ -31,6 +32,9 @@ const subjectsByExam: Record<string, { id: string; label: string; icon: LucideIc
 const Sidebar: React.FC = () => {
     const { examSubjectId, activeSubjectId } = useExamSubjectId();
     const [collapsed, setCollapsed] = useState(false);
+    const [searchFocusRequested, setSearchFocusRequested] = useState(false);
+    const searchInputRef = useRef<HTMLInputElement>(null);
+    const isMindMapRoute = !!useMatch('/mindmap/:examSubjectId/*');
 
     // Don't render sidebar on subject selection page
     if (!examSubjectId) return null;
@@ -43,14 +47,28 @@ const Sidebar: React.FC = () => {
             <aside className={`hidden md:flex flex-col bg-gray-800 text-white shrink-0 transition-all duration-300 ${collapsed ? 'w-14' : 'w-52'}`}>
                 <div className={`flex-1 ${collapsed ? 'px-2 py-4' : 'p-4'} overflow-hidden`}>
                     {collapsed ? (
-                        <Link to="/" className="flex justify-center text-gray-400 hover:text-white mb-4" title="回科目選擇">
-                            <ArrowLeft size={16} />
-                        </Link>
+                        <>
+                            <Link to="/" className="flex justify-center text-gray-400 hover:text-white mb-3" title="回科目選擇">
+                                <ArrowLeft size={16} />
+                            </Link>
+                            {isMindMapRoute && (
+                                <button
+                                    onClick={() => { setCollapsed(false); setSearchFocusRequested(true); }}
+                                    className="w-full flex justify-center text-gray-400 hover:text-white mb-3"
+                                    title="搜尋本科主題"
+                                >
+                                    <Search size={16} />
+                                </button>
+                            )}
+                        </>
                     ) : (
-                        <Link to="/" className="flex items-center gap-2 text-gray-400 hover:text-white text-sm mb-4">
-                            <ArrowLeft size={14} />
-                            <span>回科目選擇</span>
-                        </Link>
+                        <>
+                            <Link to="/" className="flex items-center gap-2 text-gray-400 hover:text-white text-sm mb-3">
+                                <ArrowLeft size={14} />
+                                <span>回科目選擇</span>
+                            </Link>
+                            {isMindMapRoute && <SidebarSearch inputRef={searchInputRef} autoFocus={searchFocusRequested} onAutoFocused={() => setSearchFocusRequested(false)} />}
+                        </>
                     )}
                     {subjects.length > 0 ? (
                         <>

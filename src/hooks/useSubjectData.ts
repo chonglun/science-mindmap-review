@@ -31,11 +31,6 @@ export async function loadSubject(id: string): Promise<SubjectData> {
   return data;
 }
 
-export function useSubjectIndex(examSubjectId?: string): SubjectIndex | null {
-  const key = examSubjectId ?? 'science';
-  return examSubjectRegistry[key] ?? null;
-}
-
 /**
  * Lazy-load all subject data for a given exam subject.
  * Returns subjects array (full data) once all are loaded.
@@ -64,22 +59,6 @@ export function useAllSubjects(examSubjectId?: string) {
   const center = index?.center ?? { id: 'center', label: '' };
 
   return { subjects, loading, center };
-}
-
-/**
- * Load a single subject's full data on demand.
- */
-export function useSubjectDetail(subjectId: string | null) {
-  const [data, setData] = useState<SubjectData | null>(null);
-  const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    if (!subjectId) { setData(null); return; }
-    setLoading(true);
-    loadSubject(subjectId).then((d) => { setData(d); setLoading(false); });
-  }, [subjectId]);
-
-  return { data, loading };
 }
 
 export interface TopicWithPath {

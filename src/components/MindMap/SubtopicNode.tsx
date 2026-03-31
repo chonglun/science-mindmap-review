@@ -5,7 +5,6 @@ interface SubtopicNodeProps {
   data: {
     label: string;
     color?: string;
-    isClicked?: boolean;
     isRead?: boolean;
     onToggleRead?: (topicId: string) => void;
     topicId?: string;

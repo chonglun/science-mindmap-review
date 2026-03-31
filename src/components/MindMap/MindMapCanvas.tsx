@@ -4,7 +4,7 @@ import 'reactflow/dist/style.css';
 import TopicNode from './TopicNode';
 import SubtopicNode from './SubtopicNode';
 import UnitNode from './UnitNode';
-import type { SubjectData, Unit, Topic } from '../../types';
+import type { SubjectData } from '../../types';
 
 const nodeTypes = {
   topic: TopicNode,
@@ -13,7 +13,6 @@ const nodeTypes = {
 };
 
 interface MindMapCanvasProps {
-  clickedTopics: string[];
   readTopics: string[];
   onNodeClick: (topicId: string) => void;
   onToggleRead: (topicId: string) => void;
@@ -23,7 +22,7 @@ interface MindMapCanvasProps {
   focusTopicId?: string;
 }
 
-const MindMapCanvasInner: React.FC<MindMapCanvasProps> = ({ clickedTopics, readTopics, onNodeClick, onToggleRead, subjects, center, focusSubjectId, focusTopicId }) => {
+const MindMapCanvasInner: React.FC<MindMapCanvasProps> = ({ readTopics, onNodeClick, onToggleRead, subjects, center, focusSubjectId, focusTopicId }) => {
   // Track which nodes are collapsed (subject ids and unit ids)
   const [collapsedNodes, setCollapsedNodes] = useState<Set<string>>(new Set());
 
@@ -83,7 +82,7 @@ const MindMapCanvasInner: React.FC<MindMapCanvasProps> = ({ clickedTopics, readT
     interface SubjectLayout { subjectId: string; subjectY: number; units: UnitLayout[] }
     const subjectLayouts: SubjectLayout[] = [];
 
-    subjects.forEach((subject, si) => {
+    subjects.forEach((subject) => {
       const unitLayouts: UnitLayout[] = [];
       const hasUnits = !!subject.units;
       const units = hasUnits ? subject.units! : null;
@@ -92,19 +91,19 @@ const MindMapCanvasInner: React.FC<MindMapCanvasProps> = ({ clickedTopics, readT
 
       if (units) {
         if (!subjectCollapsed) {
-          units.forEach((unit, ui) => {
+          units.forEach((unit) => {
             const unitCollapsed = collapsedNodes.has(unit.id);
             const topicYs: number[] = [];
 
             if (!unitCollapsed) {
-              unit.topics.forEach((topic, ti) => {
+              unit.topics.forEach((topic) => {
                 const ty = globalCursorY;
                 topicYs.push(ty);
                 ns.push({
                   id: topic.id,
                   type: 'subtopic',
                   position: { x: TOPIC_X, y: ty },
-                  data: { label: topic.name, color: subject.color, isClicked: clickedTopics.includes(topic.id), isRead: readTopics.includes(topic.id), onToggleRead, topicId: topic.id },
+                  data: { label: topic.name, color: subject.color, isRead: readTopics.includes(topic.id), onToggleRead, topicId: topic.id },
                 });
                 globalCursorY += NODE_H + TOPIC_GAP;
               });
@@ -148,13 +147,13 @@ const MindMapCanvasInner: React.FC<MindMapCanvasProps> = ({ clickedTopics, readT
         }
       } else if (flatTopics) {
         if (!subjectCollapsed) {
-          flatTopics.forEach((topic, ti) => {
+          flatTopics.forEach((topic) => {
             const ty = globalCursorY;
             ns.push({
               id: topic.id,
               type: 'subtopic',
               position: { x: UNIT_X, y: ty },
-              data: { label: topic.name, color: subject.color, isClicked: clickedTopics.includes(topic.id), isRead: readTopics.includes(topic.id), onToggleRead, topicId: topic.id },
+              data: { label: topic.name, color: subject.color, isRead: readTopics.includes(topic.id), onToggleRead, topicId: topic.id },
             });
             unitLayouts.push({ unitId: topic.id, unitY: ty, topicYs: [ty] });
             globalCursorY += NODE_H + TOPIC_GAP;
@@ -176,7 +175,7 @@ const MindMapCanvasInner: React.FC<MindMapCanvasProps> = ({ clickedTopics, readT
         id: subject.id,
         type: 'topic',
         position: { x: SUBJECT_X, y: subjectY },
-        data: { label: subject.label, color: subject.color, isClicked: false, isCenter: false, isCollapsed: subjectCollapsed, childCount: subjectChildCount },
+        data: { label: subject.label, color: subject.color, isCenter: false, isCollapsed: subjectCollapsed, childCount: subjectChildCount },
       });
 
       // Edges: subject → units (or direct topics), only if not collapsed
@@ -203,7 +202,7 @@ const MindMapCanvasInner: React.FC<MindMapCanvasProps> = ({ clickedTopics, readT
       id: center.id,
       type: 'topic',
       position: { x: CENTER_X, y: centerY },
-      data: { label: center.label, color: '#6366f1', isClicked: false, isCenter: true },
+      data: { label: center.label, color: '#6366f1', isCenter: true },
     });
 
     subjects.forEach((subject) => {
@@ -217,7 +216,7 @@ const MindMapCanvasInner: React.FC<MindMapCanvasProps> = ({ clickedTopics, readT
     });
 
     return { nodes: ns, edges: es };
-  }, [clickedTopics, readTopics, subjects, center, collapsedNodes, onToggleRead]);
+  }, [readTopics, subjects, center, collapsedNodes, onToggleRead]);
 
   // Collect node IDs belonging to the focused subject (subject + its units + their topics)
   const focusNodeIds = useMemo(() => {

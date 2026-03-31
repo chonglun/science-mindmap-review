@@ -22,6 +22,7 @@ npm run build    # Production build → dist/
 npm run serve    # Preview dist/ locally
 npm run deploy   # Deploy dist/ to GitHub Pages (gh-pages -d dist)
 npx tsc --noEmit # Type-check without emitting
+npx eslint src/  # Lint check (TypeScript-aware)
 ```
 
 > **SSL note**: Corporate proxy may block npm registry. If `npm install` hangs, run `npm config set strict-ssl false` first.
@@ -31,7 +32,7 @@ npx tsc --noEmit # Type-check without emitting
 ```
 src/
 ├── components/
-│   ├── Layout/             # Header, SearchBar, Sidebar (collapsible), Footer (app shell)
+│   ├── Layout/             # Header, SearchBar, Sidebar (collapsible), SidebarSearch (mind-map scoped), Footer
 │   ├── MindMap/
 │   │   ├── MindMapCanvas   # 4-level node/edge graph; ReactFlowProvider wrapper; focusSubjectId/focusTopicId auto-focus
 │   │   ├── TopicNode       # Center + Subject-level nodes (colored bg)
@@ -46,10 +47,10 @@ src/
 │   ├── MindMapPage.tsx           # Mind map view (/mindmap/:examSubjectId/:subjectId?)
 │   └── TopicListPage.tsx         # Flat topic list (/topics/:examSubjectId)
 ├── hooks/
-│   ├── useSubjectData.ts   # Dynamic import + cache for subject JSON (code splitting)
+│   ├── useSubjectData.ts   # Dynamic import + cache for subject JSON (code splitting); useAllSubjects, findTopicWithPath
 │   ├── useExamSubjectId.ts # Route-aware exam subject context extraction
 │   ├── useSearch.ts        # Global topic search across all exam subjects
-│   └── useUserData.ts      # localStorage: clicked / bookmarked / read topics
+│   └── useUserData.ts      # localStorage: bookmarked / read topics tracking
 ├── data/
 │   ├── exam-subjects.json  # Exam subject registry (自然科, 社會科, etc.)
 │   └── subjects/

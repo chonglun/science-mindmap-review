@@ -22,10 +22,11 @@ npm run dev      # 開發伺服器 → http://localhost:3000
 
 ```bash
 npx tsc --noEmit   # TypeScript 型別檢查
+npx eslint src/     # ESLint 程式碼檢查
 npm run build       # 正式版建置
 ```
 
-提交前請確保以上兩個指令都能通過。
+提交前請確保以上三個指令都能通過。
 
 ## 專案架構
 

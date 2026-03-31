@@ -11,6 +11,7 @@ Built with React 18 + TypeScript 5 + Vite 5 + Tailwind CSS 3 + ReactFlow 11.
 - **主題詳情面板**：生活聯想（hook）、核心觀念、歷屆考題與解析
 - **應考策略**：部分科目含解題步驟、出題方向、常見陷阱提示
 - **閱讀進度追蹤**（localStorage）：已讀 ✓、收藏 ☆
+- **側邊欄搜尋**：心智圖頁面 Sidebar 內建搜尋（主題名稱、單元名稱、核心概念），直接聚焦節點
 - **可調整寬度**的側邊詳情面板
 - **響應式設計**：桌面側邊欄 + 手機底部 Tab Bar
 - **GitHub Pages 自動部署**（GitHub Actions）
@@ -40,6 +41,7 @@ npm run dev
 | `npm run serve` | 本機預覽 `dist/` |
 | `npm run deploy` | 部署 `dist/` 至 GitHub Pages（gh-pages -d dist） |
 | `npx tsc --noEmit` | TypeScript 型別檢查（不產出檔案） |
+| `npx eslint src/` | ESLint 程式碼檢查 |
 
 ## 專案結構
 
@@ -49,7 +51,7 @@ src/
 ├── main.tsx                         # 應用程式入口
 ├── index.css                        # Tailwind 全域樣式
 ├── components/
-│   ├── Layout/                      # Header, SearchBar, Sidebar (可收合), Footer
+│   ├── Layout/                      # Header, SearchBar, Sidebar (可收合), SidebarSearch, Footer
 │   ├── MindMap/
 │   │   ├── MindMapCanvas.tsx        # 4 層節點/邊圖形；ReactFlowProvider 包裹
 │   │   ├── TopicNode.tsx            # 中心 + 科目層節點（彩色背景）
@@ -73,7 +75,6 @@ src/
 └── data/
     ├── exam-subjects.json           # 考試科目註冊表（5 大科）
     └── subjects/
-        ├── index.json               # 輕量科目索引（僅 id, label, color）
         ├── biology.json             # 生物（10 單元）
         ├── physics-chemistry.json   # 理化（12 單元）
         ├── earth-science.json       # 地球科學（6 單元）

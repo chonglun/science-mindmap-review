@@ -6,7 +6,6 @@ interface TopicNodeProps {
   data: {
     label: string;
     color?: string;
-    isClicked?: boolean;
     isCenter?: boolean;
     isCollapsed?: boolean;
     childCount?: number;

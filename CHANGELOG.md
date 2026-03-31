@@ -8,6 +8,18 @@
 - `doc-writer` agent — 專案文件撰寫與維護 agent
 - `CONTRIBUTING.md` — 貢獻指南
 - `CHANGELOG.md` — 版本變更紀錄
+- Sidebar 搜尋功能（`SidebarSearch`）— 心智圖頁面左側 Sidebar 可搜尋當前考科的主題名稱、單元名稱、核心概念，點擊結果自動聚焦節點並開啟詳情面板
+- ESLint TypeScript 支援 — 加入 `@typescript-eslint/parser` + `@typescript-eslint/eslint-plugin`
+
+### Changed
+- `main.tsx` 從 `ReactDOM.render`（已棄用）遷移至 React 18 `createRoot` API
+- 搜尋結果兩階段排序：名稱/概念直接匹配優先，單元名稱匹配補充（每 unit 限 3 筆）
+
+### Removed
+- 移除未使用的 `isClicked` prop 整條傳遞鏈（useUserData → MindMapPage → MindMapCanvas → SubtopicNode/TopicNode）
+- 移除未使用的 hook exports：`useSubjectIndex`、`useSubjectDetail`、`isClicked`、`isRead`、`bookmarkedTopics`
+- 移除未使用的 `public/data/mindmaps.json` placeholder 檔案
+- 移除 MindMapCanvas 中未使用的 forEach index 參數及 type imports
 
 ## [1.0.0]
 
