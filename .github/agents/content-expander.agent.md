@@ -28,6 +28,12 @@ tools: [read, edit, search, execute]
 ### 數學科
 - `math.json` — 數學（13 units）
 
+### 英文科
+- `english-vocabulary.json` — 字彙與片語（4 units）
+- `english-grammar.json` — 文法句型（5 units）
+- `english-reading.json` — 閱讀與題型攻略（4 units）
+- `english-listening.json` — 聽力測驗（3 units）
+
 ### JSON Schema
 
 ```json

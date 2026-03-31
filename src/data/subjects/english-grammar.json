@@ -1,0 +1,1609 @@
+{
+  "id": "english-grammar",
+  "label": "文法句型",
+  "color": "#3b82f6",
+  "units": [
+    {
+      "id": "eg-u1",
+      "name": "詞類基礎",
+      "stage": "七年級",
+      "importance": {
+        "stars": 2,
+        "level": "基礎必備",
+        "tip": "詞類觀念是文法基礎，雖不直接出題但影響所有文法判斷"
+      },
+      "unitStrategy": {
+        "examinerPerspective": "透過單字選擇或句型改寫間接測驗詞類觀念，較少直接考詞類定義",
+        "scoringTips": [
+          "理解八大詞類的功能與位置",
+          "名詞前可加冠詞，動詞前是主詞",
+          "形容詞修飾名詞，副詞修飾動詞/形容詞"
+        ],
+        "commonTraps": [
+          "混淆形容詞與副詞用法",
+          "忘記不可數名詞不加 a/an",
+          "代名詞格的選用錯誤（主格/受格/所有格）"
+        ],
+        "thinkingPath": "看到詞類題 → 判斷空格在句中的功能（主詞/受詞/修飾語）→ 選出正確詞性"
+      },
+      "topics": [
+        {
+          "id": "eg-u1-t1",
+          "name": "名詞與冠詞",
+          "hook": "為什麼「一本書」是 a book 但「一小時」是 an hour？為什麼 water 前面不能加 a？名詞與冠詞的搭配是英文句子的骨架！",
+          "coreConcepts": [
+            "可數名詞 vs. 不可數名詞：可數名詞有單複數變化（book/books），不可數名詞無複數（water, information, advice, homework）",
+            "複數變化規則：加-s（books）、加-es（boxes）、子音+y → ies（cities）、不規則（children, teeth, mice, feet）",
+            "冠詞 a/an/the：a + 子音開頭、an + 母音開頭、the 特指已知事物。注意 an hour（h不發音）、a university（u發[ju]）",
+            "零冠詞：三餐前（have breakfast）、運動前（play basketball）、科目前（study math）不加冠詞",
+            "常考不可數名詞：water, money, information, news, advice, homework, furniture, bread, fruit（水果總稱不可數，指種類時可數 tropical fruits）"
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "112年",
+              "question": "I need some _____ about the new school. Can you help me?",
+              "options": [
+                "information",
+                "informations",
+                "an information",
+                "the informations"
+              ],
+              "answer": "A",
+              "explanation": "information 是不可數名詞，不能加 -s 或 a/an，前面加 some 表示「一些資訊」。"
+            },
+            {
+              "year": "111年",
+              "question": "There is _____ apple and two bananas on the table.",
+              "options": [
+                "a",
+                "an",
+                "the",
+                "×"
+              ],
+              "answer": "B",
+              "explanation": "apple 以母音 a 開頭，前面要用 an。the 用於特指，此處為初次提及。"
+            },
+            {
+              "year": "109年",
+              "question": "My teacher gave us a lot of _____ for the weekend. I have so much to do!",
+              "options": [
+                "homework",
+                "homeworks",
+                "a homework",
+                "the homeworks"
+              ],
+              "answer": "A",
+              "explanation": "homework 是不可數名詞，用 a lot of 修飾，不能加 -s 或 a/an。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "冠詞與名詞可數性是基礎但高頻考點，常在克漏字或文法選擇題中出現",
+            "solvingSteps": [
+              "判斷名詞是可數還是不可數",
+              "可數名詞看單複數決定冠詞",
+              "不可數名詞用 some/much/a lot of 修飾",
+              "注意 a 或 an 看發音不看字母"
+            ],
+            "thinkingRules": [
+              "information, advice, homework, news 永遠不可數",
+              "a/an 看「發音」不看「字母」",
+              "三餐、運動、科目前不加冠詞"
+            ]
+          }
+        },
+        {
+          "id": "eg-u1-t2",
+          "name": "代名詞",
+          "hook": "「I love she」哪裡錯了？因為要用受格 her！主格、受格、所有格、反身代名詞——搞清楚代名詞的「格」，句子才寫得對。",
+          "coreConcepts": [
+            "人稱代名詞四格：主格（I/he/she/we/they）、受格（me/him/her/us/them）、所有格（my/his/her/our/their）、所有代名詞（mine/his/hers/ours/theirs）",
+            "主格當主詞、受格當受詞：He loves her.（他愛她）She told him.（她告訴他）",
+            "所有格 vs. 所有代名詞：my book = mine，your pen = yours。This book is my book. = This book is mine.",
+            "反身代名詞：myself/yourself/himself/herself/ourselves/themselves。用於主詞=受詞時：He hurt himself.",
+            "it 的特殊用法：虛主詞 It（It is important to study.）、指天氣/時間（It's raining. / It's 3 o'clock.）"
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "112年",
+              "question": "This book is not _____. It's my sister's.",
+              "options": [
+                "mine",
+                "my",
+                "me",
+                "I"
+              ],
+              "answer": "A",
+              "explanation": "空格後沒有名詞，需要所有代名詞 mine（= my book）。my 後面要接名詞。"
+            },
+            {
+              "year": "110年",
+              "question": "The children enjoyed _____ at the amusement park yesterday.",
+              "options": [
+                "themselves",
+                "them",
+                "their",
+                "they"
+              ],
+              "answer": "A",
+              "explanation": "enjoy oneself 表示「玩得開心」。主詞 children（they）的反身代名詞是 themselves。"
+            },
+            {
+              "year": "108年",
+              "question": "A: Is this your umbrella? B: No, it's not _____. Maybe it's John's.",
+              "options": [
+                "mine",
+                "my",
+                "me",
+                "I"
+              ],
+              "answer": "A",
+              "explanation": "問句問「這是你的傘嗎？」回答不是我的（mine = my umbrella）。所有代名詞代替「所有格+名詞」。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "代名詞格的選用是基礎文法題，幾乎每年都考",
+            "solvingSteps": [
+              "判斷空格在句中的角色（主詞/受詞/修飾名詞）",
+              "主詞用主格，受詞用受格",
+              "修飾名詞用所有格，代替「所有格+名詞」用所有代名詞",
+              "主詞和受詞相同時用反身代名詞"
+            ],
+            "thinkingRules": [
+              "空格後有名詞 → 所有格（my book）",
+              "空格後沒名詞 → 所有代名詞（It's mine.）",
+              "enjoy/help/hurt + oneself 是固定搭配"
+            ]
+          }
+        },
+        {
+          "id": "eg-u1-t3",
+          "name": "形容詞與副詞",
+          "hook": "他跑得很「快」，是 He runs fast 還是 He runs fastly？其實 fast 本身就可以當副詞！分清形容詞和副詞，是寫出正確英文句子的關鍵。",
+          "coreConcepts": [
+            "形容詞修飾名詞：放在名詞前（a beautiful flower）或 be 動詞後（The flower is beautiful.）",
+            "副詞修飾動詞/形容詞/副詞：She sings beautifully.（修飾動詞）/ very beautiful（修飾形容詞）",
+            "形容詞 → 副詞規則：加 -ly（quick → quickly）、-y 結尾改 -ily（happy → happily）、-le 結尾改 -ly（simple → simply）",
+            "形副同形字：fast, hard, early, late, high。He runs fast.（副詞）/ a fast car（形容詞）",
+            "感官動詞 + 形容詞：look/smell/taste/sound/feel + 形容詞。The cake smells good.（不是 well）"
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "112年",
+              "question": "The music sounds _____. I like it a lot.",
+              "options": [
+                "beautifully",
+                "beautiful",
+                "beauty",
+                "beautify"
+              ],
+              "answer": "B",
+              "explanation": "感官動詞 sound 後面接形容詞（不是副詞），表示「聽起來很美」。"
+            },
+            {
+              "year": "111年",
+              "question": "My brother drives very _____. He has never had an accident.",
+              "options": [
+                "careful",
+                "carefully",
+                "careless",
+                "carelessly"
+              ],
+              "answer": "B",
+              "explanation": "drives 是一般動詞，需要副詞修飾，且語意為小心駕駛，故選 carefully。"
+            },
+            {
+              "year": "109年",
+              "question": "Please speak _____. The baby is sleeping.",
+              "options": [
+                "quiet",
+                "quietly",
+                "quick",
+                "quickly"
+              ],
+              "answer": "B",
+              "explanation": "修飾動詞 speak 要用副詞，寶寶在睡覺要「安靜地」說話，故選 quietly。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "形容詞與副詞的選用是文法基礎題，常透過搭配動詞的方式測驗",
+            "solvingSteps": [
+              "看空格修飾的對象是名詞還是動詞",
+              "修飾名詞 → 形容詞",
+              "修飾動詞 → 副詞",
+              "注意感官動詞和連綴動詞後接形容詞"
+            ],
+            "thinkingRules": [
+              "be動詞/感官動詞 + 形容詞，一般動詞 + 副詞",
+              "fast, hard, early 形副同形，不加 -ly",
+              "good 是形容詞，well 是副詞（但 feel well 可以）"
+            ]
+          }
+        },
+        {
+          "id": "eg-u1-t4",
+          "name": "介系詞",
+          "hook": "「在星期一」是 on Monday，「在三月」是 in March，「在三點」是 at 3 o'clock——為什麼不同的時間要用不同的介系詞？掌握介系詞的規則，讓你不再亂猜！",
+          "coreConcepts": [
+            "時間介系詞：at + 時刻（at 7 a.m.）、on + 日期/星期（on Monday / on May 1st）、in + 月份/年/季節（in March / in 2024 / in summer）",
+            "地點介系詞：at + 小地點（at school）、in + 大地方/封閉空間（in Taipei / in the room）、on + 表面上（on the table / on the wall）",
+            "方向介系詞：to（到）、from（從）、into（進入）、out of（離開）、toward(s)（朝向）",
+            "常考搭配：be good at（擅長）、be interested in（對…有興趣）、be afraid of（害怕）、be different from（與…不同）",
+            "by/with 的區別：by + 交通工具/方式（by bus / by hand）、with + 工具/人（with a pen / with friends）"
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "112年",
+              "question": "We will have a picnic _____ Sunday morning if it doesn't rain.",
+              "options": [
+                "at",
+                "on",
+                "in",
+                "for"
+              ],
+              "answer": "B",
+              "explanation": "星期 + 上午/下午/晚上用 on。on Sunday morning。單獨的 morning 用 in the morning。"
+            },
+            {
+              "year": "111年",
+              "question": "Lisa is very good _____ playing the piano. She practices every day.",
+              "options": [
+                "at",
+                "in",
+                "on",
+                "of"
+              ],
+              "answer": "A",
+              "explanation": "be good at + V-ing：擅長做某事。be good at playing the piano。"
+            },
+            {
+              "year": "109年",
+              "question": "My school is different _____ my brother's school. His school is much bigger.",
+              "options": [
+                "from",
+                "with",
+                "to",
+                "of"
+              ],
+              "answer": "A",
+              "explanation": "be different from：與…不同。注意不是 different with 或 different to。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "介系詞搭配是每年必考題型，尤其時間介系詞和形容詞搭配介系詞",
+            "solvingSteps": [
+              "判斷介系詞在句中的功能（時間/地點/搭配）",
+              "時間介系詞：at 時刻、on 日期/星期、in 月份/季節/年",
+              "地點介系詞：at 小地點、in 大地方、on 表面",
+              "固定搭配：回想形容詞/動詞 + 介系詞的慣用組合"
+            ],
+            "thinkingRules": [
+              "時間大小原則：in（大）> on（中）> at（小）",
+              "be good at / be interested in / be afraid of 是最高頻搭配",
+              "on + 星期/日期，但 on Sunday morning（星期+時段仍用 on）"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "eg-u2",
+      "name": "動詞與時態",
+      "stage": "七～九年級",
+      "importance": {
+        "stars": 3,
+        "level": "最高出題率",
+        "tip": "時態題幾乎每年出3-5題，是文法題的絕對核心"
+      },
+      "unitStrategy": {
+        "examinerPerspective": "時態是文法核心考點，測驗學生能否根據時間副詞與語境正確選擇時態",
+        "scoringTips": [
+          "整理各時態的時間副詞標誌（every day=現在簡單式、yesterday=過去式等）",
+          "現在完成式 vs. 過去式是最常考的對比",
+          "被動語態公式 be + Vpp 要熟記"
+        ],
+        "commonTraps": [
+          "忽略時間副詞直接選答案",
+          "現在完成式與過去式混用",
+          "被動語態漏掉 be 動詞或用錯時態"
+        ],
+        "thinkingPath": "看到時態題 → 找時間副詞 → 確認動作完成與否 → 選出正確時態"
+      },
+      "topics": [
+        {
+          "id": "eg-u2-t1",
+          "name": "現在簡單式與現在進行式",
+          "hook": "「我每天吃早餐」是 I eat breakfast every day（簡單式），「我正在吃早餐」是 I am eating breakfast now（進行式）。差別就在：習慣 vs. 正在做！",
+          "coreConcepts": [
+            "現在簡單式：表示習慣、事實、規律。時間副詞：every day, always, usually, often, sometimes, never",
+            "現在簡單式動詞變化：第三人稱單數加 -s/-es（he goes, she watches）。否定用 doesn't + 原形",
+            "現在進行式：be動詞 + V-ing，表示正在進行的動作。時間副詞：now, right now, at the moment, Look!",
+            "V-ing 拼寫規則：直接加 -ing（eating）、去 e 加 -ing（making）、重複字尾加 -ing（running, swimming）",
+            "不用進行式的動詞：know, like, love, want, need, believe, understand, belong 等表狀態的動詞"
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "112年",
+              "question": "My father _____ the newspaper every morning before he goes to work.",
+              "options": [
+                "reads",
+                "is reading",
+                "read",
+                "has read"
+              ],
+              "answer": "A",
+              "explanation": "every morning 表示每天的習慣，用現在簡單式。主詞 My father 第三人稱單數，動詞加 -s。"
+            },
+            {
+              "year": "111年",
+              "question": "Be quiet! The baby _____.",
+              "options": [
+                "sleeps",
+                "is sleeping",
+                "slept",
+                "has slept"
+              ],
+              "answer": "B",
+              "explanation": "Be quiet! 暗示「現在」寶寶正在睡覺，用現在進行式 is sleeping。"
+            },
+            {
+              "year": "109年",
+              "question": "I _____ this song. Can you play it again?",
+              "options": [
+                "am loving",
+                "love",
+                "am love",
+                "loves"
+              ],
+              "answer": "B",
+              "explanation": "love 是狀態動詞，不能用進行式。不管什麼時候都用簡單式 I love。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "現在簡單式 vs. 進行式是最基礎時態題，找時間副詞是關鍵",
+            "solvingSteps": [
+              "找時間副詞（every day→簡單式，now→進行式）",
+              "檢查主詞人稱決定動詞形式",
+              "確認是否為狀態動詞（不用進行式）",
+              "代入確認時態和主詞動詞一致"
+            ],
+            "thinkingRules": [
+              "every/always/usually → 現在簡單式",
+              "now/Look!/Listen! → 現在進行式",
+              "know/like/love/want 不用進行式"
+            ]
+          }
+        },
+        {
+          "id": "eg-u2-t2",
+          "name": "過去簡單式與過去進行式",
+          "hook": "「昨天我去了公園」I went to the park yesterday。「我去的時候正在下雨」It was raining when I went. 過去式講已完成的事，過去進行式講當時正在做的事。",
+          "coreConcepts": [
+            "過去簡單式：表過去已完成的動作。時間副詞：yesterday, last week, ago, in 2020, this morning（如天已過一半）",
+            "規則動詞：加 -ed（played）、去 e 加 -d（lived）、子音+y 改 ied（studied）、重複字尾加 -ed（stopped）",
+            "不規則動詞三態：go-went-gone、eat-ate-eaten、see-saw-seen、take-took-taken、write-wrote-written",
+            "過去進行式：was/were + V-ing，表過去某時正在進行。常搭配 when/while 副詞子句",
+            "when vs. while：when + 過去簡單式（短動作），while + 過去進行式（長動作）。When he called, I was studying."
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "112年",
+              "question": "I _____ a strange noise when I was walking home last night.",
+              "options": [
+                "hear",
+                "heard",
+                "am hearing",
+                "was hearing"
+              ],
+              "answer": "B",
+              "explanation": "when I was walking 表過去某時，聽到聲音是瞬間動作用過去簡單式 heard。"
+            },
+            {
+              "year": "110年",
+              "question": "While my mom _____ dinner, the phone rang.",
+              "options": [
+                "cooks",
+                "cooked",
+                "was cooking",
+                "is cooking"
+              ],
+              "answer": "C",
+              "explanation": "While + 過去進行式（長動作），the phone rang 是短動作。While 搭配 was cooking。"
+            },
+            {
+              "year": "108年",
+              "question": "Tom _____ to Japan with his family two years ago.",
+              "options": [
+                "goes",
+                "went",
+                "has gone",
+                "is going"
+              ],
+              "answer": "B",
+              "explanation": "two years ago 是過去時間，用過去簡單式 went。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "when/while 搭配過去式 vs. 過去進行式是經典考型",
+            "solvingSteps": [
+              "找過去時間標誌（yesterday, ago, last...）",
+              "有 when/while 判斷長短動作",
+              "when + 短動作（過去簡單式）",
+              "while + 長動作（過去進行式）"
+            ],
+            "thinkingRules": [
+              "ago/yesterday/last → 過去簡單式",
+              "when + 過去式, 主詞 + 過去進行式（或反過來）",
+              "不規則動詞三態靠背誦，無規則可循"
+            ]
+          }
+        },
+        {
+          "id": "eg-u2-t3",
+          "name": "未來式",
+          "hook": "「明天我要去看電影」I will go to the movies tomorrow，還是 I am going to go to the movies tomorrow？兩種都可以，但語感不同！",
+          "coreConcepts": [
+            "will + 原形動詞：表示臨時決定、預測、意願。I will help you.（我願意幫你）/ It will rain tomorrow.（預測）",
+            "be going to + 原形動詞：表示已計劃好的事或有跡象即將發生。I am going to visit grandma this weekend.（計劃）",
+            "will vs. be going to：臨時決定用 will，事先計劃用 be going to。看到烏雲密布 → It's going to rain.（有跡象）",
+            "未來式時間副詞：tomorrow, next week, soon, in the future, this weekend",
+            "否定與疑問：will not (won't) + V / Will you...? / be not going to + V / Are you going to...?"
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "112年",
+              "question": "A: It's very hot today. B: I _____ the air conditioner on for you.",
+              "options": [
+                "turn",
+                "turned",
+                "will turn",
+                "am turning"
+              ],
+              "answer": "C",
+              "explanation": "當下決定要開冷氣，臨時決定用 will。will turn on。"
+            },
+            {
+              "year": "110年",
+              "question": "Look at those dark clouds. It _____ soon.",
+              "options": [
+                "rains",
+                "rained",
+                "is going to rain",
+                "will raining"
+              ],
+              "answer": "C",
+              "explanation": "看到烏雲（有跡象），即將下雨用 is going to rain。will raining 文法錯誤。"
+            },
+            {
+              "year": "109年",
+              "question": "We _____ have a school trip next month. I'm so excited!",
+              "options": [
+                "are going to",
+                "will",
+                "were going to",
+                "have"
+              ],
+              "answer": "A",
+              "explanation": "next month + 已計劃好的校外教學，用 are going to。也可用 will，但 be going to 更強調已排定。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "will vs. be going to 的語境區分是常見考點",
+            "solvingSteps": [
+              "找未來時間副詞確認是未來式",
+              "判斷是臨時決定還是事先計劃",
+              "臨時決定 → will，有計劃/有跡象 → be going to",
+              "注意 will 後接原形動詞"
+            ],
+            "thinkingRules": [
+              "tomorrow/next/soon → 未來式",
+              "will 後面一定接原形動詞（不是 will raining）",
+              "be going to 也可表示「即將」（有跡象時）"
+            ]
+          }
+        },
+        {
+          "id": "eg-u2-t4",
+          "name": "現在完成式",
+          "hook": "「你吃過日本料理嗎？」Have you ever eaten Japanese food? 現在完成式不是在問「什麼時候吃的」，而是「有沒有這個經驗」——它連結過去和現在！",
+          "coreConcepts": [
+            "公式：have/has + 過去分詞（Vpp）。I have lived here for 10 years.",
+            "表經驗：ever/never/before。Have you ever been to Japan? I have never seen snow before.",
+            "表持續：since + 時間點 / for + 一段時間。She has studied English since 2018. / for 6 years.",
+            "表完成：already（已經）/ yet（還沒/已經？）/ just（剛剛）。I have already finished. Have you eaten yet?",
+            "現在完成式 vs. 過去式：完成式不能搭配明確過去時間（yesterday, ago, last week）。I saw him yesterday. ✓ / I have seen him yesterday. ✗"
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "112年",
+              "question": "A: Have you _____ the new movie? B: Yes, I saw it last weekend.",
+              "options": [
+                "see",
+                "saw",
+                "seen",
+                "seeing"
+              ],
+              "answer": "C",
+              "explanation": "Have you + Vpp（過去分詞）。see 的過去分詞是 seen。回答用 saw 是因為有明確過去時間 last weekend。"
+            },
+            {
+              "year": "111年",
+              "question": "My family has lived in this town _____ 2010.",
+              "options": [
+                "for",
+                "since",
+                "from",
+                "in"
+              ],
+              "answer": "B",
+              "explanation": "since + 時間點（2010年），for + 一段時間。has lived 是現在完成式，表從2010年住到現在。"
+            },
+            {
+              "year": "109年",
+              "question": "I have known Amy _____ five years. She is my best friend.",
+              "options": [
+                "for",
+                "since",
+                "from",
+                "about"
+              ],
+              "answer": "A",
+              "explanation": "for + 一段時間（five years）。have known 現在完成式表示認識了五年且持續到現在。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "現在完成式是國中最重要的進階時態，since/for 和 ever/never 是必考搭配",
+            "solvingSteps": [
+              "看到 have/has 確認是完成式題",
+              "找搭配副詞（ever/never/since/for/already/yet）",
+              "確認動詞是否為過去分詞形式",
+              "注意不能搭配明確過去時間"
+            ],
+            "thinkingRules": [
+              "since + 時間點、for + 一段時間",
+              "have + Vpp，不是 have + Ved",
+              "現在完成式問經驗（ever），過去式答細節（yesterday）"
+            ]
+          }
+        },
+        {
+          "id": "eg-u2-t5",
+          "name": "被動語態",
+          "hook": "「這本書是用英文寫的」This book is written in English。不說誰寫的，只講「被寫」——這就是被動語態！",
+          "coreConcepts": [
+            "公式：be動詞 + 過去分詞（Vpp）。主動：Tom wrote the letter. → 被動：The letter was written by Tom.",
+            "各時態被動：現在 → is/are + Vpp（English is spoken here.）、過去 → was/were + Vpp（The window was broken.）",
+            "何時用被動：不知道誰做的、不重要誰做的、或強調承受者。如 The bridge was built in 1950.",
+            "by + 行為者：行為者已知且重要時用 by。The song was sung by Jay Chou. 行為者不重要則省略。",
+            "常見被動表達：be made of/from（由…製成）、be covered with（被…覆蓋）、be known for（以…聞名）"
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "112年",
+              "question": "This temple _____ over 200 years ago.",
+              "options": [
+                "builds",
+                "built",
+                "was built",
+                "is built"
+              ],
+              "answer": "C",
+              "explanation": "200 years ago 是過去時間，寺廟是「被建造」的，用過去被動 was built。"
+            },
+            {
+              "year": "110年",
+              "question": "English _____ in many countries around the world.",
+              "options": [
+                "speaks",
+                "spoke",
+                "is speaking",
+                "is spoken"
+              ],
+              "answer": "D",
+              "explanation": "英文在很多國家「被說」，表事實用現在式被動 is spoken。"
+            },
+            {
+              "year": "108年",
+              "question": "The cake _____ by my mother. It's delicious!",
+              "options": [
+                "makes",
+                "made",
+                "was made",
+                "is making"
+              ],
+              "answer": "C",
+              "explanation": "蛋糕是媽媽「做的」，由 by my mother 可知是被動語態。語境為已完成用 was made。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "被動語態考查學生能否判斷主動/被動關係並正確使用 be + Vpp",
+            "solvingSteps": [
+              "判斷主詞是「做」動作還是「被做」",
+              "被做 → 被動語態 be + Vpp",
+              "確認時態（看時間副詞）選正確 be 動詞",
+              "有 by 更確定是被動"
+            ],
+            "thinkingRules": [
+              "主詞是人/動物通常主動，主詞是物品通常被動",
+              "be + Vpp = 被動；be + V-ing = 進行",
+              "200 years ago → was built（過去被動）"
+            ]
+          }
+        },
+        {
+          "id": "eg-u2-t6",
+          "name": "助動詞",
+          "hook": "can 是「能」，should 是「應該」，must 是「必須」——這些助動詞後面永遠接原形動詞！搞清楚它們的意思和用法，文法分數就穩了。",
+          "coreConcepts": [
+            "can/could：can 表能力或許可（I can swim.）、could 表過去能力或更禮貌的請求（Could you help me?）",
+            "should/had better：should 表建議（You should study harder.）、had better 表警告性建議（You'd better hurry up.）",
+            "must/have to：must 表示強烈義務或推測（You must be tired.）、have to 表外在要求（I have to wear a uniform.）",
+            "may/might：may 表允許或可能（May I come in? / It may rain.）、might 更不確定",
+            "助動詞 + 原形動詞：所有助動詞後面接原形動詞。She can swim. ✓ / She can swims. ✗ / She can swimming. ✗"
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "112年",
+              "question": "You _____ be quiet in the library. Other people are reading.",
+              "options": [
+                "can",
+                "may",
+                "should",
+                "would"
+              ],
+              "answer": "C",
+              "explanation": "在圖書館應該安靜。should 表示「應該」的建議。"
+            },
+            {
+              "year": "111年",
+              "question": "A: _____ I use your phone? B: Sure, go ahead.",
+              "options": [
+                "May",
+                "Must",
+                "Should",
+                "Will"
+              ],
+              "answer": "A",
+              "explanation": "May I...? 用於禮貌請求「我可以…嗎？」Must 太強烈，Should 是建議不是請求。"
+            },
+            {
+              "year": "109年",
+              "question": "You look pale. You _____ go to see a doctor.",
+              "options": [
+                "had better",
+                "would rather",
+                "used to",
+                "are able to"
+              ],
+              "answer": "A",
+              "explanation": "臉色蒼白，最好去看醫生。had better 表「最好」，帶有警告意味。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "助動詞的語意區分是每年穩定出題的考點",
+            "solvingSteps": [
+              "判斷句意需要哪種語氣（能力/建議/義務/請求）",
+              "選出對應的助動詞",
+              "確認助動詞後接原形動詞",
+              "注意禮貌程度的差異"
+            ],
+            "thinkingRules": [
+              "助動詞 + 原形動詞，永遠不變",
+              "can/could/may 都可表請求，may最禮貌",
+              "must = 一定（推測）或必須（義務）看語境判斷"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "eg-u3",
+      "name": "句型結構",
+      "stage": "八～九年級",
+      "importance": {
+        "stars": 3,
+        "level": "高出題率",
+        "tip": "句型題每年穩定出2-3題，尤其比較級與疑問句"
+      },
+      "unitStrategy": {
+        "examinerPerspective": "透過句型轉換與選擇題測驗學生對基本句型結構的掌握",
+        "scoringTips": [
+          "熟記五大句型(S+V, S+V+O, S+V+C, S+V+O+O, S+V+O+C)",
+          "比較級規則要背熟，注意 than 和 the + 最高級",
+          "疑問句的倒裝語序是常考陷阱"
+        ],
+        "commonTraps": [
+          "比較級微微加 more 還是加 -er 混淆",
+          "附加問句前肯後否規則忽略",
+          "There is/are 主詞單複數一致性"
+        ],
+        "thinkingPath": "看到句型題 → 分析句子結構(S/V/O/C) → 套用對應規則 → 確認語序正確"
+      },
+      "topics": [
+        {
+          "id": "eg-u3-t1",
+          "name": "五大基本句型",
+          "hook": "英文句子再複雜，都不出五種基本架構。就像蓋房子，先有骨架才能裝潢——學好五大句型，就能看懂任何句子！",
+          "coreConcepts": [
+            "S+V（主詞+動詞）：Birds fly. The baby is sleeping. 動詞為不及物動詞，不需受詞",
+            "S+V+C（主詞+動詞+補語）：She is beautiful. He looks tired. 連綴動詞(be/look/feel/become)後接補語",
+            "S+V+O（主詞+動詞+受詞）：I like English. She plays the piano. 及物動詞後需接受詞",
+            "S+V+O+O（主詞+動詞+間接受詞+直接受詞）：Mom gave me a gift. = Mom gave a gift to me.",
+            "S+V+O+C（主詞+動詞+受詞+受詞補語）：We call him Tom. The news made her happy."
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "112年",
+              "question": "The story made everyone _____.",
+              "options": [
+                "happy",
+                "happily",
+                "happiness",
+                "to happy"
+              ],
+              "answer": "A",
+              "explanation": "make + O + C（受詞補語），C用形容詞描述受詞狀態。made everyone happy。"
+            },
+            {
+              "year": "110年",
+              "question": "My teacher gave _____ a lot of homework yesterday.",
+              "options": [
+                "us",
+                "we",
+                "our",
+                "ours"
+              ],
+              "answer": "A",
+              "explanation": "gave + 間接受詞 + 直接受詞。間接受詞用受格 us。"
+            },
+            {
+              "year": "108年",
+              "question": "The cake smells _____. Can I have some?",
+              "options": [
+                "good",
+                "well",
+                "goodly",
+                "nice smell"
+              ],
+              "answer": "A",
+              "explanation": "smell 是感官動詞（連綴動詞），後接形容詞 good。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "透過句型結構判斷過空格需要什麼詞性是基本必考考型",
+            "solvingSteps": [
+              "分析句子結構，找出 S/V/O/C",
+              "判斷空格扮演的角色",
+              "選出正確詞性的答案",
+              "代入檢查句意是否通順"
+            ],
+            "thinkingRules": [
+              "make/keep/find + O + 形容詞",
+              "give/send/show + 人 + 物 = give/send/show + 物 + to + 人",
+              "感官動詞 + 形容詞（不是副詞）"
+            ]
+          }
+        },
+        {
+          "id": "eg-u3-t2",
+          "name": "疑問句與附加問句",
+          "hook": "「You like coffee, don’t you?」這句話不是真的在問你，而是想確認！附加問句的「前肯後否」規則，是會考的經典考點。",
+          "coreConcepts": [
+            "Wh- 疑問句：Who/What/When/Where/Why/How + 助動詞 + S + V? How often do you exercise?",
+            "附加問句規則：前肯後否、前否後肯。You are a student, aren't you? / He can't swim, can he?",
+            "特殊附加問句：I am → aren't I? / Let's → shall we? / 祈使句 → will you?",
+            "How 系列問句：How many(可數)/How much(不可數/價錢)/How often(頻率)/How long(時間長度)/How far(距離)",
+            "間接問句應用：直接問 Where is he? → 間接 I don't know where he is.（詳見子句單元）"
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "112年",
+              "question": "Your sister works in a hospital, _____?",
+              "options": [
+                "does she",
+                "doesn't she",
+                "is she",
+                "isn't she"
+              ],
+              "answer": "B",
+              "explanation": "前面肯定句 works，附加問句用否定 doesn't she。動詞是 works，助動詞用 does。"
+            },
+            {
+              "year": "110年",
+              "question": "_____ do you go to the library? — About twice a week.",
+              "options": [
+                "How long",
+                "How far",
+                "How often",
+                "How many"
+              ],
+              "answer": "C",
+              "explanation": "回答 twice a week（頻率），用 How often 問頻率。"
+            },
+            {
+              "year": "109年",
+              "question": "Let's go shopping this afternoon, _____?",
+              "options": [
+                "shall we",
+                "will you",
+                "don't we",
+                "aren't we"
+              ],
+              "answer": "A",
+              "explanation": "Let's 的附加問句固定用 shall we?。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "附加問句和 How 系列問句是每年必考的句型題",
+            "solvingSteps": [
+              "附加問句：看前句肯定/否定，後面反過來",
+              "找前句的助動詞或 be 動詞",
+              "沒有助動詞則用 do/does/did",
+              "How 問句看回答判斷用哪個"
+            ],
+            "thinkingRules": [
+              "前肯後否、前否後肯",
+              "Let's → shall we? / 祈使句 → will you?",
+              "I am → aren't I?（特殊）"
+            ]
+          }
+        },
+        {
+          "id": "eg-u3-t3",
+          "name": "祈使句與感嘆句",
+          "hook": "「Don’t run!」「What a beautiful day!」一個是命令、一個是情感爆發——祈使句和感嘆句是英文中最直接的表達方式！",
+          "coreConcepts": [
+            "肯定祈使句：原形動詞開頭。Open the door. / Be quiet. / Please sit down.",
+            "否定祈使句：Don't + 原形動詞。Don't touch it. / Don't be late. / Never give up.",
+            "感嘆句 What：What + (a/an) + 形容詞 + 名詞 + S + V! What a smart boy he is!",
+            "感嘆句 How：How + 形容詞/副詞 + S + V! How beautiful the flower is!",
+            "Let 祈使句：Let me help you. / Let's go. / Let him try."
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "111年",
+              "question": "_____ a wonderful movie it is! I want to see it again.",
+              "options": [
+                "What",
+                "How",
+                "Which",
+                "That"
+              ],
+              "answer": "A",
+              "explanation": "What + a + 形容詞 + 名詞！因為有名詞 movie，用 What。"
+            },
+            {
+              "year": "109年",
+              "question": "_____ run in the hallway. It's dangerous.",
+              "options": [
+                "Not",
+                "Don't",
+                "No",
+                "Doesn't"
+              ],
+              "answer": "B",
+              "explanation": "否定祈使句用 Don't + 原形動詞。Don't run 表示「不要跑」。"
+            },
+            {
+              "year": "108年",
+              "question": "_____ nice the weather is today! Let's go for a walk.",
+              "options": [
+                "What",
+                "How",
+                "What a",
+                "How a"
+              ],
+              "answer": "B",
+              "explanation": "weather 是不可數名詞且強調形容詞 nice，用 How + 形容詞 + S + V!。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "感嘆句 What vs. How 選擇是常考題型",
+            "solvingSteps": [
+              "看強調的是名詞還是形容詞",
+              "有名詞 → What + (a/an) + adj + n",
+              "只有形容詞/副詞 → How + adj/adv",
+              "祈使句看肯定/否定決定用原形或 Don't"
+            ],
+            "thinkingRules": [
+              "What a/an + adj + 可數單數名詞",
+              "How + adj + S + V（無名詞）",
+              "Don't be late — be 動詞的否定祈使句也用 Don't"
+            ]
+          }
+        },
+        {
+          "id": "eg-u3-t4",
+          "name": "比較級與最高級",
+          "hook": "「Tom 比 John 高」是 Tom is taller than John。「Tom 是全班最高的」是 Tom is the tallest in the class。兩個比用比較級，三個以上用最高級！",
+          "coreConcepts": [
+            "比較級規則：短字加 -er（taller）、長字加 more（more beautiful）、不規則（good→better、bad→worse）",
+            "最高級規則：短字加 -est（tallest）、長字加 most（most beautiful）、不規則（good→best、bad→worst）",
+            "比較級 + than：She is smarter than her brother. 最高級前加 the：She is the smartest in her family.",
+            "as...as 原級比較：He is as tall as his father.（一樣高）/ not as...as（不如…）",
+            "the + 比較級, the + 比較級：The more you practice, the better you get.（愈…愈…）"
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "112年",
+              "question": "This math test is _____ than the last one. I can't answer most of the questions.",
+              "options": [
+                "difficult",
+                "more difficult",
+                "most difficult",
+                "the most difficult"
+              ],
+              "answer": "B",
+              "explanation": "有 than 表示比較級，difficult 是長字加 more。"
+            },
+            {
+              "year": "111年",
+              "question": "Jade is _____ student in our class. She always gets the highest score.",
+              "options": [
+                "smarter",
+                "the smartest",
+                "smart",
+                "smartest"
+              ],
+              "answer": "B",
+              "explanation": "in our class 表示範圍，用最高級 the smartest。"
+            },
+            {
+              "year": "109年",
+              "question": "The _____ you study, the _____ grades you will get.",
+              "options": [
+                "hard; good",
+                "harder; better",
+                "hardest; best",
+                "more hard; more good"
+              ],
+              "answer": "B",
+              "explanation": "the + 比較級, the + 比較級。hard → harder，good → better。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "比較級與最高級是每年必考的重點文法",
+            "solvingSteps": [
+              "有 than → 比較級",
+              "in/of + 範圍 → 最高級 + the",
+              "判斷短字(-er/-est)或長字(more/most)",
+              "確認不規則變化(good-better-best)"
+            ],
+            "thinkingRules": [
+              "than → 比較級，in/of → 最高級",
+              "單音節短字加 -er/-est，雙音節以上加 more/most",
+              "good-better-best / bad-worse-worst / many-more-most"
+            ]
+          }
+        },
+        {
+          "id": "eg-u3-t5",
+          "name": "There is/are 與 It is 句型",
+          "hook": "「桌上有一本書」是 There is a book on the table，不是 It is a book...。There is/are 說「存在」，It is 說「它是」——分清楚就不會寫錯！",
+          "coreConcepts": [
+            "There is + 單數/不可數名詞：There is a cat under the table. / There is some water in the glass.",
+            "There are + 複數名詞：There are three books on the desk. / There are many students in the classroom.",
+            "It is + 形容詞 + to V：It is important to study hard.（虛主詞，真主詞是 to study hard）",
+            "It is + 時間/天氣/距離：It is 3 o'clock. / It is rainy today. / It is 5 km from here to school.",
+            "過去式：There was/were... It was... 未來式：There will be..."
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "112年",
+              "question": "_____ many people in the park yesterday because the weather was nice.",
+              "options": [
+                "There was",
+                "There were",
+                "It was",
+                "It were"
+              ],
+              "answer": "B",
+              "explanation": "many people 是複數，過去式用 There were。"
+            },
+            {
+              "year": "110年",
+              "question": "_____ is important for students to get enough sleep every day.",
+              "options": [
+                "There",
+                "It",
+                "This",
+                "What"
+              ],
+              "answer": "B",
+              "explanation": "It is + adj + to V，It 是虛主詞，真主詞是 to get enough sleep。"
+            },
+            {
+              "year": "108年",
+              "question": "There _____ a pen and two books on my desk.",
+              "options": [
+                "is",
+                "are",
+                "was",
+                "has"
+              ],
+              "answer": "A",
+              "explanation": "There is/are 採就近原則，最近的 a pen 是單數，用 is。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "There is/are 的主詞一致性和 It is 虛主詞用法是常考點",
+            "solvingSteps": [
+              "判斷句意是「存在」還是「它是」",
+              "存在 → There is/are，看名詞單複數",
+              "虛主詞 → It is + adj + to V",
+              "注意就近原則：There is a pen and two books."
+            ],
+            "thinkingRules": [
+              "There is/are 後接名詞決定單複數",
+              "It is 用於天氣/時間/虛主詞",
+              "就近原則：看最近的名詞決定 is/are"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "eg-u4",
+      "name": "子句與複合句",
+      "stage": "八～九年級",
+      "importance": {
+        "stars": 3,
+        "level": "高出題率",
+        "tip": "子句題每年穩定出2-3題，尤其關係代名詞與間接問句"
+      },
+      "unitStrategy": {
+        "examinerPerspective": "透過連接詞選擇與子句合併測驗學生對複合句的理解",
+        "scoringTips": [
+          "分清 and/but/or/so 的語意差異",
+          "關係代名詞 who/which/that 的先行詞判斷",
+          "間接問句用陳述語序是關鍵"
+        ],
+        "commonTraps": [
+          "關係代名詞後多加了代名詞",
+          "間接問句仍用倒裝語序",
+          "混淆 because 和 because of"
+        ],
+        "thinkingPath": "看到連接詞/子句題 → 分析前後子句關係 → 選出正確連接詞 → 確認語序"
+      },
+      "topics": [
+        {
+          "id": "eg-u4-t1",
+          "name": "對等連接詞",
+          "hook": "「我喜歡貓和狗」用 and，「我想去但沒時間」用 but，「你要茶還是咖啡」用 or。三個小字，連接兩個想法！",
+          "coreConcepts": [
+            "and：表示並列、加（I like cats and dogs.）",
+            "but：表示轉折、對比（He is short but strong.）",
+            "or：表示選擇（Do you want tea or coffee?）否定句中 or 代替 and（I don't like cats or dogs.）",
+            "so：表示因果（It rained, so we stayed home.）注意 because 和 so 不能同時用",
+            "not only...but also：不但…而且。He is not only smart but also kind. 動詞跟近的主詞一致"
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "112年",
+              "question": "I was very tired, _____ I still finished my homework.",
+              "options": [
+                "and",
+                "but",
+                "or",
+                "so"
+              ],
+              "answer": "B",
+              "explanation": "前後語意轉折（很累但仍完成），用 but。"
+            },
+            {
+              "year": "110年",
+              "question": "Hurry up, _____ you will be late for school.",
+              "options": [
+                "and",
+                "but",
+                "or",
+                "so"
+              ],
+              "answer": "C",
+              "explanation": "「快點，否則你會遲到」祈使句 + or 表示「否則」。"
+            },
+            {
+              "year": "108年",
+              "question": "_____ it rained heavily, we didn't go out.",
+              "options": [
+                "Because",
+                "So",
+                "But",
+                "And"
+              ],
+              "answer": "A",
+              "explanation": "因為下大雨所以沒出門。Because 引導原因子句。注意不能寫 Because...so...。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "連接詞選擇是基礎但高頻的考點",
+            "solvingSteps": [
+              "分析前後子句的邏輯關係",
+              "並列→and，轉折→but，選擇/否則→or，結果→so",
+              "注意 because 和 so 不能同時出現",
+              "祈使句 + or 表示「否則」"
+            ],
+            "thinkingRules": [
+              "because 和 so 互斥，只能用一個",
+              "祈使句 + and = 就會… / 祈使句 + or = 否則…",
+              "not only...but also 動詞跟 but also 後的主詞一致"
+            ]
+          }
+        },
+        {
+          "id": "eg-u4-t2",
+          "name": "從屬連接詞",
+          "hook": "「如果明天下雨，我們就不去」If it rains tomorrow, we won't go.「雖然他很小，但很勇敢」Although he is small, he is brave. 從屬連接詞讓句子更豐富！",
+          "coreConcepts": [
+            "時間：when(當)、before(在…之前)、after(在…之後)、while(當…的時候)、until(直到)、as soon as(一…就)",
+            "條件：if(如果)、unless(除非=if...not)。條件句用現在式代替未來式：If it rains tomorrow... (不用 will rain)",
+            "讓步：although/though(雖然)。注意 although 和 but 不能同時用！Although he is tired, he keeps working. (不加 but)",
+            "原因：because(因為)、since(既然)。because vs. because of：because + 子句 / because of + 名詞",
+            "目的：so that(以便於)。He studied hard so that he could pass the exam."
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "112年",
+              "question": "_____ he is only 12 years old, he can speak three languages.",
+              "options": [
+                "Although",
+                "Because",
+                "If",
+                "Until"
+              ],
+              "answer": "A",
+              "explanation": "雖然只有12歲但能說三種語言，前後語意轉折用 Although。"
+            },
+            {
+              "year": "111年",
+              "question": "If it _____ tomorrow, we will cancel the picnic.",
+              "options": [
+                "rain",
+                "rains",
+                "rained",
+                "will rain"
+              ],
+              "answer": "B",
+              "explanation": "if 條件句用現在式代替未來式。主詞 it 第三人稱加 -s。"
+            },
+            {
+              "year": "109年",
+              "question": "We stayed home _____ the heavy rain.",
+              "options": [
+                "because",
+                "because of",
+                "although",
+                "so that"
+              ],
+              "answer": "B",
+              "explanation": "the heavy rain 是名詞片語，用 because of + 名詞。because + 子句。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "if 條件句的時態和 although/but 互斥是最常設的陷阱",
+            "solvingSteps": [
+              "判斷前後子句的邏輯關係",
+              "選出對應的從屬連接詞",
+              "檢查時態：if/when + 現在式（即使語意是未來）",
+              "確認不重複：although≠but, because≠so"
+            ],
+            "thinkingRules": [
+              "if/when/before/after + 現在式代替未來式",
+              "although 和 but 互斥、because 和 so 互斥",
+              "because + 子句，because of + 名詞"
+            ]
+          }
+        },
+        {
+          "id": "eg-u4-t3",
+          "name": "關係代名詞與形容詞子句",
+          "hook": "「我認識那個住在隔壁的女孩」I know the girl who lives next door. who 就像膠水一樣，把兩句話黏成一句！",
+          "coreConcepts": [
+            "關係代名詞 who：代替人。The boy who is reading is my brother.（who 引導形容詞子句修飾 the boy）",
+            "關係代名詞 which：代替事物。The book which I bought is interesting.（which 代替 the book）",
+            "關係代名詞 that：可代替人或物，用法最廣。The girl that sits next to me is Amy.",
+            "who/which/that 當受詞時可省略：The book (which/that) I bought... 當主詞時不可省",
+            "whose：所有格。The man whose car is red is my uncle.（車是紅色的那個人）"
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "112年",
+              "question": "The woman _____ is wearing a red dress is my aunt.",
+              "options": [
+                "who",
+                "which",
+                "whose",
+                "whom"
+              ],
+              "answer": "A",
+              "explanation": "woman 是人，關係代名詞用 who。who is wearing 修飾 the woman。"
+            },
+            {
+              "year": "111年",
+              "question": "I like the cake _____ my grandmother made for me.",
+              "options": [
+                "who",
+                "which",
+                "whose",
+                "where"
+              ],
+              "answer": "B",
+              "explanation": "cake 是物，用 which。which my grandmother made 修飾 the cake。此處 which 當受詞可省略。"
+            },
+            {
+              "year": "109年",
+              "question": "The boy _____ father is a doctor wants to be a doctor, too.",
+              "options": [
+                "who",
+                "which",
+                "whose",
+                "that"
+              ],
+              "answer": "C",
+              "explanation": "whose father 表示「他的父親」，whose 是所有格關係代名詞。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "關係代名詞的選擇是子句單元最重要的考點",
+            "solvingSteps": [
+              "找先行詞（被修飾的名詞）",
+              "判斷人或物：人→who，物→which，所有格→whose",
+              "檢查關係代名詞在子句中的角色（主詞/受詞）",
+              "受詞位置的 who/which/that 可省略"
+            ],
+            "thinkingRules": [
+              "先行詞是人→who/that，是物→which/that",
+              "後面已有主詞→關係代名詞當受詞（可省）",
+              "後面缺主詞→關係代名詞當主詞（不可省）"
+            ]
+          }
+        },
+        {
+          "id": "eg-u4-t4",
+          "name": "間接問句與名詞子句",
+          "hook": "「他住哪裡？」Where does he live? → 「我不知道他住哪裡」I don’t know where he lives. 注意到了嗎？間接問句用「陳述語序」！",
+          "coreConcepts": [
+            "間接問句是把問句放進另一個句子裡，當名詞子句用。Do you know + where he lives?（不是 where does he live）",
+            "語序變化：直接問 Where does he live? → 間接 where he lives（去掉助動詞 does，動詞變回三単）",
+            "Wh- 間接問句：I wonder what he wants. / Tell me where she went. / I don't know why he is late.",
+            "Yes/No 間接問句用 if/whether：Do you know if/whether he is coming?（你知道他是否會來嗎）",
+            "that 名詞子句：I think (that) he is right. / I hope (that) you can come. that 可省略"
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "112年",
+              "question": "Can you tell me where _____?",
+              "options": [
+                "is the post office",
+                "the post office is",
+                "does the post office",
+                "the post office does"
+              ],
+              "answer": "B",
+              "explanation": "間接問句用陳述語序：where + S + V。where the post office is。"
+            },
+            {
+              "year": "111年",
+              "question": "I don't know _____ he will come to the party or not.",
+              "options": [
+                "that",
+                "what",
+                "whether",
+                "which"
+              ],
+              "answer": "C",
+              "explanation": "or not 提示「是否」，用 whether。whether...or not 是固定搭配。"
+            },
+            {
+              "year": "109年",
+              "question": "Do you know what time _____?",
+              "options": [
+                "does the movie start",
+                "the movie starts",
+                "starts the movie",
+                "the movie does start"
+              ],
+              "answer": "B",
+              "explanation": "間接問句用陳述語序：what time + S + V。the movie starts。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "間接問句的語序轉換是最常考的陷阱題",
+            "solvingSteps": [
+              "確認是間接問句（問句嵌入在句子裡）",
+              "用陳述語序：疑問詞 + S + V",
+              "去掉助動詞 do/does/did，動詞恢復原形或加三單",
+              "是否問句用 if/whether"
+            ],
+            "thinkingRules": [
+              "間接問句 = 疑問詞 + S + V（陳述語序）",
+              "有 or not → 用 whether",
+              "I think/believe/hope + (that) + S + V"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "eg-u5",
+      "name": "特殊句型與慣用法",
+      "stage": "九年級",
+      "importance": {
+        "stars": 2,
+        "level": "中高出題率",
+        "tip": "不定詞/動名詞、使役動詞每年1-2題"
+      },
+      "unitStrategy": {
+        "examinerPerspective": "透過特殊動詞搭配和句型測驗學生對進階文法的掌握",
+        "scoringTips": [
+          "背熟接不定詞和動名詞的動詞分類",
+          "使役動詞 + O + V原形 規則要熟",
+          "太…而不能 / 夠…可以 句型要能互換"
+        ],
+        "commonTraps": [
+          "忘記使役動詞後用原形動詞",
+          "混淆 stop to V / stop V-ing",
+          "感官動詞後誤加 to"
+        ],
+        "thinkingPath": "看到特殊動詞/句型 → 回想搭配規則 → 判斷接不定詞或動名詞 → 代入檢查"
+      },
+      "topics": [
+        {
+          "id": "eg-u5-t1",
+          "name": "不定詞與動名詞",
+          "hook": "「I enjoy swimming」但是「I want to swim」——為什麼一個用 V-ing、一個用 to V？因為每個動詞「喜歡」的后綴不一樣！",
+          "coreConcepts": [
+            "不定詞 to V：表目的、未來、意願。I want to go. / I decided to study abroad. / I hope to see you.",
+            "V-ing 動名詞：表已在做、習慣、一般活動。I enjoy reading. / I finished doing homework. / I practice playing piano.",
+            "接 to V 的動詞：want, hope, decide, plan, learn, agree, promise, need, would like",
+            "接 V-ing 的動詞：enjoy, finish, practice, mind, avoid, keep, give up, spend time",
+            "意思不同：stop to V(停下來去做) vs. stop V-ing(停止做) / remember to V(記得要去做) vs. remember V-ing(記得做過)"
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "112年",
+              "question": "I enjoy _____ music in my free time. It makes me feel relaxed.",
+              "options": [
+                "listen",
+                "to listen",
+                "listening",
+                "listened"
+              ],
+              "answer": "C",
+              "explanation": "enjoy + V-ing。enjoy listening to music。enjoy 後不接 to V。"
+            },
+            {
+              "year": "111年",
+              "question": "Tom decided _____ harder for the final exam.",
+              "options": [
+                "study",
+                "studying",
+                "to study",
+                "studied"
+              ],
+              "answer": "C",
+              "explanation": "decide + to V。decide to study harder 「決定更努力讀書」。"
+            },
+            {
+              "year": "109年",
+              "question": "Please remember _____ the door when you leave.",
+              "options": [
+                "lock",
+                "locking",
+                "to lock",
+                "locked"
+              ],
+              "answer": "C",
+              "explanation": "remember to V 表示「記得要去做」。remember V-ing 表示「記得做過」。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "不定詞 vs. 動名詞是進階文法的核心考點",
+            "solvingSteps": [
+              "找出前面的動詞（want/enjoy/decide等）",
+              "回想該動詞接 to V 還是 V-ing",
+              "若是 stop/remember 等雙用動詞，看語意判斷",
+              "代入確認語意通順"
+            ],
+            "thinkingRules": [
+              "want/hope/decide/plan/learn → to V",
+              "enjoy/finish/practice/mind/avoid → V-ing",
+              "stop to V(停下來去做) vs. stop V-ing(停止做)"
+            ]
+          }
+        },
+        {
+          "id": "eg-u5-t2",
+          "name": "使役動詞與感官動詞",
+          "hook": "「媽媽叫我打掃房間」Mom made me clean my room. 為什麼不是 made me to clean？因為使役動詞後面要用原形動詞！",
+          "coreConcepts": [
+            "使役動詞 make/let/have + O + V原形：Mom made me clean. / Let me go. / I'll have him call you.",
+            "make + O + adj：The news made her happy.（使某人變得…）",
+            "get + O + to V：I got him to help me.（get 用 to V，不用原形）",
+            "感官動詞 see/hear/watch/feel + O + V原形/V-ing：I saw him cross the street.(看到全程) / I saw him crossing the street.(看到正在過)",
+            "被動中的使役動詞：make 被動加 to。I was made to clean my room.（被迫打掃）"
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "112年",
+              "question": "The teacher made the students _____ the test again.",
+              "options": [
+                "take",
+                "to take",
+                "taking",
+                "took"
+              ],
+              "answer": "A",
+              "explanation": "make + O + V原形。made the students take。使役動詞後不加 to。"
+            },
+            {
+              "year": "110年",
+              "question": "I heard someone _____ for help last night.",
+              "options": [
+                "call",
+                "to call",
+                "called",
+                "calls"
+              ],
+              "answer": "A",
+              "explanation": "感官動詞 hear + O + V原形，表示聽到全程。heard someone call for help。"
+            },
+            {
+              "year": "108年",
+              "question": "My parents don't let me _____ up late on school nights.",
+              "options": [
+                "stay",
+                "to stay",
+                "staying",
+                "stayed"
+              ],
+              "answer": "A",
+              "explanation": "let + O + V原形。let me stay up late。let 是使役動詞。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "使役動詞和感官動詞後接原形動詞是每年必考",
+            "solvingSteps": [
+              "辨識出使役/感官動詞",
+              "make/let/have → O + V原形",
+              "see/hear/watch/feel → O + V原形 或 V-ing",
+              "注意 get + O + to V（例外）"
+            ],
+            "thinkingRules": [
+              "make/let/have + O + V原形（不加 to）",
+              "get + O + to V（要加 to）",
+              "被動：be made + to V（被動要加回 to）"
+            ]
+          }
+        },
+        {
+          "id": "eg-u5-t3",
+          "name": "too…to / so…that / enough to 句型",
+          "hook": "「這個箱子太重了，我搬不動」The box is too heavy to carry. 「他多才多藝，足以勝任」He is talented enough to win. 三種句型可以互換！",
+          "coreConcepts": [
+            "too + adj/adv + to V：太…而不能…。He is too young to drive.（他太年輕，不能開車）",
+            "so + adj/adv + that + S + V：如此…以至於…。He is so young that he can't drive.",
+            "adj/adv + enough + to V：夠…可以…。He is old enough to drive.（他夠大可以開車）",
+            "enough 的位置：形容詞/副詞 + enough（tall enough），但 enough + 名詞（enough money）",
+            "互換：too young to = so young that...can't = not old enough to"
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "112年",
+              "question": "The tea is _____ hot to drink. Let's wait for a few minutes.",
+              "options": [
+                "very",
+                "too",
+                "so",
+                "enough"
+              ],
+              "answer": "B",
+              "explanation": "too hot to drink 表示「太燙而不能喝」。too...to 句型。"
+            },
+            {
+              "year": "110年",
+              "question": "The movie was _____ boring that many people left early.",
+              "options": [
+                "very",
+                "too",
+                "such",
+                "so"
+              ],
+              "answer": "D",
+              "explanation": "so + adj + that + S + V。so boring that many people left。"
+            },
+            {
+              "year": "109年",
+              "question": "Is this room big _____ for twenty people?",
+              "options": [
+                "too",
+                "enough",
+                "very",
+                "so"
+              ],
+              "answer": "B",
+              "explanation": "adj + enough + for：big enough for twenty people。注意 enough 放在形容詞後。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "too...to 和 so...that 的互換是常考句型轉換題",
+            "solvingSteps": [
+              "判斷語意：太…而不能 / 如此…以至於 / 夠…可以",
+              "選擇對應句型",
+              "注意 enough 的位置（adj + enough，enough + n）",
+              "互換時注意肯定/否定轉換"
+            ],
+            "thinkingRules": [
+              "too...to = so...that...can't = not...enough to",
+              "enough 接形容詞放後面，接名詞放前面",
+              "so + adj，such + n：so beautiful / such a beautiful day"
+            ]
+          }
+        },
+        {
+          "id": "eg-u5-t4",
+          "name": "假設語氣基礎",
+          "hook": "「如果我是鳥，我就能飛」If I were a bird, I could fly. 為什麼用 were 不用 was？因為這是「與現實相反」的假設！",
+          "coreConcepts": [
+            "與現在事實相反：If + S + 過去式, S + would/could + V。If I had money, I would buy it.",
+            "be 動詞一律用 were：If I were you, I would study harder.（不管主詞是誰都用 were）",
+            "wish + 過去式：I wish I were taller.（希望我更高，但事實上不是）",
+            "If I were you… 給建議：If I were you, I would see a doctor.（如果我是你，我會去看醫生）",
+            "國中範圍僅考基本假設（與現在相反），不考與過去相反的假設語氣"
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "112年",
+              "question": "If I _____ you, I would apologize to her right away.",
+              "options": [
+                "am",
+                "was",
+                "were",
+                "be"
+              ],
+              "answer": "C",
+              "explanation": "與現在事實相反的假設，be 動詞一律用 were。If I were you。"
+            },
+            {
+              "year": "110年",
+              "question": "I wish I _____ a bird. Then I could fly anywhere.",
+              "options": [
+                "am",
+                "was",
+                "were",
+                "will be"
+              ],
+              "answer": "C",
+              "explanation": "wish + 過去式表示與現實相反的願望。be 用 were。"
+            },
+            {
+              "year": "108年",
+              "question": "If Tom _____ more time, he would travel around the world.",
+              "options": [
+                "has",
+                "had",
+                "have",
+                "will have"
+              ],
+              "answer": "B",
+              "explanation": "與現在相反的假設，if 子句用過去式 had。主要子句用 would + V。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "假設語氣在國中僅考基本型，抓住 were 和 would 就能拿分",
+            "solvingSteps": [
+              "判斷是否與現實相反",
+              "與現實相反 → if + 過去式, would/could + V",
+              "所有人稱的 be 動詞都用 were",
+              "wish + 過去式（同一規則）"
+            ],
+            "thinkingRules": [
+              "If I were you 是固定用法，永遠 were",
+              "would/could + 原形動詞（不是 would + 過去式）",
+              "國中範圍只考「與現在相反」的假設"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -26,6 +26,12 @@ argument-hint: "例如：幫理化的電與磁補充歷屆考題、幫歷史臺�
 ### 數學科
 - [math.json](../../src/data/subjects/math.json) — 數學
 
+### 英文科
+- [english-vocabulary.json](../../src/data/subjects/english-vocabulary.json) — 字彙與片語
+- [english-grammar.json](../../src/data/subjects/english-grammar.json) — 文法句型
+- [english-reading.json](../../src/data/subjects/english-reading.json) — 閱讀與題型攻略
+- [english-listening.json](../../src/data/subjects/english-listening.json) — 聽力測驗
+
 ## JSON Schema
 
 每個 subject 有 `units[]`，每個 unit 有 `topics[]`：

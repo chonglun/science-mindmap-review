@@ -1,0 +1,1071 @@
+{
+  "id": "english-vocabulary",
+  "label": "字彙與片語",
+  "color": "#8b5cf6",
+  "units": [
+    {
+      "id": "ev-u1",
+      "name": "基礎必備字彙",
+      "stage": "七年級",
+      "importance": {
+        "stars": 3,
+        "level": "高出題率",
+        "tip": "每年約8~10題直接考字彙，基礎字彙是拿分關鍵"
+      },
+      "unitStrategy": {
+        "examinerPerspective": "測驗學生對日常生活基本字彙的掌握程度，題目多以圖片或簡單情境呈現",
+        "scoringTips": [
+          "每天背10個單字，搭配例句記憶",
+          "將單字分類整理（食物、交通、家庭等）",
+          "善用圖像記憶法，把單字與畫面連結"
+        ],
+        "commonTraps": [
+          "拼字相近的單字混淆（如 quiet/quite）",
+          "忽略同一單字的不同詞性用法",
+          "只背中文意思，不記搭配用法"
+        ],
+        "thinkingPath": "看到題目 → 判斷考的是哪個生活情境 → 從情境聯想相關字彙 → 檢查詞性是否正確 → 選答案"
+      },
+      "topics": [
+        {
+          "id": "ev-u1-t1",
+          "name": "日常生活字彙",
+          "hook": "走進便利商店，你看到的每樣東西都有英文名字——從 sandwich 到 receipt，這些天天用到的字就是會考最愛考的基礎字彙！",
+          "coreConcepts": [
+            "食物與飲料：breakfast, lunch, dinner, snack, dessert, noodle(s), dumpling 等三餐與常見食物",
+            "交通工具：bus, train, MRT, scooter, bicycle；搭配動詞 take/ride/drive 的用法差異",
+            "學校生活：subject, textbook, homework, exam, classmate, principal 等校園常用詞",
+            "購物與金錢：price, discount, change, receipt, cashier, expensive/cheap 的比較用法",
+            "身體與健康：headache, stomachache, fever, medicine, dentist；常見 have a + 症狀句型"
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "112年",
+              "question": "My sister likes to eat _____ for breakfast. She always has two pieces with butter and jam.",
+              "options": [
+                "toast",
+                "steak",
+                "salad",
+                "candy"
+              ],
+              "answer": "A",
+              "explanation": "從 breakfast、two pieces、butter and jam 判斷是吐司 (toast)。steak 是牛排不適合早餐搭配果醬。"
+            },
+            {
+              "year": "111年",
+              "question": "It's raining hard outside. Don't forget to bring your _____ when you go out.",
+              "options": [
+                "umbrella",
+                "uniform",
+                "underwear",
+                "university"
+              ],
+              "answer": "A",
+              "explanation": "下大雨要帶雨傘 (umbrella)。四個選項都是 u 開頭，要注意語境判斷。"
+            },
+            {
+              "year": "110年",
+              "question": "The _____ is very convenient. There are many shops, restaurants, and a movie theater nearby.",
+              "options": [
+                "neighbor",
+                "neighborhood",
+                "national",
+                "natural"
+              ],
+              "answer": "B",
+              "explanation": "neighborhood 指社區、鄰近地區，符合「有商店、餐廳、電影院」的描述。neighbor 是鄰居（人）。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "出題者透過生活情境測字彙量，關鍵在於上下文線索",
+            "solvingSteps": [
+              "讀完整句，找出情境線索",
+              "從選項中排除明顯不符的",
+              "考慮詞性（名詞/動詞/形容詞）是否搭配",
+              "回填確認句意通順"
+            ],
+            "thinkingRules": [
+              "生活情境題靠上下文判斷",
+              "注意同類字的細微差異",
+              "別只看單字開頭就急著選"
+            ]
+          }
+        },
+        {
+          "id": "ev-u1-t2",
+          "name": "人物與情感字彙",
+          "hook": "形容你最好的朋友是什麼個性？generous（大方）、shy（害羞）、還是 humorous（幽默）？人物描寫題在會考閱讀測驗中超常出現！",
+          "coreConcepts": [
+            "外表描述：tall, short, slim, heavy, curly hair, straight hair, wear glasses 等外貌形容",
+            "個性特質：kind, honest, patient, lazy, selfish, confident, creative 等性格形容詞",
+            "情緒表達：excited, nervous, disappointed, embarrassed, surprised, satisfied 等情緒詞",
+            "人際關係：stranger, acquaintance, colleague, relative, couple 等關係名詞",
+            "正面 vs. 負面情感詞配對：happy/sad, proud/ashamed, grateful/jealous 的對比記憶法"
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "112年",
+              "question": "Kevin is very _____. He always shares his lunch and snacks with his classmates.",
+              "options": [
+                "generous",
+                "curious",
+                "nervous",
+                "serious"
+              ],
+              "answer": "A",
+              "explanation": "從 shares his lunch and snacks 判斷是「大方的」(generous)。curious 是好奇的，nervous 是緊張的。"
+            },
+            {
+              "year": "110年",
+              "question": "The little girl felt _____ when she couldn't find her mother in the department store.",
+              "options": [
+                "bored",
+                "frightened",
+                "interested",
+                "relaxed"
+              ],
+              "answer": "B",
+              "explanation": "小女孩在百貨公司找不到媽媽會感到害怕 (frightened)。bored 是無聊，不符情境。"
+            },
+            {
+              "year": "109年",
+              "question": "My grandfather is 80 years old, but he is still very _____. He exercises every morning.",
+              "options": [
+                "weak",
+                "sick",
+                "energetic",
+                "tired"
+              ],
+              "answer": "C",
+              "explanation": "80歲但每天早上運動，表示很有活力 (energetic)。與 weak/sick/tired 形成對比。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "透過人物描寫情境測試形容詞掌握度",
+            "solvingSteps": [
+              "找出人物行為或特徵的關鍵描述",
+              "判斷需要正面還是負面的形容詞",
+              "從選項中選出最符合語境的",
+              "確認詞性為形容詞且語法正確"
+            ],
+            "thinkingRules": [
+              "人物題重點在行為→特質的對應",
+              "注意 but, however 等轉折詞暗示相反特質",
+              "情緒詞常搭配 feel/become/look 等連綴動詞"
+            ]
+          }
+        },
+        {
+          "id": "ev-u1-t3",
+          "name": "時間與數字表達",
+          "hook": "「我們約三點半見！」——half past three 還是 three and a half？看似簡單的時間和數字表達，卻是會考克漏字的常客！",
+          "coreConcepts": [
+            "時鐘表達法：o'clock, half past, quarter to/past, a.m./p.m. 的使用區別",
+            "日期與星期：January~December 月份、Monday~Sunday 星期、序數詞 first~thirty-first",
+            "頻率副詞：always, usually, often, sometimes, seldom, never 的頻率排列與句中位置",
+            "數量表達：hundred/thousand/million 前面有數字時不加 s；a couple of, several, a few/few 的差異",
+            "年齡與度量：years old 用法、meter/kilometer, kilogram, degree 等計量單位"
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "111年",
+              "question": "The meeting will start at _____ in the afternoon. Please don't be late.",
+              "options": [
+                "two thirty",
+                "thirty two",
+                "two and thirty",
+                "the two thirty"
+              ],
+              "answer": "A",
+              "explanation": "英文時間表達：小時在前，分鐘在後，two thirty = 2:30。不用 and 連接。"
+            },
+            {
+              "year": "109年",
+              "question": "There are _____ students in our school. It's a big school.",
+              "options": [
+                "two thousands",
+                "two thousand",
+                "second thousand",
+                "thousands two"
+              ],
+              "answer": "B",
+              "explanation": "hundred/thousand/million 前有確切數字時不加 s。two thousand = 2000。"
+            },
+            {
+              "year": "108年",
+              "question": "Lisa _____ goes to bed before 10 o'clock. She goes to bed at 9:30 almost every day.",
+              "options": [
+                "never",
+                "seldom",
+                "usually",
+                "hardly"
+              ],
+              "answer": "C",
+              "explanation": "almost every day 表示幾乎每天，對應 usually（通常）。never 是從不，seldom 是很少。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "數字與時間是基礎溝通能力，常融入克漏字或對話題",
+            "solvingSteps": [
+              "辨識題目考的是時間/數字/頻率哪一類",
+              "回想該類表達的固定規則",
+              "注意特殊規則（如 thousand 不加 s）",
+              "代入選項確認語法正確"
+            ],
+            "thinkingRules": [
+              "數字表達有固定語序，不能直譯中文",
+              "頻率副詞要看上下文判斷程度",
+              "月份星期一定要大寫開頭"
+            ]
+          }
+        },
+        {
+          "id": "ev-u1-t4",
+          "name": "自然與天氣字彙",
+          "hook": "台灣夏天 typhoon（颱風）一來就放假，winter 的 cold front（冷鋒）讓人直發抖——這些跟天氣有關的字，會考每年都考！",
+          "coreConcepts": [
+            "天氣描述：sunny, cloudy, rainy, windy, foggy, stormy；名詞與形容詞轉換（rain→rainy, cloud→cloudy）",
+            "四季與氣候：spring, summer, fall/autumn, winter；tropical, humid, dry 等氣候形容詞",
+            "自然環境：mountain, ocean, island, forest, desert, river, lake 等地理名詞",
+            "動植物：pet, insect, whale, dolphin, bamboo, cherry blossom；與台灣生態相關的常考字",
+            "環保議題：pollution, recycle, global warming, endangered, protect, environment 等時事常考字彙"
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "112年",
+              "question": "The weather report says it will be _____ tomorrow, so remember to bring an umbrella.",
+              "options": [
+                "sunny",
+                "rainy",
+                "windy",
+                "cloudy"
+              ],
+              "answer": "B",
+              "explanation": "要帶傘表示會下雨 (rainy)。cloudy 只是多雲，不一定需要傘。"
+            },
+            {
+              "year": "110年",
+              "question": "We should _____ plastic bags to help protect the environment.",
+              "options": [
+                "produce",
+                "prepare",
+                "reduce",
+                "review"
+              ],
+              "answer": "C",
+              "explanation": "reduce plastic bags（減少塑膠袋）是環保行動。produce 是生產，反而增加汙染。"
+            },
+            {
+              "year": "109年",
+              "question": "The _____ of the river is very dirty because the factory poured waste water into it.",
+              "options": [
+                "water",
+                "weather",
+                "weight",
+                "width"
+              ],
+              "answer": "A",
+              "explanation": "工廠排廢水到河裡，所以是河水 (water) 很髒。注意 w 開頭的易混淆字。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "自然與天氣結合生活情境和環保議題，是跨領域出題熱點",
+            "solvingSteps": [
+              "判斷情境是天氣預報、自然描述還是環保議題",
+              "找出因果關係線索（下雨→帶傘）",
+              "注意名詞/形容詞轉換",
+              "檢查是否有環保相關的關鍵動詞"
+            ],
+            "thinkingRules": [
+              "天氣形容詞多由名詞+y構成",
+              "環保題常考 reduce/reuse/recycle",
+              "自然地理名詞注意可數與不可數"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "ev-u2",
+      "name": "進階高頻字彙",
+      "stage": "八～九年級",
+      "importance": {
+        "stars": 3,
+        "level": "高出題率",
+        "tip": "進階字彙占會考字彙題50%以上，為拉開程度差距的關鍵"
+      },
+      "unitStrategy": {
+        "examinerPerspective": "測驗學生對1200-2000字範圍的掌握，特別是動詞片語與一字多義",
+        "scoringTips": [
+          "動詞搭配介系詞一起背（look for / look after / look up）",
+          "同義字反義字做對照表整理",
+          "一字多義要記住2-3個常用意思"
+        ],
+        "commonTraps": [
+          "動詞片語介系詞換一個意思完全不同",
+          "同義字有微妙語感差異（如 big/large/huge）",
+          "忽略字彙在不同詞性時的不同意思"
+        ],
+        "thinkingPath": "看到進階字彙題 → 先理解整句語境 → 判斷所需詞性 → 用語境線索選出最佳答案"
+      },
+      "topics": [
+        {
+          "id": "ev-u2-t1",
+          "name": "常考動詞與動詞片語",
+          "hook": "「我在找我的手機」是 look for，「我在照顧弟弟」是 look after，同一個 look 加不同介系詞就變成完全不同的意思！這是會考的超高頻考點。",
+          "coreConcepts": [
+            "look 家族：look for（尋找）、look after（照顧）、look up（查閱）、look forward to（期待）、look like（看起來像）",
+            "take 家族：take off（脫掉/起飛）、take care of（照顧）、take place（發生）、take part in（參加）、take turns（輪流）",
+            "turn 家族：turn on/off（開/關）、turn down（拒絕/調低）、turn into（變成）、turn out（結果是）",
+            "get 家族：get up（起床）、get along with（相處）、get rid of（擺脫）、get used to（習慣）",
+            "give/put/make 片語：give up（放棄）、put off（延期）、put on（穿上）、make up（編造/化妝）、make fun of（取笑）"
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "112年",
+              "question": "The game was _____ because of the heavy rain.",
+              "options": [
+                "called off",
+                "called on",
+                "called up",
+                "called for"
+              ],
+              "answer": "A",
+              "explanation": "call off 意為「取消」，因大雨取消比賽。call on 拜訪，call up 打電話，call for 要求。"
+            },
+            {
+              "year": "111年",
+              "question": "Please _____ the TV. The baby is sleeping.",
+              "options": [
+                "turn on",
+                "turn off",
+                "turn up",
+                "turn into"
+              ],
+              "answer": "B",
+              "explanation": "寶寶在睡覺，應關掉電視。turn off 關閉，turn on 打開，turn up 調大聲，turn into 變成。"
+            },
+            {
+              "year": "109年",
+              "question": "I can't _____ my keys. Have you seen them?",
+              "options": [
+                "find out",
+                "look for",
+                "look after",
+                "find"
+              ],
+              "answer": "D",
+              "explanation": "can't find 找不到（結果）。look for 是「正在尋找」的動作。此句強調結果，故用 find。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "動詞片語是會考最高頻考點之一，測驗學生能否分辨介系詞不同造成的語意差異",
+            "solvingSteps": [
+              "確認空格後的介系詞或受詞",
+              "回想該動詞搭配該介系詞的意思",
+              "代入句子確認語意通順",
+              "注意時態是否正確"
+            ],
+            "thinkingRules": [
+              "動詞片語要整組記憶，不能拆開推測",
+              "注意 look for（過程）vs. find（結果）的差異",
+              "片語動詞後接受詞時，有些可分離（turn it off）有些不可"
+            ]
+          }
+        },
+        {
+          "id": "ev-u2-t2",
+          "name": "抽象概念字彙",
+          "hook": "experience（經驗）、opportunity（機會）、environment（環境）——這些「看不到摸不到」的抽象名詞，會考閱讀測驗超愛考！",
+          "coreConcepts": [
+            "學習相關：experience（經驗）、knowledge（知識）、ability（能力）、effort（努力）、progress（進步）",
+            "社會議題：environment（環境）、pollution（汙染）、government（政府）、culture（文化）、population（人口）",
+            "生活態度：opportunity（機會）、challenge（挑戰）、success（成功）、failure（失敗）、goal（目標）",
+            "抽象情感：freedom（自由）、peace（和平）、justice（正義）、courage（勇氣）、imagination（想像力）",
+            "常考搭配：make progress（進步）、take the opportunity（把握機會）、protect the environment（保護環境）"
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "111年",
+              "question": "Reading books can help us get more _____.",
+              "options": [
+                "knowledge",
+                "furniture",
+                "medicine",
+                "garbage"
+              ],
+              "answer": "A",
+              "explanation": "閱讀書籍能獲得更多「知識」，故選 knowledge。"
+            },
+            {
+              "year": "110年",
+              "question": "We should make more _____ to protect the environment.",
+              "options": [
+                "excuses",
+                "efforts",
+                "mistakes",
+                "noises"
+              ],
+              "answer": "B",
+              "explanation": "make efforts to 表示「努力去做」，保護環境需要努力，故選 efforts。"
+            },
+            {
+              "year": "108年",
+              "question": "Don't miss this _____. It may not come again.",
+              "options": [
+                "opportunity",
+                "apartment",
+                "instrument",
+                "movement"
+              ],
+              "answer": "A",
+              "explanation": "不要錯過這個「機會」，機會可能不再來，故選 opportunity。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "透過語境考驗學生對抽象名詞的理解，常與動詞搭配一起出題",
+            "solvingSteps": [
+              "理解整句語意與情境",
+              "確認空格需要名詞",
+              "從語境推斷需要正面或負面含義的字",
+              "確認常見搭配是否正確"
+            ],
+            "thinkingRules": [
+              "抽象名詞常與特定動詞搭配（make efforts, gain knowledge）",
+              "注意語境正負面暗示來縮小選項",
+              "長字不一定難，先從認識的選項下手"
+            ]
+          }
+        },
+        {
+          "id": "ev-u2-t3",
+          "name": "同義字與反義字辨析",
+          "hook": "happy、glad、pleased 都是「高興」，但會考會測你哪個最適合放在句子裡！學會分辨同義字的細微差異，才能精準作答。",
+          "coreConcepts": [
+            "大/小：big（一般大）、large（面積/數量大）、huge（巨大）；small（一般小）、little（小且帶感情）、tiny（極小）",
+            "快樂：happy（一般快樂）、glad（因特定事情高興）、pleased（滿意的）、cheerful（開朗的）、delighted（非常高興）",
+            "重要：important（重要）、necessary（必要）、significant（有意義的）；vs. unimportant、unnecessary",
+            "說話：say（說內容）、speak（說語言/對眾人說）、talk（交談）、tell（告訴某人）",
+            "看：see（看見結果）、watch（注意觀看）、look（看的動作）；hear（聽見）vs. listen（聆聽）"
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "112年",
+              "question": "I'm _____ to hear that you got the first prize.",
+              "options": [
+                "glad",
+                "angry",
+                "afraid",
+                "sorry"
+              ],
+              "answer": "A",
+              "explanation": "得到第一名是好事，聽到好消息感到高興，故選 glad。glad to hear 是常見搭配。"
+            },
+            {
+              "year": "110年",
+              "question": "Could you please _____ me how to get to the train station?",
+              "options": [
+                "say",
+                "talk",
+                "tell",
+                "speak"
+              ],
+              "answer": "C",
+              "explanation": "tell + 人 + 事：告訴我怎麼去車站。say 後不直接接人，talk 要加 to，speak 指說語言。"
+            },
+            {
+              "year": "109年",
+              "question": "This box is too _____ for me to carry. Can you help me?",
+              "options": [
+                "heavy",
+                "light",
+                "thin",
+                "empty"
+              ],
+              "answer": "A",
+              "explanation": "搬不動需要幫忙，表示箱子很重（heavy）。light 輕、thin 薄、empty 空的，都不合語境。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "測驗學生能否在語境中選出最精確的同義字，或辨別反義字的正確使用",
+            "solvingSteps": [
+              "理解句意確定需要正面或負面詞",
+              "比較選項中同義字的使用情境",
+              "注意介系詞搭配（glad to / pleased with）",
+              "代入確認最自然的表達"
+            ],
+            "thinkingRules": [
+              "同義字題重在「搭配」和「語境」，不只是意思相近就能選",
+              "say/speak/talk/tell 是永遠的經典考題",
+              "反義字題注意句中否定詞或轉折詞"
+            ]
+          }
+        },
+        {
+          "id": "ev-u2-t4",
+          "name": "多義字與一字多義",
+          "hook": "light 可以是「光」也可以是「輕的」；right 可以是「右邊」也可以是「正確的」。會考最愛考的就是一個字的不同意思！",
+          "coreConcepts": [
+            "light：（名詞）光、燈；（形容詞）輕的、淺色的。如 turn on the light / a light bag",
+            "right：（形容詞）正確的、右邊的；（名詞）權利。如 the right answer / turn right / human rights",
+            "run：（動詞）跑；經營；運轉。如 run fast / run a business / The machine runs well.",
+            "change：（動詞）改變、換；（名詞）零錢、變化。如 change clothes / keep the change",
+            "match：（動詞）搭配、相配；（名詞）比賽、火柴。如 The shirt matches the pants. / a basketball match"
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "111年",
+              "question": "The coat is too _____ for winter. You need a thicker one.",
+              "options": [
+                "light",
+                "bright",
+                "tight",
+                "right"
+              ],
+              "answer": "A",
+              "explanation": "冬天穿太「輕薄」，需要更厚的。light 在此指「薄的、輕的」，不是「光線」的意思。"
+            },
+            {
+              "year": "110年",
+              "question": "My uncle _____ a small restaurant near the train station.",
+              "options": [
+                "runs",
+                "walks",
+                "moves",
+                "flies"
+              ],
+              "answer": "A",
+              "explanation": "run a restaurant 意為「經營餐廳」，run 在此不是「跑」的意思。"
+            },
+            {
+              "year": "108年",
+              "question": "Here's your _____. You gave me one hundred dollars for the seventy-dollar meal.",
+              "options": [
+                "chance",
+                "change",
+                "choice",
+                "challenge"
+              ],
+              "answer": "B",
+              "explanation": "100元付70元的餐，找回的是「零錢」change。注意 chance（機會）和 change（零錢）拼寫相近但意思不同。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "一字多義是會考高頻考點，測驗學生能否根據語境判斷同一個字的不同意思",
+            "solvingSteps": [
+              "讀完整句確認語境",
+              "回想該字的所有常見意思",
+              "選出最符合語境的意思",
+              "注意詞性變化（名詞/動詞/形容詞）"
+            ],
+            "thinkingRules": [
+              "一字多義題必看語境，不能只記一個意思",
+              "注意該字在句中的詞性，不同詞性意思不同",
+              "常考多義字：run, light, right, change, match, fine, present, book"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "ev-u3",
+      "name": "片語與慣用語",
+      "stage": "八～九年級",
+      "importance": {
+        "stars": 3,
+        "level": "高出題率",
+        "tip": "片語題穩定出現2-3題，熟背高頻片語是拿分關鍵"
+      },
+      "unitStrategy": {
+        "examinerPerspective": "測驗學生對常用片語和慣用語的掌握，尤其是介系詞搭配與連接詞使用",
+        "scoringTips": [
+          "每天背3-5個片語搭配例句",
+          "把片語按功能分類（表原因、表轉折、表結果）",
+          "用片語造句加深記憶"
+        ],
+        "commonTraps": [
+          "介系詞用錯導致意思完全不同",
+          "混淆相似片語（in time vs. on time）",
+          "忽略片語後接動名詞還是不定詞"
+        ],
+        "thinkingPath": "看到片語題 → 先確認空格前後的搭配 → 回想片語完整形式 → 代入檢查語意"
+      },
+      "topics": [
+        {
+          "id": "ev-u3-t1",
+          "name": "動詞片語",
+          "hook": "give up 是放棄，put off 是延期，work out 是健身也是解決——會考最愛用「動詞+介/副詞」的組合來考你！",
+          "coreConcepts": [
+            "give 動詞片語：give up（放棄）、give in（屈服）、give away（贈送）、give back（歸還）",
+            "put 動詞片語：put on（穿上）、put off（延期）、put away（收好）、put up with（忍受）",
+            "work/carry 片語：work out（運動/解決）、carry out（執行）、carry on（繼續）、figure out（弄清楚）",
+            "come/go 片語：come up with（想出）、come across（偶遇）、go over（複習）、go through（經歷）",
+            "break/bring 片語：break down（故障/崩潰）、break out（爆發）、bring up（撫養/提出）、bring about（導致）"
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "112年",
+              "question": "Don't _____. Keep trying and you'll succeed.",
+              "options": [
+                "give up",
+                "give in",
+                "give away",
+                "give back"
+              ],
+              "answer": "A",
+              "explanation": "不要放棄，繼續努力就會成功。give up 放棄，give in 屈服，give away 贈送，give back 歸還。"
+            },
+            {
+              "year": "111年",
+              "question": "The car _____ on the highway, so we had to wait for help.",
+              "options": [
+                "broke down",
+                "broke out",
+                "broke up",
+                "broke in"
+              ],
+              "answer": "A",
+              "explanation": "車在高速公路上「拋錨」。break down（機器故障），break out（爆發），break up（分手），break in（闖入）。"
+            },
+            {
+              "year": "109年",
+              "question": "Can you help me _____ this math problem?",
+              "options": [
+                "figure out",
+                "find out",
+                "carry out",
+                "point out"
+              ],
+              "answer": "A",
+              "explanation": "幫我「弄清楚」這道數學題。figure out 弄懂/算出，find out 發現，carry out 執行，point out 指出。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "動詞片語是會考必考題型，測驗學生是否記得動詞搭配不同介/副詞的意思",
+            "solvingSteps": [
+              "看清楚是哪個基底動詞",
+              "確認介/副詞是什麼",
+              "回想該組合的意思",
+              "代入句子確認通順"
+            ],
+            "thinkingRules": [
+              "動詞片語必須整組記憶",
+              "同一動詞搭配不同介詞意思完全不同",
+              "注意可分離片語（put it on）與不可分離片語（give up it ✗）的差別"
+            ]
+          }
+        },
+        {
+          "id": "ev-u3-t2",
+          "name": "介系詞片語",
+          "hook": "in time 是「及時」，on time 是「準時」，差一個介系詞意思就不同！介系詞片語是會考閱讀的隱形考點。",
+          "coreConcepts": [
+            "時間相關：in time（及時）、on time（準時）、at times（有時）、from time to time（偶爾）、in the future（未來）",
+            "地點狀態：in front of（在前面）、next to（在旁邊）、on top of（在上面）、in the middle of（在中間）",
+            "原因目的：because of（因為）、instead of（而非）、in order to（為了）、thanks to（多虧）",
+            "方式手段：by the way（順便一提）、on purpose（故意）、by accident（意外地）、in person（親自）",
+            "程度範圍：at least（至少）、at most（最多）、in fact（事實上）、for example（例如）、such as（像是）"
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "112年",
+              "question": "We arrived at the airport just _____. The plane was about to leave.",
+              "options": [
+                "in time",
+                "on time",
+                "at times",
+                "in no time"
+              ],
+              "answer": "A",
+              "explanation": "差點趕不上飛機，是「及時」趕到。in time 及時，on time 準時（按計劃），at times 有時候。"
+            },
+            {
+              "year": "110年",
+              "question": "_____ his help, we finished the project before the deadline.",
+              "options": [
+                "Thanks to",
+                "Instead of",
+                "Because",
+                "In spite of"
+              ],
+              "answer": "A",
+              "explanation": "多虧他的幫忙，我們在期限前完成。Thanks to + N（多虧），Because + 子句。"
+            },
+            {
+              "year": "108年",
+              "question": "She didn't break the vase _____. It was an accident.",
+              "options": [
+                "on purpose",
+                "in person",
+                "by the way",
+                "at first"
+              ],
+              "answer": "A",
+              "explanation": "她不是「故意」打破花瓶的，是意外。on purpose 故意地。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "介系詞片語常藏在閱讀測驗中，也會在字彙選擇題直接出現",
+            "solvingSteps": [
+              "看空格前後的搭配",
+              "辨認整個片語的意思",
+              "注意介系詞後接名詞或動名詞",
+              "代入確認語意"
+            ],
+            "thinkingRules": [
+              "in/on/at + time 系列是永恆考點",
+              "介系詞片語後面接名詞或 V-ing",
+              "thanks to vs. because of 都表原因但用法不同"
+            ]
+          }
+        },
+        {
+          "id": "ev-u3-t3",
+          "name": "常考慣用語",
+          "hook": "「It's a piece of cake!」不是在說蛋糕，是說「超簡單」！英文慣用語的意思不能從字面猜，要整組記起來。",
+          "coreConcepts": [
+            "表達容易/困難：a piece of cake（很簡單）、no pain no gain（不勞無獲）、easier said than done（說比做容易）",
+            "表達行為態度：keep an eye on（留意）、make up one's mind（下定決心）、change one's mind（改變心意）",
+            "表達時間頻率：once in a while（偶爾）、sooner or later（遲早）、right away（馬上）、all of a sudden（突然）",
+            "日常實用語：help oneself（自行取用）、take it easy（放輕鬆）、never mind（沒關係）、no wonder（難怪）",
+            "比喻性慣用語：rain cats and dogs（傾盆大雨）、cost an arm and a leg（非常昂貴）、hit the books（用功讀書）"
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "111年",
+              "question": "A: I'm sorry I broke your cup. B: _____. I can buy a new one.",
+              "options": [
+                "Never mind",
+                "No wonder",
+                "Of course",
+                "Take it easy"
+              ],
+              "answer": "A",
+              "explanation": "打破杯子道歉，回覆「沒關係」用 Never mind。No wonder 難怪，Of course 當然，Take it easy 放輕鬆。"
+            },
+            {
+              "year": "110年",
+              "question": "It's raining _____. We'd better stay inside.",
+              "options": [
+                "cats and dogs",
+                "a piece of cake",
+                "an arm and a leg",
+                "once in a while"
+              ],
+              "answer": "A",
+              "explanation": "rain cats and dogs 表示「傾盆大雨」，是常見慣用語。"
+            },
+            {
+              "year": "109年",
+              "question": "You look tired. Why don't you _____?",
+              "options": [
+                "take it easy",
+                "make up your mind",
+                "keep an eye on",
+                "change your mind"
+              ],
+              "answer": "A",
+              "explanation": "看起來累了，建議「放輕鬆」。take it easy 放鬆休息。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "慣用語無法從字面推測意思，純粹測驗學生是否記得該用語",
+            "solvingSteps": [
+              "看到非字面意思的選項，判斷為慣用語",
+              "回想該慣用語的真正意思",
+              "從對話或語境判斷需要哪種回應",
+              "整組代入確認"
+            ],
+            "thinkingRules": [
+              "慣用語不能拆開字面翻譯",
+              "對話型慣用語要注意問答配對（道歉→沒關係）",
+              "比喻型慣用語背下來就是分數"
+            ]
+          }
+        },
+        {
+          "id": "ev-u3-t4",
+          "name": "連接詞與轉折語",
+          "hook": "however 和 but 都是「但是」，那什麼時候用哪個？besides 和 moreover 有什麼不同？會考閱讀測驗的克漏字最愛考連接詞！",
+          "coreConcepts": [
+            "對比轉折：but（但是）、however（然而）、although/though（雖然）、instead（反而）、on the other hand（另一方面）",
+            "因果關係：because（因為）、since（既然）、therefore（因此）、as a result（結果）、so（所以）",
+            "遞進補充：besides（此外）、moreover/furthermore（而且）、in addition（另外）、also（也）、what's more（更重要的是）",
+            "舉例說明：for example（例如）、such as（像是）、for instance（舉例來說）、like（如同）",
+            "總結讓步：in conclusion（總而言之）、in short（簡言之）、after all（畢竟）、even though（即使）"
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "112年",
+              "question": "I studied very hard for the test; _____, I didn't get a good grade.",
+              "options": [
+                "however",
+                "therefore",
+                "besides",
+                "moreover"
+              ],
+              "answer": "A",
+              "explanation": "前句努力讀書，後句成績不好，是轉折關係，故選 however（然而）。therefore 因此，besides 此外。"
+            },
+            {
+              "year": "111年",
+              "question": "_____ it was raining, we still went hiking.",
+              "options": [
+                "Although",
+                "Because",
+                "If",
+                "Unless"
+              ],
+              "answer": "A",
+              "explanation": "雖然下雨，我們仍去健行。Although 雖然（表讓步），Because 因為（因果），If 如果（條件）。"
+            },
+            {
+              "year": "109年",
+              "question": "The food in this restaurant is great. _____, the price is very reasonable.",
+              "options": [
+                "Besides",
+                "However",
+                "Instead",
+                "Otherwise"
+              ],
+              "answer": "A",
+              "explanation": "食物好吃，「此外」價格合理。遞進補充關係用 Besides。However 表轉折，Instead 表替代。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "連接詞與轉折語出現在克漏字與閱讀理解，測驗學生能否判斷句間邏輯關係",
+            "solvingSteps": [
+              "讀前後兩句，判斷邏輯關係",
+              "分辨是轉折、因果、遞進還是舉例",
+              "選出對應功能的連接詞",
+              "注意連接詞的標點符號用法（分號 + however）"
+            ],
+            "thinkingRules": [
+              "先判斷前後句的邏輯關係再選連接詞",
+              "however 前面通常有分號或句號",
+              "although 和 but 不能同時出現在同一句"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "ev-u4",
+      "name": "字彙解題策略",
+      "stage": "九年級總複習",
+      "importance": {
+        "stars": 2,
+        "level": "中出題率",
+        "tip": "字彙解題技巧幫助你推測不認識的字，閱讀測驗必備能力"
+      },
+      "unitStrategy": {
+        "examinerPerspective": "測驗學生面對不認識的字彙時，能否運用上下文線索與構詞知識推測字義",
+        "scoringTips": [
+          "練習從上下文找線索推測字義",
+          "背熟常見字首字根字尾，遇到生字能拆解",
+          "整理易混淆字做對比表"
+        ],
+        "commonTraps": [
+          "只看字的拼寫不看語境就選答案",
+          "忽略上下文的因果或對比線索",
+          "字首字根只是輔助，不能完全取代語境判斷"
+        ],
+        "thinkingPath": "遇到不認識的字 → 先跳過繼續讀完全句 → 從上下文推測語意 → 嘗試用字首字根輔助判斷 → 選出最合理的答案"
+      },
+      "topics": [
+        {
+          "id": "ev-u4-t1",
+          "name": "上下文猜字技巧",
+          "hook": "閱讀測驗遇到不認識的字怎麼辦？別慌！前後句子裡藏了很多線索，學會「上下文猜字法」就能化險為夷。",
+          "coreConcepts": [
+            "定義線索：文章直接解釋生字。如 'A veterinarian, a doctor for animals, helped the injured cat.'",
+            "同義/反義線索：上下文用同義字或反義字暗示。如 'She was furious, not just angry, but really mad.'",
+            "因果線索：從原因或結果推測字義。如 'Because of the drought, the crops died.' → drought 指乾旱",
+            "舉例線索：透過例子推測。如 'Citrus fruits, such as oranges, lemons, and grapefruits...' → citrus 指柑橘類",
+            "經驗常識線索：結合生活常識推測。如 'The doctor prescribed some medicine for his cough.' → prescribed 指開處方"
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "112年",
+              "question": "When Sarah saw the mess in the kitchen, she was furious. She yelled at her brother for not cleaning up. What does 'furious' mean?",
+              "options": [
+                "hungry",
+                "happy",
+                "angry",
+                "tired"
+              ],
+              "answer": "C",
+              "explanation": "Sarah 看到廚房髒亂就對弟弟大吼，從 yelled（大吼）可推知 furious 是「非常生氣」的意思。"
+            },
+            {
+              "year": "110年",
+              "question": "The new policy was controversial. Some people supported it, but others were strongly against it. What does 'controversial' mean?",
+              "options": [
+                "popular",
+                "expensive",
+                "boring",
+                "debatable"
+              ],
+              "answer": "D",
+              "explanation": "有人支持、有人反對，表示有爭議的，故 controversial 意為 debatable（有爭議的）。"
+            },
+            {
+              "year": "108年",
+              "question": "Because of the severe typhoon, many trees were uprooted and roads were blocked. What does 'severe' mean?",
+              "options": [
+                "small",
+                "serious",
+                "beautiful",
+                "common"
+              ],
+              "answer": "B",
+              "explanation": "颱風導致樹被連根拔起、道路被阻斷，可知是很「嚴重的」颱風，severe = serious。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "閱讀測驗中的字義推測題直接測驗學生的閱讀策略能力",
+            "solvingSteps": [
+              "不要因為不認識字就放棄，先讀完整段",
+              "找出生字前後的線索（定義、同義字、例子、因果）",
+              "從線索推測可能的意思",
+              "代入選項找最接近的"
+            ],
+            "thinkingRules": [
+              "上下文線索90%的情況下都能幫你推測字義",
+              "注意標點符號（逗號、破折號後常有解釋）",
+              "如果有 such as / for example 後面的例子就是線索"
+            ]
+          }
+        },
+        {
+          "id": "ev-u4-t2",
+          "name": "字首字根字尾",
+          "hook": "unhappy 的 un- 是「不」，rewrite 的 re- 是「再次」——學會拆解字首字根字尾，就像拿到破解英文單字的密碼！",
+          "coreConcepts": [
+            "否定字首：un-（不）unhappy、im-/in-（不）impossible/incorrect、dis-（不）disagree、mis-（錯）misunderstand",
+            "方向/程度字首：re-（再次）rewrite/review、pre-（預先）preview、over-（過度）overwork、under-（不足）underestimate",
+            "常見字根：-port-（搬運）transport/export、-duct-（引導）produce/conduct、-vis-/-vid-（看）visible/video",
+            "名詞字尾：-tion/-sion（動作）education、-ness（狀態）happiness、-ment（結果）movement、-er/-or（人）teacher",
+            "形容詞字尾：-ful（充滿）beautiful、-less（缺乏）careless、-able/-ible（能夠）comfortable、-ous（具有）dangerous"
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "111年",
+              "question": "It is _____ to drive after drinking alcohol. You might hurt yourself or others.",
+              "options": [
+                "dangerous",
+                "generous",
+                "famous",
+                "nervous"
+              ],
+              "answer": "A",
+              "explanation": "酒後駕車可能傷害自己或他人，是「危險的」。dangerous 來自 danger + -ous（具有危險性的）。"
+            },
+            {
+              "year": "110年",
+              "question": "The little girl felt _____ because nobody played with her.",
+              "options": [
+                "hopeless",
+                "careless",
+                "useless",
+                "lonely"
+              ],
+              "answer": "D",
+              "explanation": "沒人跟她玩所以覺得孤單。lonely（孤單的）。-less 字尾表「缺乏」：hopeless 無望、careless 粗心、useless 無用。"
+            },
+            {
+              "year": "109年",
+              "question": "Please _____ your paper before you hand it in.",
+              "options": [
+                "review",
+                "preview",
+                "view",
+                "interview"
+              ],
+              "answer": "A",
+              "explanation": "交卷前「複習/檢查」你的考卷。review = re-（再次）+ view（看）= 再看一次。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "字首字根字尾幫助學生系統性地擴充字彙量，也能推測陌生字彙",
+            "solvingSteps": [
+              "看到陌生單字先嘗試拆解",
+              "辨識字首（否定？方向？）",
+              "辨識字根（核心意思）",
+              "辨識字尾（判斷詞性）"
+            ],
+            "thinkingRules": [
+              "字首改變意思，字尾改變詞性",
+              "un-/in-/dis- 否定字首最常考",
+              "-ful vs. -less 是經典對比（careful vs. careless）"
+            ]
+          }
+        },
+        {
+          "id": "ev-u4-t3",
+          "name": "易混淆字詞辨析",
+          "hook": "borrow 和 lend 都跟「借」有關，到底誰借誰？spend、cost、take 都是「花費」，差在哪裡？這些混淆字是會考年年必考的陷阱題！",
+          "coreConcepts": [
+            "借用：borrow（向別人借入）vs. lend（借出給別人）。I borrowed a book from the library. / Can you lend me your pen?",
+            "花費：spend（人 + spend + 時間/金錢 + on/V-ing）、cost（物 + cost + 人 + 金錢）、take（It takes + 人 + 時間 + to V）、pay（人 + pay + 金錢 + for）",
+            "穿戴：wear（穿戴的狀態）、put on（穿上的動作）、dress（給某人穿衣）。She wears a hat. / Put on your coat. / She dressed her baby.",
+            "到達：arrive at（小地方）/ arrive in（大地方）、get to（一般用法）、reach（直接加地點）",
+            "影響：affect（動詞，影響）vs. effect（名詞，效果）；另外 except（除了…之外不包含）vs. accept（接受）"
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "112年",
+              "question": "A: Can I _____ your dictionary? B: Sure. I'll _____ it to you.",
+              "options": [
+                "borrow; lend",
+                "lend; borrow",
+                "borrow; borrow",
+                "lend; lend"
+              ],
+              "answer": "A",
+              "explanation": "A 向 B 借（borrow）字典，B 借給 A（lend it to you）。borrow from / lend to 是固定搭配。"
+            },
+            {
+              "year": "111年",
+              "question": "It _____ me thirty minutes to walk to school every day.",
+              "options": [
+                "takes",
+                "costs",
+                "spends",
+                "pays"
+              ],
+              "answer": "A",
+              "explanation": "It takes + 人 + 時間 + to V。花時間做某事的固定句型。spend/cost/pay 的主詞和句型不同。"
+            },
+            {
+              "year": "109年",
+              "question": "My mother _____ a lot of money on my birthday present.",
+              "options": [
+                "spent",
+                "cost",
+                "took",
+                "paid"
+              ],
+              "answer": "A",
+              "explanation": "人 + spend + 金錢 + on + 物。主詞是人用 spend。如果主詞是物才用 cost。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "易混淆字是會考固定考點，測驗學生能否精確區分拼寫或意思相近的字",
+            "solvingSteps": [
+              "辨認選項中的易混淆字組",
+              "回想每個字的「主詞」和「搭配介系詞」",
+              "根據句子主詞和結構選出正確的字",
+              "代入確認句型完整"
+            ],
+            "thinkingRules": [
+              "borrow/lend 看方向：借入 borrow from，借出 lend to",
+              "spend/cost/take/pay 看主詞：人 spend、物 cost、It takes、人 pay",
+              "wear/put on 看狀態還是動作"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

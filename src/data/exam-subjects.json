@@ -21,6 +21,15 @@
       { "id": "chinese", "label": "國文", "color": "#e11d48" }
     ]
   },
+  "english": {
+    "center": { "id": "english-center", "label": "國中英文" },
+    "subjects": [
+      { "id": "english-vocabulary", "label": "字彙與片語", "color": "#8b5cf6" },
+      { "id": "english-grammar", "label": "文法句型", "color": "#3b82f6" },
+      { "id": "english-reading", "label": "閱讀與題型攻略", "color": "#06b6d4" },
+      { "id": "english-listening", "label": "聽力測驗", "color": "#f59e0b" }
+    ]
+  },
   "math": {
     "center": { "id": "math-center", "label": "國中數學" },
     "subjects": [

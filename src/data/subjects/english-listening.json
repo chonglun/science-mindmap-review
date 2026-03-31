@@ -1,0 +1,706 @@
+{
+  "id": "english-listening",
+  "label": "聽力測驗",
+  "color": "#f59e0b",
+  "units": [
+    {
+      "id": "el-u1",
+      "name": "辨識句意",
+      "stage": "七～八年級",
+      "importance": {
+        "stars": 2,
+        "level": "基礎必備",
+        "tip": "辨識句意約10題，是聽力最容易得分的部分"
+      },
+      "unitStrategy": {
+        "examinerPerspective": "透過圖片與句子配對測驗學生對基本英文句子的聽力理解",
+        "scoringTips": [
+          "先看圖片預測可能的描述",
+          "抓住關鍵字（主詞、動詞、地點）",
+          "相似音的字要特別注意辨別"
+        ],
+        "commonTraps": [
+          "相似音誤導（thirteen vs. thirty）",
+          "只聽到部分關鍵字就判斷",
+          "圖片很像但細節不同"
+        ],
+        "thinkingPath": "先看圖片 → 預測可能內容 → 聆聽關鍵字 → 比對圖片選擇"
+      },
+      "topics": [
+        {
+          "id": "el-u1-t1",
+          "name": "圖片描述聽辨",
+          "hook": "聽到一句英文，看三張圖片選一張——這就是辨識句意題！關鍵是在音檔播放前就先觀察圖片差異！",
+          "coreConcepts": [
+            "題型說明：聽一句英文描述，從三張圖片中選出符合的一張",
+            "預看策略：在音檔播放前，快速觀察三張圖片的差異（人數、動作、物品、地點）",
+            "常考場景：日常活動（運動、購物、飲食）、天氣、時間、方位",
+            "抓關鍵字：動詞（running/eating/reading）、位置（in/on/under/next to）、數字",
+            "3遍播放間隔利用：第一遍聽大意、第二遍確認細節、第三遍最終確認"
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "112年",
+              "question": "（聽力題）聽到 'The girl is reading a book under the tree.'，請選出正確的圖片。",
+              "answer": "選有女孩在樹下看書的圖片。注意 under the tree（不是 beside/behind）和 reading a book（不是 writing/sleeping）。",
+              "explanation": "圖片題要同時比對動作和位置兩個要素。"
+            },
+            {
+              "year": "110年",
+              "question": "（聽力題）聽到 'There are five cats on the sofa.'，請選出正確的圖片。",
+              "answer": "注意數量 five（不是 four 或 six）和位置 on the sofa（不是 under/beside）。",
+              "explanation": "數字和位置是圖片題最常變化的兩個要素。"
+            },
+            {
+              "year": "108年",
+              "question": "（聽力題）聽到關於天氣的描述，請選出正確的圖片。",
+              "answer": "抓住天氣關鍵字：sunny/rainy/cloudy/windy/snowy，配對圖片中的天氣圖示。",
+              "explanation": "天氣描述是圖片題的常見主題，要熟悉天氣相關字彙。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "圖片題是聽力最基本的題型，測驗國中學生的基本聽力理解",
+            "solvingSteps": [
+              "播放前觀察圖片差異",
+              "第一遍聽大意",
+              "第二遍確認關鍵細節",
+              "比對圖片差異選答案"
+            ],
+            "thinkingRules": [
+              "圖片差異就是出題重點",
+              "動作+位置+數量是三大核心要素",
+              "先看圖再聽，不要先聽再看"
+            ]
+          }
+        },
+        {
+          "id": "el-u1-t2",
+          "name": "關鍵字捕捉技巧",
+          "hook": "聽不懂整句沒關係！只要抓到「關鍵字」就能選出答案。關鍵字通常是名詞、動詞和數字！",
+          "coreConcepts": [
+            "內容詞 > 功能詞：重點聽名詞、動詞、形容詞，而不是 a/the/is 等功能詞",
+            "重音提示：英文句子中重讀的字通常是關鍵訊息。I went to the PARK on SUNDAY.",
+            "數字與時間：數字(thirteen vs. thirty)、時間(7:15, quarter past seven)要特別訓練",
+            "否定詞注意：not/don't/can't/never 會完全改變句意，要特別注意",
+            "筆記技巧：聽到關鍵字時快速在題目旁寫下簡寫（如 park, Sun, 3:00）"
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "策略",
+              "question": "（聽力策略）聽到 'Mary doesn't like swimming but she enjoys running.'，關鍵字是？",
+              "answer": "doesn't + swimming / enjoys + running。Mary 不喜歡游泳但喜歡跑步。否定詞 doesn't 是關鍵。",
+              "explanation": "否定詞可以完全反轉句意，一定要聽清楚。"
+            },
+            {
+              "year": "策略",
+              "question": "（聽力策略）聽到數字 'fifteen' 和 'fifty' 如何分辨？",
+              "answer": "fifteen [fɪfˈtiːn] 重音在後，fifty [ˈfɪfti] 重音在前。-teen 重音在後，-ty 重音在前。",
+              "explanation": "-teen vs. -ty 是聽力最常見的數字陷阱。"
+            },
+            {
+              "year": "策略",
+              "question": "（聽力策略）聽到時間 'quarter past three' 是幾點？",
+              "answer": "3:15。quarter = 15分鐘，past = 過了。所以 quarter past three = 3點15分。",
+              "explanation": "時間表達：half past = 30分，quarter past = 15分，quarter to = 差15分。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "關鍵字捕捉是所有聽力題的基本技能",
+            "solvingSteps": [
+              "準備階段先看題目和選項",
+              "聽的時候專注於內容詞",
+              "聽到關鍵字快速筆記",
+              "特別注意否定詞和數字"
+            ],
+            "thinkingRules": [
+              "名詞、動詞、數字是三大關鍵字",
+              "not/don't/can't 改變整句意思",
+              "-teen(重音後) vs. -ty(重音前)分辨數字"
+            ]
+          }
+        },
+        {
+          "id": "el-u1-t3",
+          "name": "相似音辨別",
+          "hook": "「sheep」和「ship」只差一個母音，但意思完全不同！英文聽力裡最常設的陷阱就是「相似音」！",
+          "coreConcepts": [
+            "母音混淆：[iː] vs. [I](長短音)——sheep/ship, eat/it, beat/bit。長音嘴型更緊",
+            "子音混淆：[l] vs. [r]——light/right, lake/rake。[b] vs. [v]——boat/vote, berry/very",
+            "數字混淆：thirteen(13) vs. thirty(30), fourteen(14) vs. forty(40), fifteen(15) vs. fifty(50)",
+            "字尾音混淆：-s/-es 的發音差異：cats[s], dogs[z], watches[ɪz]",
+            "練習方法：用最小對(minimal pairs)練習，如 bat/bad, cap/cab, wrote/rode"
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "112年",
+              "question": "（聽力題）聽到 'I want to buy a new sheet.' 如何確認是 sheet 而不是 seat？",
+              "answer": "sheet [iː] 和 seat [iː] 母音相同，但子音不同：[sh] vs. [s]。通常需配合上下文判斷。",
+              "explanation": "相似音除了聽發音，也要配合語境判斷。"
+            },
+            {
+              "year": "110年",
+              "question": "（聽力題）聽到 'There are thirty students.' 如何確認不是 thirteen？",
+              "answer": "thirty [ˈθɝːti] 重音在第一音節，thirteen [θɝːˈtiːn] 重音在第二音節。",
+              "explanation": "-ty 重音在前，-teen 重音在後，這是區分的關鍵。"
+            },
+            {
+              "year": "108年",
+              "question": "（聽力題）聽到 'Turn right at the light.'，如何分辨 right 和 light？",
+              "answer": "right [r] 捲舌不碰任何地方，light [l] 舌尖碰上顎。配合前後文：turn 接方向用 right。",
+              "explanation": "[l] 和 [r] 對中文母語者是最常見的混淆。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "相似音是聽力題最常見的陷阱設計",
+            "solvingSteps": [
+              "熟悉常見混淆音組",
+              "聽的時候同時注意上下文",
+              "如果不確定，用前後文意思驗證",
+              "平時多練習最小對"
+            ],
+            "thinkingRules": [
+              "[iː]/[I] 長短音→嘴型緊度不同",
+              "[l]/[r] →舌頭位置不同",
+              "-teen/-ty →重音位置不同"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "el-u2",
+      "name": "基本問答",
+      "stage": "七～九年級",
+      "importance": {
+        "stars": 3,
+        "level": "高頻重點",
+        "tip": "基本問答約10題，考日常對話反應，是最常見的聽力題型"
+      },
+      "unitStrategy": {
+        "examinerPerspective": "測驗學生對日常英文對話的即時反應能力",
+        "scoringTips": [
+          "聽清問句的第一個字（Wh-/Do/Does/Is/Are）",
+          "先看選項預測可能的問句類型",
+          "日常情境對話用顛覆不破原則排除不合理的選項"
+        ],
+        "commonTraps": [
+          "詳答句回 Yes/No 問句",
+          "回答內容與問句主詞不一致",
+          "禁止用 Yes/No 回答 Wh- 問句"
+        ],
+        "thinkingPath": "聽問句開頭字 → 判斷問句類型 → 預測回答方式 → 比對選項"
+      },
+      "topics": [
+        {
+          "id": "el-u2-t1",
+          "name": "Wh-問句回應",
+          "hook": "「What」問什麼、「Where」問哪裡、「When」問何時——聽力的第一個字就決定了答案方向！",
+          "coreConcepts": [
+            "Wh-問句分類：What(什麼/哪個), Where(地點), When(時間), Who(人), Why(原因), How(方式/程度)",
+            "回答對應：What→事物, Where→地點, When→時間, Who→人, Why→Because..., How→方式",
+            "複合問句：How many(數量), How much(價格/不可數), How often(頻率), How long(時間長度)",
+            "陷阱識別：Wh-問句絕不能用 Yes/No 回答！看到這類選項直接排除",
+            "常考情境：問路、問時間、問價格、問喜好"
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "112年",
+              "question": "（聽力題）Q: Where did you go last weekend? 請選正確回答。",
+              "options": [
+                "Yes, I did.",
+                "I went to the beach.",
+                "Last Saturday.",
+                "By bus."
+              ],
+              "answer": "B",
+              "explanation": "Where 問地點，要回答地點。A是Yes/No回答不對，C是時間，D是方式。"
+            },
+            {
+              "year": "111年",
+              "question": "（聽力題）Q: How often do you exercise? 請選正確回答。",
+              "options": [
+                "For two hours.",
+                "Three times a week.",
+                "In the morning.",
+                "Yes, I like it."
+              ],
+              "answer": "B",
+              "explanation": "How often 問頻率，要回答次數。A是時間長度(How long)，C是時間點，D是Yes/No。"
+            },
+            {
+              "year": "109年",
+              "question": "（聽力題）Q: How much is this T-shirt? 請選正確回答。",
+              "options": [
+                "It's medium.",
+                "It's 500 dollars.",
+                "It's blue.",
+                "It's mine."
+              ],
+              "answer": "B",
+              "explanation": "How much 問價格，要回答金額。A是尺寸，C是顏色，D是所有權。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "Wh-問句是基本問答的核心，測學生能否精準理解問句類型",
+            "solvingSteps": [
+              "聽清第一個字判斷Wh類型",
+              "排除Yes/No回答的選項",
+              "比對選項內容與問句類型是否匹配",
+              "確認回答的主詞與問句一致"
+            ],
+            "thinkingRules": [
+              "Wh-問句→絕不Yes/No",
+              "問句第一個字=答案方向",
+              "How系列要分清後面接什麼"
+            ]
+          }
+        },
+        {
+          "id": "el-u2-t2",
+          "name": "Yes/No問句與附和",
+          "hook": "「Do you like pizza?」——你以為只要回 Yes 或 No 就好？會考的陳述可沒那麼簡單！",
+          "coreConcepts": [
+            "Yes/No問句結構：Aux(Do/Does/Is/Are/Can/Will) + S + V...?",
+            "肯定回答：Yes, I do. / Yes, she is. / Yes, we can.（助動詞要對應）",
+            "否定回答：No, I don't. / No, she isn't.（助動詞要與問句對應）",
+            "附和句：Sure! / Of course! / I'd love to. / No, thanks. / Sorry, I can't.（常考自然回答）",
+            "注意主詞一致：問句用 your，回答要改成 my；問句 you，回答 I"
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "112年",
+              "question": "（聽力題）Q: Can you help me with my homework? 請選正確回答。",
+              "options": [
+                "Yes, I am.",
+                "Sure, no problem.",
+                "Yes, you can.",
+                "I'm homework."
+              ],
+              "answer": "B",
+              "explanation": "Can you... 是請求，Sure, no problem 是自然的肯定回應。A的助動詞不對，C主詞反了，D不合理。"
+            },
+            {
+              "year": "111年",
+              "question": "（聽力題）Q: Would you like some coffee? 請選正確回答。",
+              "options": [
+                "Yes, I would like.",
+                "No, thanks. I'm fine.",
+                "I like coffee.",
+                "Coffee is good."
+              ],
+              "answer": "B",
+              "explanation": "Would you like 的否定回答常用 No, thanks. A不自然，C/D沒有回答問題。"
+            },
+            {
+              "year": "109年",
+              "question": "（聽力題）Q: Does your sister play the piano? 請選正確回答。",
+              "options": [
+                "Yes, she plays.",
+                "Yes, she does.",
+                "Yes, she is.",
+                "Yes, I do."
+              ],
+              "answer": "B",
+              "explanation": "Does問句用does回答。A用原形動詞不對，C助動詞不對，D主詞不對。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "Yes/No問句測試學生對助動詞的掌握和自然回應",
+            "solvingSteps": [
+              "聽清問句開頭的助動詞",
+              "判斷是一般問句還是請求/邀請",
+              "排除助動詞不對應的選項",
+              "確認主詞一致性"
+            ],
+            "thinkingRules": [
+              "助動詞前後要對應：Do→do, Is→is, Can→can",
+              "主詞前後要對應：you→I, your→my",
+              "請求句常用自然回應：Sure/Of course"
+            ]
+          }
+        },
+        {
+          "id": "el-u2-t3",
+          "name": "日常情境對話",
+          "hook": "餐廳點餐、商店購物、醫院看診——會考聽力的日常對話，跟你生活中的情境一模一樣！",
+          "coreConcepts": [
+            "餐廳情境：Can I take your order? / I'd like... / For here or to go? / How much is...?",
+            "購物情境：Can I help you? / I'm looking for... / What size? / I'll take it.",
+            "問路情境：Excuse me, how can I get to...? / Go straight and turn left at...",
+            "看診情境：What's wrong? / I have a headache. / Take this medicine twice a day.",
+            "電話情境：May I speak to...? / Hold on, please. / Sorry, he's not here right now."
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "112年",
+              "question": "（聽力題）A: Can I take your order? B: Yes, ____.",
+              "options": [
+                "I'd like a hamburger.",
+                "I'm fine, thanks.",
+                "It's on the table.",
+                "At 7 o'clock."
+              ],
+              "answer": "A",
+              "explanation": "餐廳點餐，Can I take your order 後要回答想點什麼。"
+            },
+            {
+              "year": "110年",
+              "question": "（聽力題）A: Excuse me, how can I get to the post office? B: ____.",
+              "options": [
+                "It's five dollars.",
+                "Go straight and turn right.",
+                "I like the post office.",
+                "Yes, you can."
+              ],
+              "answer": "B",
+              "explanation": "How can I get to 問路，要回答方向指引。"
+            },
+            {
+              "year": "108年",
+              "question": "（聽力題）A: What's wrong with you? B: ____.",
+              "options": [
+                "I'm twelve.",
+                "I have a stomachache.",
+                "It's Monday.",
+                "I'm a student."
+              ],
+              "answer": "B",
+              "explanation": "What's wrong 問症狀，要回答身體不適的地方。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "日常情境對話測驗學生是否能在真實情境中適當回應",
+            "solvingSteps": [
+              "判斷對話情境（餐廳/商店/醫院/問路）",
+              "根據情境預測可能的問答",
+              "排除不符合情境的回答",
+              "確認回答符合對話邏輯"
+            ],
+            "thinkingRules": [
+              "情境關鍵詞判斷場景",
+              "回答要符合對話邏輯",
+              "常見對話模式要熟記"
+            ]
+          }
+        },
+        {
+          "id": "el-u2-t4",
+          "name": "禮貌用語與慣用回應",
+          "hook": "「Thank you!」除了 You're welcome，還有 No problem / My pleasure / Don't mention it 等回答——聽力愛考這些自然回應！",
+          "coreConcepts": [
+            "感謝回應：You're welcome. / No problem. / My pleasure. / Don't mention it. / Anytime.",
+            "道歉回應：That's OK. / Never mind. / Don't worry about it. / No big deal.",
+            "讚美回應：Thank you! / That's very kind of you. / You're so sweet.",
+            "告別用語：See you later. / Take care. / Have a nice day. / Catch you later.",
+            "鼓勵用語：Good luck! / You can do it! / Break a leg! / Don't give up!"
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "112年",
+              "question": "（聽力題）A: I'm sorry I broke your cup. B: ____.",
+              "options": [
+                "You're welcome.",
+                "That's OK. Don't worry.",
+                "Thank you.",
+                "Good luck."
+              ],
+              "answer": "B",
+              "explanation": "對方道歉，要用「沒關係」的回應。A是回答感謝，C/D不合語境。"
+            },
+            {
+              "year": "111年",
+              "question": "（聽力題）A: Good luck on your test tomorrow! B: ____.",
+              "options": [
+                "Me too.",
+                "Thanks! I'll do my best.",
+                "You're welcome.",
+                "I'm sorry."
+              ],
+              "answer": "B",
+              "explanation": "對方祈你好運，要回謝並表示會努力。"
+            },
+            {
+              "year": "109年",
+              "question": "（聽力題）A: Your English is really good! B: ____.",
+              "options": [
+                "No, no. I'm bad.",
+                "Yes, I know.",
+                "Thank you. That's very kind of you.",
+                "I don't care."
+              ],
+              "answer": "C",
+              "explanation": "對方讚美，英文文化中應該接受並道謝，不是謙虛否認。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "禮貌用語測驗學生對英文社交慣例的理解",
+            "solvingSteps": [
+              "判斷對方說的是感謝/道歉/讚美/告別/鼓勵",
+              "回憶對應的慣用回應",
+              "排除不符合社交慣例的選項",
+              "選擇最自然的回應"
+            ],
+            "thinkingRules": [
+              "感謝→You're welcome系列",
+              "道歉→That's OK系列",
+              "讚美→Thank you（接受）",
+              "告別→See you系列"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "el-u3",
+      "name": "言談理解",
+      "stage": "八～九年級",
+      "importance": {
+        "stars": 3,
+        "level": "高頻重點",
+        "tip": "言談理解約10題，是聽力最難的部分，需要理解整段對話的意思"
+      },
+      "unitStrategy": {
+        "examinerPerspective": "透過較長的對話或獨白測驗學生的綜合聽力理解能力",
+        "scoringTips": [
+          "先看題目和選項預測對話主題",
+          "注意對話中的轉折詞(but/however/actually)",
+          "推論說話者的語氣和意圖"
+        ],
+        "commonTraps": [
+          "只聽到片段就選答案",
+          "忽略轉折詞導致理解相反",
+          "被對話中重複出現的字誤導"
+        ],
+        "thinkingPath": "預看題目 → 預測主題 → 聽整段對話 → 注意轉折 → 綜合判斷"
+      },
+      "topics": [
+        {
+          "id": "el-u3-t1",
+          "name": "短對話理解",
+          "hook": "兩個人講了三四句話，你要從中判斷他們在哪裡、要做什麼、是什麼關係——就像當偵探一樣聽線索！",
+          "coreConcepts": [
+            "題型說明：聽一段2-4句的短對話，回答與對話內容相關的問題",
+            "場景判斷：從關鍵字推斷場景（menu→餐廳、prescription→醫院、check out→旅館）",
+            "人物關係：從稱呼和語氣判斷關係（teacher-student、doctor-patient、clerk-customer）",
+            "時態線索：注意動詞時態暗示的時間（did→過去、will→未來、is doing→現在進行）",
+            "數字計算：對話中可能需要簡單加減（原價-折扣=實付、幾點出發+幾小時=幾點到達）"
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "112年",
+              "question": "（聽力題）A: Can I have two hamburgers and one salad? B: Sure. That's 150 dollars. A: Here's 200. Q: How much change will A get?",
+              "options": [
+                "50 dollars",
+                "100 dollars",
+                "150 dollars",
+                "200 dollars"
+              ],
+              "answer": "A",
+              "explanation": "200 - 150 = 50。聽力中的數字計算題，要快速心算。"
+            },
+            {
+              "year": "111年",
+              "question": "（聽力題）A: Good morning. Do you have a reservation? B: Yes, under the name Wang. Q: Where are they most likely talking?",
+              "options": [
+                "At a restaurant",
+                "At a school",
+                "At a hospital",
+                "At a park"
+              ],
+              "answer": "A",
+              "explanation": "reservation（訂位）是餐廳的關鍵字。"
+            },
+            {
+              "year": "109年",
+              "question": "（聽力題）A: Mom, can I go to the movies with Tom tonight? B: You have a test tomorrow. A: I'll study when I get back. Q: What does A want to do?",
+              "options": [
+                "Study for a test",
+                "Go to the movies",
+                "Stay at home",
+                "Visit Tom's house"
+              ],
+              "answer": "B",
+              "explanation": "A想去看電影，雖然媽媽提到考試，但問的是A想做什麼。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "短對話測驗學生從有限資訊中快速提取關鍵訊息的能力",
+            "solvingSteps": [
+              "先看問題判斷要聽什麼（地點/原因/數字）",
+              "聽對話時專注於與問題相關的資訊",
+              "注意轉折詞後面的內容",
+              "需要計算時快速在題目旁寫數字"
+            ],
+            "thinkingRules": [
+              "問題類型決定聽的重點",
+              "轉折詞(but/however)後面才是重點",
+              "場景判斷靠關鍵字不靠猜"
+            ]
+          }
+        },
+        {
+          "id": "el-u3-t2",
+          "name": "長篇言談理解",
+          "hook": "一個人講了一整段話（像廣播、公告、導覽），你要聽懂主旨和細節——這就像聽英文廣播一樣！",
+          "coreConcepts": [
+            "題型說明：聽一段較長的獨白（公告、廣播、留言、導覽），回答2-3個相關問題",
+            "常見獨白類型：天氣預報、校園廣播、商店公告、旅遊導覽、電話留言",
+            "主旨掌握：第一句通常點出主題（Today I'd like to talk about... / Attention please...）",
+            "細節記錄：聽到時間、地點、數字時快速筆記，這些通常是考點",
+            "順序邏輯：獨白通常按時間順序或步驟順序進行，抓住邏輯線有助理解"
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "112年",
+              "question": "（聽力題）Attention, please. The store will close in 30 minutes. All items on the second floor are 50% off today. Q: What is this announcement about?",
+              "options": [
+                "A new store opening",
+                "A sale before closing",
+                "Store directions",
+                "New products"
+              ],
+              "answer": "B",
+              "explanation": "close in 30 minutes + 50% off 表示打烊前特價。"
+            },
+            {
+              "year": "110年",
+              "question": "（聽力題）聽一段關於動物園新展覽的廣播，問展覽在幾樓。",
+              "answer": "要聽清楚樓層數字。長篇聽力中地點和樓層是常考細節。",
+              "explanation": "長篇言談的細節題，需要邊聽邊做筆記。"
+            },
+            {
+              "year": "108年",
+              "question": "（聽力題）聽一段學校廣播關於運動會改期的公告，問改到什麼時候。",
+              "answer": "注意 changed/moved/postponed 等關鍵字後面的新日期。",
+              "explanation": "公告類聽力常考「改變」後的新資訊。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "長篇言談測驗學生持續專注和記憶資訊的能力",
+            "solvingSteps": [
+              "先看所有題目（通常2-3題）掌握要聽的方向",
+              "第一遍聽大意和主旨",
+              "邊聽邊在題目旁做簡短筆記",
+              "第二遍確認細節和答案"
+            ],
+            "thinkingRules": [
+              "獨白第一句通常是主旨",
+              "時間/地點/數字是最常考的細節",
+              "changed/moved/instead 後面是新資訊"
+            ]
+          }
+        },
+        {
+          "id": "el-u3-t3",
+          "name": "推論說話者意圖",
+          "hook": "他說 'Nice weather, isn't it?' 不是真的在聊天氣，而是想跟你搭話——聽力也要讀懂「話中話」！",
+          "coreConcepts": [
+            "直接意圖vs.間接意圖：'Can you pass the salt?' 不是問你能不能，而是請你遞鹽",
+            "語氣判斷：同一句話用不同語氣意思不同（Really? 可以是驚訝、懷疑、或諷刺）",
+            "暗示理解：'It's getting late.' 可能暗示該走了，不是單純陳述時間",
+            "常見間接表達：Would you mind...（請求）、Why don't you...（建議）、I wish I could, but...（婉拒）",
+            "上下文推論：結合對話場景和前後文推斷說話者真正的意思"
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "112年",
+              "question": "（聽力題）A: Would you like to go hiking this weekend? B: I wish I could, but I have a lot of homework. Q: What does B mean?",
+              "options": [
+                "B will go hiking.",
+                "B can't go because of homework.",
+                "B doesn't like hiking.",
+                "B has finished the homework."
+              ],
+              "answer": "B",
+              "explanation": "I wish I could, but... 是婉拒的經典句型，表示想去但不行。"
+            },
+            {
+              "year": "111年",
+              "question": "（聽力題）A: How was the movie? B: Well, let's just say I fell asleep in the middle. Q: What does B think about the movie?",
+              "options": [
+                "It was exciting.",
+                "It was boring.",
+                "It was scary.",
+                "It was too long."
+              ],
+              "answer": "B",
+              "explanation": "看到一半睡著＝電影很無聊。這是間接表達不好的評價。"
+            },
+            {
+              "year": "109年",
+              "question": "（聽力題）A: Can you turn down the music? B: Oh, sorry. I didn't know it was that loud. Q: What will B probably do next?",
+              "options": [
+                "Turn up the music",
+                "Turn down the music",
+                "Turn off the music",
+                "Play different music"
+              ],
+              "answer": "B",
+              "explanation": "A 請求，B 道歉表示會配合，所以B會把音樂轉小聲。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "推論題測驗學生超越字面意思理解深層含義的能力",
+            "solvingSteps": [
+              "聽清楚整段對話不要只抓片段",
+              "注意語氣詞和間接表達",
+              "想像真實場景中這句話的意思",
+              "排除只看字面意思的選項"
+            ],
+            "thinkingRules": [
+              "I wish I could, but... = 婉拒",
+              "Let's just say... = 委婉地說不好",
+              "Why don't you... = 建議不是反問"
+            ]
+          }
+        },
+        {
+          "id": "el-u3-t4",
+          "name": "聽力筆記技巧",
+          "hook": "聽力只播兩三遍，記憶力再好也會忘！學會「速記符號」，邊聽邊寫，答題正確率大幅提升！",
+          "coreConcepts": [
+            "速記符號：↑(增加) ↓(減少) →(導致/然後) ?(問題) !(重要) ✓(正確) ✗(錯誤)",
+            "數字速記：聽到數字立刻寫下，包括時間、金額、數量、日期、電話號碼",
+            "關鍵字縮寫：只寫前幾個字母（Mon=Monday, b/c=because, info=information）",
+            "表格筆記法：如果題目有多個人物或資訊，畫簡單表格對照（Who-What-When）",
+            "時間管理：考前利用試題本預看題目(約2分鐘)，每題播放間隔用來確認答案和預看下題"
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "策略",
+              "question": "（聽力策略）聽到 'The train leaves at 7:15 and arrives at 9:30.' 應該怎麼做筆記？",
+              "answer": "快速寫：train 7:15→9:30。只記關鍵數字和符號，不要寫完整句子。如果要算時間差：9:30-7:15=2h15m。",
+              "explanation": "數字是聽力筆記最重要的內容，一聽到就寫下。"
+            },
+            {
+              "year": "策略",
+              "question": "（聽力策略）一段對話提到三個人分別要去不同地方，如何做筆記？",
+              "answer": "畫簡單表格：Tom-library / Mary-store / John-park。用最少的字記錄對應關係。",
+              "explanation": "多人多資訊時，表格筆記最有效率。"
+            },
+            {
+              "year": "策略",
+              "question": "（聽力策略）聽到 'The price was 800, but now it's only 600.' 如何速記？",
+              "answer": "寫：800→600 或 800-200=600。箭頭表示變化，快速記錄新舊價格。",
+              "explanation": "價格變化題需要記錄原價和新價，才能回答相關問題。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "筆記能力間接影響所有聽力題的表現",
+            "solvingSteps": [
+              "考前2分鐘快速預看所有聽力題目",
+              "聽到數字/時間/地點立刻寫下",
+              "用符號代替文字（→↑↓?!）",
+              "多人資訊用表格整理"
+            ],
+            "thinkingRules": [
+              "數字一聽到就寫，不要等",
+              "符號比文字快且不干擾聽力",
+              "預看題目是最重要的準備步驟"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

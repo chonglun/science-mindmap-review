@@ -1,0 +1,921 @@
+{
+  "id": "english-reading",
+  "label": "閱讀與題型攻略",
+  "color": "#06b6d4",
+  "units": [
+    {
+      "id": "er-u1",
+      "name": "克漏字測驗攻略",
+      "stage": "八～九年級",
+      "importance": {
+        "stars": 3,
+        "level": "最高出題率",
+        "tip": "克漏字占約10-15題，是得分效率最高的題型"
+      },
+      "unitStrategy": {
+        "examinerPerspective": "透過空格前後文測驗學生文法、字彙、邏輯推理的綜合能力",
+        "scoringTips": [
+          "先通讀全文再填空格",
+          "文法型先做（確定性高），語意型後做",
+          "注意空格前後的線索詞（轉折詞、代名詞、時間副詞）"
+        ],
+        "commonTraps": [
+          "只看空格所在句不看全文",
+          "忽略上下文的邏輯關係",
+          "被干擾選項的相似拼寫誤導"
+        ],
+        "thinkingPath": "通讀全文掌握大意 → 判斷空格類型（文法/語意） → 找線索 → 選答案 → 代入檢查"
+      },
+      "topics": [
+        {
+          "id": "er-u1-t1",
+          "name": "文法型克漏字",
+          "hook": "克漏字裡有一種題目，答案藏在文法規則裡——看到時態、詞性、主詞動詞一致的線索，就能穩穩拿分！",
+          "coreConcepts": [
+            "時態型：找時間副詞判斷時態。yesterday → 過去式，every day → 現在式，since → 現在完成式",
+            "詞性型：看空格在句中的位置判斷需要什麼詞性。be 動詞後接形容詞，一般動詞後接副詞",
+            "主詞動詞一致：第三人稱單數動詞加 -s/-es，複數主詞用原形",
+            "連接詞型：看前後句的邏輯關係選連接詞。轉折用 but，因果用 so，條件用 if",
+            "代名詞/限定詞型：看名詞單複數、可數不可數決定冠詞或代名詞"
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "112年",
+              "question": "文章中：My sister _____ to school by bus every day. (A) go (B) goes (C) went (D) going",
+              "options": [
+                "go",
+                "goes",
+                "went",
+                "going"
+              ],
+              "answer": "B",
+              "explanation": "every day 表示現在習慣，用現在簡單式。主詞 My sister 第三人稱單數加 -es。"
+            },
+            {
+              "year": "111年",
+              "question": "克漏字：Although it was raining, he _____ went out to play. (A) still (B) but (C) so (D) because",
+              "options": [
+                "still",
+                "but",
+                "so",
+                "because"
+              ],
+              "answer": "A",
+              "explanation": "although 引導讓步，主要子句用 still（仍然）。although 不能與 but 同用。"
+            },
+            {
+              "year": "109年",
+              "question": "克漏字：She has lived here _____ she was ten years old. (A) for (B) since (C) from (D) before",
+              "options": [
+                "for",
+                "since",
+                "from",
+                "before"
+              ],
+              "answer": "B",
+              "explanation": "has lived 現在完成式 + 時間點(ten years old) 用 since。for + 一段時間。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "文法型克漏字是最容易得分的題型，掌握規則就能穩拿",
+            "solvingSteps": [
+              "找空格前後的文法線索（時間副詞、主詞人稱、連接詞）",
+              "判斷考點是時態、詞性、連接詞或代名詞",
+              "套用對應文法規則",
+              "代入檢查句意是否通順"
+            ],
+            "thinkingRules": [
+              "時間副詞是最重要的線索",
+              "although ≠ but，because ≠ so",
+              "be + Vpp = 被動，be + V-ing = 進行"
+            ]
+          }
+        },
+        {
+          "id": "er-u1-t2",
+          "name": "語意型克漏字",
+          "hook": "這種題的答案藏在文章的「意思」裡，不是文法規則。你需要讀懂上下文，才能選出最合邏輯的答案！",
+          "coreConcepts": [
+            "前後文線索：空格前後的句子通常有提示。如「下雨」後面可能接「帶傘」",
+            "詞彙辨析：四個選項文法正確但語意不同，需根據文意選擇",
+            "主題一致性：選的字要符合文章主題和語氣",
+            "轉折詞提示：however/but 後面語意相反，therefore/so 後面是結果",
+            "常考比較：四個選項可能是同一詞性但意思不同的字，如 borrow/lend/keep/return"
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "112年",
+              "question": "It started to rain, so I _____ an umbrella before going out. (A) forgot (B) lost (C) brought (D) bought",
+              "options": [
+                "forgot",
+                "lost",
+                "brought",
+                "bought"
+              ],
+              "answer": "C",
+              "explanation": "下雨了所以出門前「帶」了傳。brought(bring的過去式)表示帶。bought是買。"
+            },
+            {
+              "year": "111年",
+              "question": "The test was very _____. Almost everyone passed it. (A) difficult (B) easy (C) boring (D) dangerous",
+              "options": [
+                "difficult",
+                "easy",
+                "boring",
+                "dangerous"
+              ],
+              "answer": "B",
+              "explanation": "幾乎每人都通過了，表示考試很「簡單」。用後文線索判斷。"
+            },
+            {
+              "year": "109年",
+              "question": "Tom is very _____. He always helps others without being asked. (A) shy (B) lazy (C) kind (D) angry",
+              "options": [
+                "shy",
+                "lazy",
+                "kind",
+                "angry"
+              ],
+              "answer": "C",
+              "explanation": "總是主動幫助別人，表示「善良」。用後文行為描述判斷形容詞。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "語意型克漏字測驗的是閱讀理解能力，而非單純文法",
+            "solvingSteps": [
+              "先讀懂全文大意",
+              "看空格前後句的邏輯關係",
+              "將四個選項分別代入，看哪個最合文意",
+              "注意轉折詞和因果關係的提示"
+            ],
+            "thinkingRules": [
+              "後文是最重要的線索",
+              "however/but → 前後語意相反",
+              "so/therefore → 前因後果"
+            ]
+          }
+        },
+        {
+          "id": "er-u1-t3",
+          "name": "轉折語與連接詞判斷",
+          "hook": "文章裡的 however、therefore、for example 就像交通號誌——它們告訴你文章接下來要「轉彎」、「繼續」還是「舉例」。",
+          "coreConcepts": [
+            "轉折：however / but / although / on the other hand / instead——前後語意相反",
+            "因果：therefore / so / as a result / because / since——前因後果或前果後因",
+            "舉例：for example / for instance / such as / like——後接具體例子",
+            "遞進：moreover / besides / in addition / also——加強或補充前文",
+            "總結：in conclusion / in short / to sum up / all in all——文章結尾總結觀點"
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "112年",
+              "question": "She studied very hard. _____, she got the best grade in the class.",
+              "options": [
+                "However",
+                "Therefore",
+                "Although",
+                "Instead"
+              ],
+              "answer": "B",
+              "explanation": "前文努力讀書，後文得到最好成績，是因果關係用 Therefore。"
+            },
+            {
+              "year": "110年",
+              "question": "I wanted to go to the party. _____, I had too much homework to do.",
+              "options": [
+                "Besides",
+                "However",
+                "Therefore",
+                "For example"
+              ],
+              "answer": "B",
+              "explanation": "想去派對，但作業太多。前後語意轉折用 However。"
+            },
+            {
+              "year": "108年",
+              "question": "There are many things to do in Taipei. _____, you can visit the night markets or go to museums.",
+              "options": [
+                "However",
+                "Instead",
+                "For example",
+                "Therefore"
+              ],
+              "answer": "C",
+              "explanation": "後文舉了具體例子（夜市、博物館），用 For example。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "轉折語判斷是克漏字和閱讀理解的雙重考點",
+            "solvingSteps": [
+              "看前後句的邏輯關係",
+              "相反 → however/but",
+              "因果 → therefore/so",
+              "舉例 → for example",
+              "補充 → moreover/besides"
+            ],
+            "thinkingRules": [
+              "前後語意相反→轉折詞",
+              "前因後果→因果詞",
+              "後接具體例子→舉例詞"
+            ]
+          }
+        },
+        {
+          "id": "er-u1-t4",
+          "name": "克漏字解題步驟",
+          "hook": "克漏字不是一題一題做，而是要先「通讀」再「填空」。就像拼拼圖，先看全貌才知道每一塊該放哪裡！",
+          "coreConcepts": [
+            "步驟一：快速通讀全文，掌握文章主題和大意（不要急著填空）",
+            "步驟二：先做文法型題目（確定性高，不太需要上下文）",
+            "步驟三：再做語意型題目（需要上下文提示）",
+            "步驟四：將答案代入重讀一遍，確認文意通順",
+            "時間分配：克漏字建議每篇花 3-4 分鐘，不要卡在單一題太久"
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "策略",
+              "question": "（綜合題）一篇關於環保的克漏字，空格分別考時態、連接詞、字彙。先通讀全文後分類作答。",
+              "answer": "先通讀掌握主題→分類題型→文法型先做→語意型後做→代入檢查",
+              "explanation": "克漏字的核心策略是先建立全文理解，再逐題攻破。"
+            },
+            {
+              "year": "策略",
+              "question": "(學習策略題) 當克漏字運到不確定的題目時，最好的策略是？",
+              "answer": "先跳過，做完其他題後回頭再做。其他題的答案可能提供線索。",
+              "explanation": "克漏字需要整篇的理解，先做確定的題目可以幫助理解不確定的題目。"
+            },
+            {
+              "year": "策略",
+              "question": "(時間管理題) 克漏字測驗建議花多少時間？",
+              "answer": "每篇克漏字建議 3-4 分鐘。先花 30 秒通讀，再逐題作答。",
+              "explanation": "全部克漏字約 10-15 題，建議總共花 12-15 分鐘。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "克漏字測驗綜合能力，掌握解題步驟能有效提升正確率",
+            "solvingSteps": [
+              "通讀全文掌握大意",
+              "分類題型：文法型 vs. 語意型",
+              "文法型先做（確定性高）",
+              "語意型看上下文線索",
+              "全部代入重讀一遍"
+            ],
+            "thinkingRules": [
+              "先通讀再填空，不要一題一題線性做",
+              "不確定先跳過，回頭再做",
+              "花 30 秒通讀是值得的投資"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "er-u2",
+      "name": "閱讀理解 — 短文閱讀",
+      "stage": "八～九年級",
+      "importance": {
+        "stars": 3,
+        "level": "最高出題率",
+        "tip": "閱讀測驗占約12-18題，是英文程度分級的主要依據"
+      },
+      "unitStrategy": {
+        "examinerPerspective": "透過不同題型測驗學生的理解層次：表面理解→推論→批判思考",
+        "scoringTips": [
+          "先看題目再讀文章，帶著目的找答案",
+          "主旨題看首尾段，細節題定位關鍵字",
+          "推論題要找文中證據，不能憑空猜測"
+        ],
+        "commonTraps": [
+          "答案似是而非，部分正確但有關鍵詞置換",
+          "過度推論，超出文章內容",
+          "因個人經驗而非文章信息作答"
+        ],
+        "thinkingPath": "先看題目 → 帶著問題讀文章 → 定位答案區間 → 比對選項 → 確認答案"
+      },
+      "topics": [
+        {
+          "id": "er-u2-t1",
+          "name": "主旨大意題",
+          "hook": "「這篇文章主要在說什麼？」這種題不是問細節，而是問你能不能用一句話總結全文。答案通常藏在第一段和最後一段！",
+          "coreConcepts": [
+            "主旨題常見問法：What is the main idea? / What is the passage mainly about? / What is the best title?",
+            "找主旨的方法：看首段的主題句(topic sentence)和尾段的總結句",
+            "每段的第一句通常是該段的主題句，把各段主題句串起來就是全文大意",
+            "避免選「太細節」的選項：如果選項只描述文章中的一個例子，它不是主旨",
+            "避免選「太廣」的選項：如果選項涵蓋的範圍比文章內容廣，也不是好答案"
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "112年",
+              "question": "What is the passage mainly about? (A) How to save water (B) Why water is important (C) The history of water use (D) Water pollution in Taiwan",
+              "answer": "B",
+              "explanation": "文章從多個角度說明水的重要性，最合適的主旨是 B。A 和 D 太細節，C 文中未提及。"
+            },
+            {
+              "year": "110年",
+              "question": "What is the best title for this passage? (A) My Favorite Food (B) Eating Healthy (C) How to Cook (D) Fast Food",
+              "answer": "B",
+              "explanation": "文章討論健康飲食的重要性和方法，Eating Healthy 最能涵蓋全文。"
+            },
+            {
+              "year": "108年",
+              "question": "What is the main idea of the second paragraph?",
+              "answer": "回到第二段找主題句（通常是第一句），抝要該段的核心觀點。",
+              "explanation": "單段主旨題的答案通常在該段的第一句或最後一句。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "主旨題測驗學生能否區分「大意」和「細節」",
+            "solvingSteps": [
+              "讀完全文後用一句話總結",
+              "比對四個選項，找最接近的",
+              "刪除太細節或太籠統的選項",
+              "主旨應涵蓋全文而非單一段落"
+            ],
+            "thinkingRules": [
+              "首段+尾段是找主旨的金鑰區",
+              "太細節(只描述一個例子)→刪",
+              "太廣泛(超出文章範圍)→刪"
+            ]
+          }
+        },
+        {
+          "id": "er-u2-t2",
+          "name": "細節與事實題",
+          "hook": "「Tom 什麼時候到的？」「誰說了這句話？」這種題的答案就在文章裡，你要做的就是「定位」和「比對」！",
+          "coreConcepts": [
+            "細節題常見問法：According to the passage... / Which is true? / What did Tom do first?",
+            "定位策略：先在題目中找關鍵字（人名、時間、地點），再回文章定位對應段落",
+            "對比策略：將選項與文章原文逐一比對，注意「換字」陷阱",
+            "排序題：找時間詞(first, then, next, finally)排列事件順序",
+            "正確與錯誤判斷：Which is true/NOT true? 一定要回文章確認➡每個選項都檢查"
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "112年",
+              "question": "According to the passage, when did Amy start learning English? (A) At age 3 (B) At age 5 (C) At age 7 (D) At age 10",
+              "answer": "B",
+              "explanation": "回文章找 Amy 和 learning English 的關鍵字定位，找到 started learning English when she was five。"
+            },
+            {
+              "year": "110年",
+              "question": "Which is true about the story? (A) Tom went to Japan. (B) Tom stayed home. (C) Tom went to school. (D) Tom went to a park.",
+              "answer": "A",
+              "explanation": "逐一比對選項與文章內容，只有 A 與文章描述一致。"
+            },
+            {
+              "year": "108年",
+              "question": "What did the girl do FIRST in the morning?",
+              "answer": "找文章中描述早上活動的段落，按時間順序找出第一件事。注意 first/then/after that 等時間詞。",
+              "explanation": "排序題要找文中的時間順序詞，不能懑感覺作答。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "細節題測驗的是資訊定位和比對能力",
+            "solvingSteps": [
+              "在題目中圈出關鍵字",
+              "回文章定位對應段落",
+              "將選項與原文逐一比對",
+              "注意換字陷阱（意思相同但換了詞）"
+            ],
+            "thinkingRules": [
+              "答案一定在文章裡，不能憑空猜",
+              "看到 NOT true 要特別小心，找「錯」的",
+              "first/then/finally 是排序題的金鑰字"
+            ]
+          }
+        },
+        {
+          "id": "er-u2-t3",
+          "name": "推論題",
+          "hook": "「文章沒直接說，但你可以推出來」——推論題要你「讀字裡行間」，從線索拼湊出答案！",
+          "coreConcepts": [
+            "推論題常見問法：What can we infer/learn from the passage? / How does Amy probably feel? / What will Tom most likely do next?",
+            "推論的基礎是文章證據：不是憑空猜測，而是從文中的線索合理推導",
+            "情緒推論：從人物的行為、語氣、反應推斷感受。He slammed the door. → angry",
+            "原因推論：Why did Tom...? 從前後文找動機或原因",
+            "後續推論：What will happen next? 根據故事發展趨勢合理預測"
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "112年",
+              "question": "How does Amy probably feel at the end of the story? (A) Angry (B) Sad (C) Happy (D) Scared",
+              "answer": "C",
+              "explanation": "故事結尾 Amy 收到驚喜禮物且微笑，可推論她很開心。從 smile/laugh/hug 等行為推斷情緒。"
+            },
+            {
+              "year": "110年",
+              "question": "What can we learn from this story? (A) Money is everything. (B) Friends are important. (C) Study is easy. (D) Food is expensive.",
+              "answer": "B",
+              "explanation": "故事描述朋友在困難時互相幫助，可推論主旨是「友誼很重要」。"
+            },
+            {
+              "year": "108年",
+              "question": "What will Tom most likely do next?",
+              "answer": "根據故事結尾的情境和 Tom 的性格推斷下一步行動。找文末的線索。",
+              "explanation": "後續推論要合理，不能太跳躍。選最「符合常理」的選項。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "推論題是高分群與低分群的區別關鍵",
+            "solvingSteps": [
+              "找文中的線索（行為、語氣、情境）",
+              "合理推導，不能超出文章範圍",
+              "刪除明顯與文章矛盾的選項",
+              "選最有文章支撐的答案"
+            ],
+            "thinkingRules": [
+              "推論 ≠ 猜測，要有文中證據",
+              "行為/語氣 → 情緒推論",
+              "故事趨勢 → 後續行動推論"
+            ]
+          }
+        },
+        {
+          "id": "er-u2-t4",
+          "name": "字詞推測題",
+          "hook": "看到不認識的字不要慌！前後文就是你的字典。「The boy was famished. He hadn't eaten all day.」→ famished 就是「很餓的」！",
+          "coreConcepts": [
+            "字詞推測題常見問法：What does the word \"___\" most likely mean? / The word \"___\" probably means...",
+            "上下文線索：看該字前後的句子，找解釋性的詞語或例子",
+            "同義詞/反義詞線索：文中可能用同義詞重複說明，或用 but/however 接反義詞",
+            "字首字根提示：un- = 不（unhappy）、re- = 再（rewrite）、-ful = 充滿（beautiful）、-less = 沒有（homeless）",
+            "舉例提示：如果生字後緊接 such as/like/for example，後面的例子就是解釋"
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "112年",
+              "question": "In the passage, the word 'thrilled' is closest in meaning to ___.",
+              "options": [
+                "tired",
+                "excited",
+                "worried",
+                "angry"
+              ],
+              "answer": "B",
+              "explanation": "看上下文：他的團隊贏了比賽且他在歡呼，thrilled 最接近 excited（興奮的）。"
+            },
+            {
+              "year": "110年",
+              "question": "What does 'enormous' mean in this sentence? 'The enormous building can hold 5000 people.'",
+              "options": [
+                "very old",
+                "very beautiful",
+                "very big",
+                "very expensive"
+              ],
+              "answer": "C",
+              "explanation": "能容納5000人的建築，enormous 表示「巨大的」= very big。"
+            },
+            {
+              "year": "108年",
+              "question": "The word 'beneficial' in line 5 is closest in meaning to ___.",
+              "options": [
+                "harmful",
+                "helpful",
+                "beautiful",
+                "careful"
+              ],
+              "answer": "B",
+              "explanation": "從 bene-(好)字根推測，或從上下文「對健康有益」判斷 beneficial = helpful。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "字詞推測題測驗學生能否運用上下文理解生字",
+            "solvingSteps": [
+              "不要精，往前後看 1-2 句",
+              "找同義詞、反義詞、解釋性詞語",
+              "嘗試字首字根提示",
+              "將四個選項分別代入，看哪個最合文意"
+            ],
+            "thinkingRules": [
+              "碰到生字不要慌，前後文就是答案",
+              "but/however 後可能是反義提示",
+              "such as/like 後是同類例子，可推測詞義"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "er-u3",
+      "name": "閱讀理解 — 多元文本",
+      "stage": "九年級",
+      "importance": {
+        "stars": 3,
+        "level": "高出題率",
+        "tip": "多元文本題是近年趨勢，圖表、廣告、書信均常出現"
+      },
+      "unitStrategy": {
+        "examinerPerspective": "用多元文本測驗學生在真實情境中的英文應用能力",
+        "scoringTips": [
+          "圖表題先看標題和圖例，再看數據",
+          "廣告題注意時間、地點、價格、條件等細節",
+          "多文本題要交叉比對兩篇文章的資訊"
+        ],
+        "commonTraps": [
+          "圖表數據看錯行/列",
+          "廣告的例外條款沒注意",
+          "多文本對應錯誤—張冠李戴"
+        ],
+        "thinkingPath": "先判斷文本類型 → 掌握結構特徵 → 帶著題目定位資訊 → 比對答案"
+      },
+      "topics": [
+        {
+          "id": "er-u3-t1",
+          "name": "圖表判讀",
+          "hook": "國中會考的圖表不是數學題，而是要你「看圖說故事」！長條圖、圓餅圖、折線圖…每種圖都有它的「讀法」。",
+          "coreConcepts": [
+            "常見圖表類型：長條圖(bar chart)比較數量、圓餅圖(pie chart)比較比例、折線圖(line graph)看趨勢變化",
+            "讀圖步驟：先看標題(title) → 看圖例(legend) → 看坐標軸(X/Y axis) → 讀數據",
+            "數據比較：找最大值、最小值、趨勢方向（上升/下降/持平）",
+            "文字+圖表配合：有時題目需要結合文章和圖表的資訊才能作答",
+            "常考問法：According to the chart... / Which is the most popular? / What can we learn from the graph?"
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "112年",
+              "question": "（圖表題）根據圓餅圖，哪個運動最受學生歡迎？",
+              "answer": "看圓餅圖中占比最大的部分，對應的運動就是答案。注意看圖例確認顏色對應。",
+              "explanation": "圓餅圖題最常問「最大/最小」，直接看圖即可。"
+            },
+            {
+              "year": "110年",
+              "question": "（圖表題）根據折線圖，哪個月份的銷售量最高？",
+              "answer": "在折線圖中找最高點，對應 X 軸的月份就是答案。",
+              "explanation": "折線圖最常問「最高/最低點」和「趨勢」。"
+            },
+            {
+              "year": "108年",
+              "question": "（圖表題）根據長條圖，A 和 B 的差距是多少？",
+              "answer": "分別讀出 A 和 B 的數值，相減得答案。注意 Y 軸的單位。",
+              "explanation": "長條圖題可能問比較或計算，一定要看清楚座標軸。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "圖表題考的是資訊擷取能力，不是數學能力",
+            "solvingSteps": [
+              "先看圖表標題和圖例",
+              "再看題目問什麼",
+              "定位到圖表中對應的數據",
+              "比對選項確認答案"
+            ],
+            "thinkingRules": [
+              "標題告訴你圖表在說什麼",
+              "圖例告訴你顏色/符號代表什麼",
+              "座標軸告訴你數字的意義"
+            ]
+          }
+        },
+        {
+          "id": "er-u3-t2",
+          "name": "廣告與公告閱讀",
+          "hook": "「Buy one, get one free!」「Open from 9 AM to 5 PM」這些生活中常見的廣告用語，就是會考的閱讀素材！",
+          "coreConcepts": [
+            "廣告常見要素：商品名稱、價格(price)、時間(time)、地點(location)、優惠條件(conditions)",
+            "公告常見要素：活動名稱、日期時間、地點、報名方式、注意事項",
+            "關鍵細節：過期日(deadline)、限制條件(restrictions)、例外情況(except/not including)",
+            "常考問法：How much...? / When does it start? / Who can join? / What is NOT included?",
+            "陷阱：廣告常有「例外條款」藏在小字裡，如 except weekends / for members only"
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "112年",
+              "question": "（廣告題）根據廣告，買兩杯咖啡要多少錢？",
+              "answer": "找廣告中的價格資訊，注意是否有買一送一或折扣條件。",
+              "explanation": "廣告題要仔細看數字和條件，不要只看大標題。"
+            },
+            {
+              "year": "110年",
+              "question": "（公告題）活動什麼時候截止報名？",
+              "answer": "找公告中的 deadline / sign up before / by + 日期。",
+              "explanation": "截止日期通常用 by/before + date 表示。"
+            },
+            {
+              "year": "108年",
+              "question": "（廣告題）哪些人可以享有買一送一的優惠？",
+              "answer": "看廣告的限制條件，如 for students only / members only / with this coupon。",
+              "explanation": "廣告優惠常有限制條件，這是最常考的陷阱。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "廣告/公告題測驗實際資訊擷取，重點在細節",
+            "solvingSteps": [
+              "快速掃描廣告/公告的框架（標題、時間、價格）",
+              "看題目問什麼",
+              "定位到對應資訊",
+              "注意例外條款和限制條件"
+            ],
+            "thinkingRules": [
+              "廣告的小字比大字重要",
+              "except/not including/only 是陷阱關鍵字",
+              "價格題要看清楚單位和條件"
+            ]
+          }
+        },
+        {
+          "id": "er-u3-t3",
+          "name": "書信與電子郵件",
+          "hook": "會考的英文信不是情書，而是 email、留言、邀請函！看懂寄件人、收件人、主旨，就能快速拿分。",
+          "coreConcepts": [
+            "書信/郵件要素：寄件人(From)、收件人(To)、主旨(Subject)、日期(Date)、內文(Body)",
+            "常見書信類型：邀請函(invitation)、感謝信(thank-you letter)、道歉信(apology)、詢問信(inquiry)",
+            "讀信策略：先看 From/To/Subject 判斷關係和目的，再讀內文",
+            "常考問法：Who wrote this letter? / What is the purpose of the email? / What does the writer want the reader to do?",
+            "信件語氣：正式(Dear Mr./Ms.)、非正式(Hi/Hey)；語氣可幫助判斷關係"
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "112年",
+              "question": "（郵件題）這封郵件的主要目的是什麼？",
+              "answer": "看 Subject 和第一段，通常會說明寫信目的：I'm writing to...",
+              "explanation": "郵件的第一段通常就是寫信目的。"
+            },
+            {
+              "year": "110年",
+              "question": "（書信題）寄件人希望收件人做什麼？",
+              "answer": "看信的最後一段或結尾，通常有請求或期望：Please.../I hope you can.../Could you...?",
+              "explanation": "書信的結尾通常包含行動請求。"
+            },
+            {
+              "year": "108年",
+              "question": "（郵件題）寄件人和收件人可能是什麼關係？",
+              "answer": "從稱呼(Dear Mr. Wang / Hi Amy)和內容語氣判斷。正式=師生/商業，非正式=朋友/家人。",
+              "explanation": "稱呼和語氣是判斷關係的重要線索。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "書信/郵件題測驗學生能否從格式和內容提取資訊",
+            "solvingSteps": [
+              "先看 From/To/Subject 建立背景",
+              "再讀第一段掌握目的",
+              "帶著題目定位細節",
+              "最後一段通常有行動請求"
+            ],
+            "thinkingRules": [
+              "Subject 行是快速理解郵件的捷徑",
+              "第一段=目的，最後一段=請求",
+              "稱呼語氣判斷關係：Dear Mr.=正式，Hi=非正式"
+            ]
+          }
+        },
+        {
+          "id": "er-u3-t4",
+          "name": "多文本對照閱讀",
+          "hook": "會考越來越愛出「兩篇文章一起看」的題目——你要用「交叉比對」的方式找答案，不能只看一篇！",
+          "coreConcepts": [
+            "多文本常見組合：文章+圖表、郵件+回信、廣告+評論、新聞+日記",
+            "交叉比對：題目可能需要結合兩篇文本的資訊才能作答",
+            "觀點比較：兩篇文章可能持不同立場，要分清誰說了什麼",
+            "常考問法：What would Amy most likely say to Tom? / Both passages mention... / What is the difference between...?",
+            "解題策略：先個別讀懂每篇文本，再看題目進行交叉比對"
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "112年",
+              "question": "（多文本）根據兩篇文章，Amy 和 Tom 對於養寵物的看法有什麼不同？",
+              "answer": "分別找出兩人的觀點再比對。Amy 認為…，Tom 認為…，兩者的差異是…",
+              "explanation": "觀點比較題要分清每篇文章的立場。"
+            },
+            {
+              "year": "110年",
+              "question": "（多文本）哪一點是兩篇文章都提到的？",
+              "answer": "逐一檢查選項，看是否在兩篇文章中都有提及。只在一篇出現的不算。",
+              "explanation": "both 題要確認兩篇都有，不能只出現在一篇。"
+            },
+            {
+              "year": "108年",
+              "question": "（多文本）根據廣告和評論，哪個說法是正確的？",
+              "answer": "將選項分別在廣告和評論中核實，能得到兩邊支持的才是正確答案。",
+              "explanation": "多文本題的答案可能需要結合兩篇文章的信息。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "多文本題是近年趨勢，測驗資訊整合能力",
+            "solvingSteps": [
+              "先個別讀懂每篇文本",
+              "看題目判斷需要哪篇文本的資訊",
+              "交叉比對兩篇文章的內容",
+              "確認答案在兩篇文章中都有支撐"
+            ],
+            "thinkingRules": [
+              "both 題要兩篇都確認",
+              "difference 題要找對比點",
+              "不能只看一篇就作答"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "er-u4",
+      "name": "應考策略與時間管理",
+      "stage": "九年級總複習",
+      "importance": {
+        "stars": 2,
+        "level": "實戰必備",
+        "tip": "掌握答題技巧可以在同樣程度下多拿2-3分"
+      },
+      "unitStrategy": {
+        "examinerPerspective": "英文科分站式計分，策略運用得當可有效提升等級",
+        "scoringTips": [
+          "時間分配是最重要的策略",
+          "先挑會的做，不要在難題卡太久",
+          "所有題目都要作答，不要留空"
+        ],
+        "commonTraps": [
+          "花太多時間在前面的難題，導致後面簡單題沒時間做",
+          "留空白不作答（會考不倒扣）",
+          "改答案時沒擦乾淨"
+        ],
+        "thinkingPath": "拿到試卷 → 快速瀏覽整卷 → 從會的開始做 → 控制時間 → 最後檢查"
+      },
+      "topics": [
+        {
+          "id": "er-u4-t1",
+          "name": "答題順序與時間分配",
+          "hook": "會考英文共有40多題，70分鐘！平均每題不到1.5分鐘。時間分配，就是你的秘密武器！",
+          "coreConcepts": [
+            "會考英文題型分配：單題選擇(~15題) + 克漏字(~10-15題) + 閱讀測驗(~12-18題)，共約40-45題",
+            "建議時間分配：單題選擇 15分鐘 + 克漏字 15分鐘 + 閱讀 30分鐘 + 檢查 10分鐘",
+            "答題順序策略：可先做單題快速行通、再做克漏字、最後做閱讀（需要最多時間）",
+            "卡題策略：單題卡超過30秒先跳過，克漏字卡超過1分鐘先跳過，最後回頭做",
+            "最後檢查：確認所有題目都已作答、答案卡填寫正確、爭議題重新確認"
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "策略",
+              "question": "（策略題）會考英文科最建議的答題順序是？",
+              "answer": "單題 → 克漏字 → 閱讀。單題最快，閱讀最花時間。不確定的先跳過最後做。",
+              "explanation": "用「由易到難」的原則分配時間，確保會的都拿到分。"
+            },
+            {
+              "year": "策略",
+              "question": "（策略題）如果有題目完全看不懂，應該怎麼辦？",
+              "answer": "不要留空！用刪去法排除明顯錯誤的選項，再從剩下的選一個。",
+              "explanation": "會考不倒扣，留空就是 0 分，猜至少有 25% 機率。"
+            },
+            {
+              "year": "策略",
+              "question": "（策略題）考試時如何有效利用最後10分鐘？",
+              "answer": "檢查未作答的題目 → 回頭做跳過的題 → 檢查答案卡。",
+              "explanation": "最後10分鐘不要偏執於單一難題，優先確保所有題都作答了。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "時間管理是影響成績的隱藏因素",
+            "solvingSteps": [
+              "拿到試卷先花 30 秒瀏覽整卷",
+              "從有把握的題目開始做",
+              "每個題型排好時間上限",
+              "最後 10 分鐘確認所有題目都答了"
+            ],
+            "thinkingRules": [
+              "不留空白，會考不倒扣",
+              "卡題就跳，不要讓一題耗掉太多時間",
+              "簡單題的分數和難題一樣重要"
+            ]
+          }
+        },
+        {
+          "id": "er-u4-t2",
+          "name": "刪去法與猜題技巧",
+          "hook": "就算不確定答案，「刪去法」也能幫你從 25% 提升到 50% 甚至 100% 的命中率！",
+          "coreConcepts": [
+            "刪去法基本原則：先刪除明顯錯誤的選項，提高猜對機率",
+            "文法題刪去：時態不對→刪、詞性不對→刪、主詞動詞不一致→刪",
+            "字彙題刪去：詞性不對→刪、語意明顯不通→刪",
+            "閱讀題刪去：與文章明顯矛盾→刪、太絕對(always/never/all)→謹慎",
+            "最後策略：如果完全沒概念，選最長的選項或內容最完整的選項（統計上略高）"
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "策略",
+              "question": "（策略題）以下哪個是有效的刪去法線索？",
+              "answer": "時態與時間副詞矛盾→刪、主詞單複數與動詞不合→刪、語意與上下文矛盾→刪。",
+              "explanation": "刪去法的核心是找「確定錯」的，而不是找「可能對」的。"
+            },
+            {
+              "year": "策略",
+              "question": "（策略題）當四個選項都不確定時，最好的策略是？",
+              "answer": "先用刪去法排除 1-2 個，再從剩下的選擇。不要留空。",
+              "explanation": "即使用猜的，刪掉一個就從 25% 提升到 33%，刪掉兩個就是 50%。"
+            },
+            {
+              "year": "策略",
+              "question": "（策略題）閱讀題中看到 'all students must...' 這種絕對說法應該如何評估？",
+              "answer": "絕對詞(all/never/always/none)在閱讀題中通常是錯的，要特別小心確認。",
+              "explanation": "出題者愛用絕對詞製造陷阱，因為很少有事情是 100% 絕對的。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "刪去法是所有題型都適用的超級技巧",
+            "solvingSteps": [
+              "看完題目先別急著選",
+              "先找「確定錯」的選項刪掉",
+              "從剩下的選項中選擇",
+              "完全不確定時也不要留空"
+            ],
+            "thinkingRules": [
+              "先刪「確定錯」而不是找「可能對」",
+              "絕對詞(all/never/always) 要特別謹慎",
+              "不留空白！留空 = 0 分，猜 = 25%+"
+            ]
+          }
+        },
+        {
+          "id": "er-u4-t3",
+          "name": "常見陷阱分析",
+          "hook": "出題老師最愛用的「陷阱」其實就那幾招！知道陷阱在哪，你就不會踩坑！",
+          "coreConcepts": [
+            "換字陷阱：選項和文章用了不同的字但意思相同（或相反），要仔細比對",
+            "部分正確陷阱：選項中大部分內容正確，但有一個關鍵字變了（如 most 變 some）",
+            "過度推論陷阱：選項的推論超出文章範圍，雖然可能正確但文中沒證據",
+            "張冠李戴陷阱：多文本題中把 A 文章的信息套到 B 文章的人物上",
+            "絕對詞陷阱：含有 all/every/never/always 的選項通常是錯的，因為很少有絕對的事"
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "策略",
+              "question": "（陷阱分析）文章說 many students like...，選項說 all students like...，這是什麼陷阱？",
+              "answer": "部分正確陷阱。many ≠ all，把「多數」變成「所有」就是錯的。",
+              "explanation": "出題者愛把 many/some 換成 all/every 製造陷阱。"
+            },
+            {
+              "year": "策略",
+              "question": "（陷阱分析）文章提到 Tom 喜歡運動，選項說 Tom is the best at sports...，為什麼不能選？",
+              "answer": "過度推論陷阱。喜歡運動 ≠ 運動最強，文章沒說他是最好的。",
+              "explanation": "推論要有文中證據，不能自行腦補。"
+            },
+            {
+              "year": "策略",
+              "question": "（陷阱分析）如何避免「張冠李戴」的錯誤？",
+              "answer": "多文本題一定要確認「誰說的」「在哪篇提到的」，不要混淆不同文本的資訊。",
+              "explanation": "看到多文本題，在每個選項旁標註「出自哪篇」可避免混淆。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "認識陷阱就是認識出題者的套路，提高警覺性",
+            "solvingSteps": [
+              "看到絕對詞先打問號",
+              "將選項與原文逐字比對",
+              "確認推論有文中支撐",
+              "多文本題標清各選項的出處"
+            ],
+            "thinkingRules": [
+              "all/every/never → 可能是陷阱",
+              "選項和文章字不同 → 仔細比對意思",
+              "文中沒提到的 → 不能選"
+            ]
+          }
+        },
+        {
+          "id": "er-u4-t4",
+          "name": "各等級題型特徵",
+          "hook": "會考英文分 A++～C 等級。提前知道每個等級的題型特徵，就能針對弱點加強訓練！",
+          "coreConcepts": [
+            "基礎題 (B 等級)：常見字彙、基本時態、簡單句型、短篇閱讀細節題",
+            "中等題 (A 等級)：進階文法（完成式、被動）、克漏字綜合題、閱讀推論題",
+            "高難度題 (A++ 等級)：複雜子句、多文本對照、深層推論、字詞推測",
+            "各等級策略：B 級目標 → 確保單題和基本克漏字全對；A 級目標 → 加強克漏字和閱讀；A++ 目標 → 練習多文本和推論",
+            "分數對應：總分約80-85分以上為BB+，90以上為A，96以上為A++（每年略有變動）"
+          ],
+          "pastExamQuestions": [
+            {
+              "year": "策略",
+              "question": "（等級分析）想從 B+ 進步到 A，最應該加強哪個部分？",
+              "answer": "克漏字和閱讀推論題。這兩個區塊是 B 和 A 的主要分水嶺。",
+              "explanation": "單題強只能拿到基本分，要突破必須提升閱讀能力。"
+            },
+            {
+              "year": "策略",
+              "question": "（等級分析）A++ 的額外難度主要難在哪裡？",
+              "answer": "多文本對照、深層推論、字詞推測。這些題需要較高的英文閱讀能力。",
+              "explanation": "A++ 題不只是文法難，而是需要更高的思維層次。"
+            },
+            {
+              "year": "策略",
+              "question": "（等級分析）基礎等級(C/B)的學生最該優先複習什麼？",
+              "answer": "常見字彙和基本時態，確保單題和基本文法克漏字能拿分。",
+              "explanation": "基礎題占全卷約40%，全對就能拿到B。"
+            }
+          ],
+          "examStrategy": {
+            "examinerThinking": "了解題型分布可以針對性地複習",
+            "solvingSteps": [
+              "評估自己目前的等級",
+              "針對下一個等級的題型加強訓練",
+              "基礎題先確保全對",
+              "再逐步挑戰進階題型"
+            ],
+            "thinkingRules": [
+              "基礎穩固是一切的前提",
+              "B→A 的關鍵是克漏字和閱讀",
+              "A→A++ 的關鍵是多文本和推論"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

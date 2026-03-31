@@ -60,7 +60,11 @@ src/
 │       ├── geography.json         # 地理
 │       ├── civics.json            # 公民與社會
 │       ├── chinese.json           # 國文 (3 units)
-│       └── math.json              # 數學 (13 units)
+│       ├── math.json              # 數學 (13 units)
+│       ├── english-vocabulary.json     # 英文字彙與片語 (4 units)
+│       ├── english-grammar.json        # 英文文法句型 (5 units)
+│       ├── english-reading.json        # 英文閱讀與題型攻略 (4 units)
+│       └── english-listening.json      # 英文聽力測驗 (3 units)
 └── types/                  # SubjectData, Unit, Topic, PastExamQuestion, UnitImportance, ExamStrategy, UnitStrategy
 ```
 
