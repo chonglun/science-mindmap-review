@@ -2,8 +2,8 @@
 
 ## Project Overview
 
-Interactive mind-map review site for Taiwan junior-high exam (國中會考). Covers Natural Science and Social Studies; more subjects planned.
-Students explore subjects (Biology, Physics & Chemistry, Earth Science, History, Geography, Civics) through a ReactFlow-based mind map, view topic details (life-hooks, core concepts, past exam questions) in a resizable side panel, and track read / bookmarked topics via localStorage.
+Interactive mind-map review site for Taiwan junior-high exam (國中會考). Covers all five exam categories: Natural Science (自然科), Social Studies (社會科), Chinese (國文), English (英文), and Math (數學).
+Students explore subjects through a ReactFlow-based mind map, view topic details (life-hooks, core concepts, past exam questions) in a resizable side panel, and track read / bookmarked topics via localStorage.
 
 ## Tech Stack
 
@@ -52,7 +52,7 @@ src/
 ├── data/
 │   ├── exam-subjects.json  # Exam subject registry (自然科, 社會科, etc.)
 │   └── subjects/
-│       ├── index.json             # Lightweight metadata (id, label, color per subject)
+│       ├── index.json             # Legacy metadata (自然科 only); new code uses exam-subjects.json
 │       ├── biology.json           # 生物 (10 units)
 │       ├── physics-chemistry.json # 理化 (12 units)
 │       ├── earth-science.json     # 地球科學 (6 units)
@@ -79,13 +79,15 @@ index.json (static import — metadata only)
 <subject>.json (dynamic import — loaded on demand, cached)
   └─ units[]
       ├─ id, name, stage, importance { stars, level, tip }
+      ├─ unitStrategy? → { examinerPerspective, scoringTips[], commonTraps[], thinkingPath }
       └─ topics[]
           ├─ id, name, hook (生活聯想)
           ├─ coreConcepts[] (string[])
-          └─ pastExamQuestions[] → { year, question, options?, answer, explanation? }
+          ├─ pastExamQuestions[] → { year, question, options?, answer, explanation? }
+          └─ examStrategy? → { examinerThinking, solvingSteps[], thinkingRules[] }
 ```
 
-- **Exam subject registry**: `exam-subjects.json` maps exam categories (自然科, 社會科) to their constituent subjects.
+- **Exam subject registry**: `exam-subjects.json` maps all 5 exam categories (自然科, 社會科, 國文, 英文, 數學) to their constituent subjects.
 - **Code splitting**: `useSubjectData` hook loads subject JSON via `import()` on demand; results cached in module-level `Record`. Vite auto-generates separate chunks.
 - **Dual structure**: Subjects may have nested `units[]` or flat `topics[]`. Always handle both paths (see `findTopicWithPath`).
 - **Adding/changing subject data**: Edit the individual `src/data/subjects/<id>.json` file. No other files need updating unless the schema changes.
@@ -97,7 +99,6 @@ index.json (static import — metadata only)
 | `science-mindmap-clicked-topics` | `string[]` | Topic IDs that have been viewed |
 | `science-mindmap-bookmarked-topics` | `string[]` | Bookmarked topic IDs |
 | `science-mindmap-read-topics` | `string[]` | Topics marked as read |
-| `progress` | `string` | Overall completion percentage (decimal) |
 
 ## Key Conventions
 
@@ -134,7 +135,7 @@ index.json (static import — metadata only)
 
 ## Custom Agents
 
-See `.github/agents/` — five specialized agents are defined for content expansion, mind-map development, UI work, code quality, and code review.
+See `.github/agents/` — six specialized agents are defined for content expansion, mind-map development, UI work, code quality, code review, and documentation.
 
 ## Skills
 

@@ -1,12 +1,14 @@
 import { useState, useEffect, useRef } from 'react';
 import type { SubjectData, Topic } from '../types';
 
+/** Metadata for a single subject (id, label, color). Loaded from exam-subjects.json. */
 export interface SubjectMeta {
   id: string;
   label: string;
   color: string;
 }
 
+/** Top-level index for an exam subject category (e.g. "自然科" contains biology, physics-chemistry, earth-science). */
 export interface SubjectIndex {
   center: { id: string; label: string };
   subjects: SubjectMeta[];

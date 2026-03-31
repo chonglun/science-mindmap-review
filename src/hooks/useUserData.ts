@@ -24,6 +24,16 @@ function saveToStorage(key: string, value: string[]) {
   localStorage.setItem(key, JSON.stringify(value));
 }
 
+/**
+ * Manage user progress state stored in localStorage.
+ *
+ * Tracks three independent lists:
+ * - **clickedTopics** — topic IDs the user has viewed (auto-added on detail panel open)
+ * - **bookmarkedTopics** — topic IDs the user has bookmarked (toggle)
+ * - **readTopics** — topic IDs the user has marked as read (toggle)
+ *
+ * All lists persist across sessions via localStorage with safe JSON parsing.
+ */
 export function useUserData() {
   const [clickedTopics, setClickedTopics] = useState<string[]>(() =>
     loadFromStorage(STORAGE_KEYS.clickedTopics)

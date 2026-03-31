@@ -27,6 +27,6 @@
     "eslint": "^8.0.0",
     "eslint-plugin-react": "^7.0.0"
   },
-  "homepage": "https://<username>.github.io/science-mindmap-review/",
+  "homepage": "https://chonglun.github.io/science-mindmap-review/",
   "license": "MIT"
 }
