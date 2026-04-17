@@ -16,13 +16,28 @@ Students explore subjects through a ReactFlow-based mind map, view topic details
 
 ## Commands
 
+Always run `npm install` first if `node_modules/` is missing or after changing `package.json`.
+
 ```bash
-npm run dev      # Vite dev server, port 3000, auto-opens browser
-npm run build    # Production build → dist/
-npm run serve    # Preview dist/ locally
-npm run deploy   # Deploy dist/ to GitHub Pages (gh-pages -d dist)
-npx tsc --noEmit # Type-check without emitting
-npx eslint src/  # Lint check (TypeScript-aware)
+# Build & validate (run in this order)
+npm install          # Install dependencies (required first)
+npx tsc --noEmit     # Type-check without emitting
+npm run build        # Production build → dist/ (Vite)
+
+# Development
+npm run dev          # Vite dev server, port 3000, auto-opens browser
+npm run serve        # Preview dist/ locally
+
+# Deploy
+npm run deploy       # Deploy dist/ to GitHub Pages (gh-pages -d dist)
+
+# Lint
+npx eslint src/      # Lint check (TypeScript-aware)
+```
+
+**Verification command** (always run before claiming work is done):
+```bash
+npx tsc --noEmit && npx vite build
 ```
 
 > **SSL note**: Corporate proxy may block npm registry. If `npm install` hangs, run `npm config set strict-ssl false` first.
@@ -129,17 +144,49 @@ exam-subjects.json (static import — exam subject registry)
 ## Pitfalls & Gotchas
 
 - **ReactFlow v11 only** — do NOT use `@xyflow/react` or v12 imports.
-- No test framework configured (no Jest/Vitest).
+- **No test framework configured yet** — Vitest is planned but not installed. TDD workflow applies once configured.
 - Path alias `@` → `src/` in `vite.config.ts`.
 - Vite base path is `/science-mindmap-review/` for GitHub Pages.
 - GitHub Actions deploy uses Node 20.
 
+## Development Workflow
+
+Feature work follows: **Brainstorming → Design Doc → Task Plan → Implementation → Code Review**.
+This workflow is driven by the `planner` orchestrator agent with handoffs. Use the agents dropdown to start.
+Skills in `.github/skills/` are loaded automatically by agents when relevant — see each SKILL.md for details.
+
 ## Custom Agents
 
-See `.github/agents/` — seven specialized agents are defined for content expansion, mind-map development, UI work, code quality, code review, documentation, and **domain expert review** (學科內容審查).
+See `.github/agents/` for specialized agents. Key agents:
+
+| Agent | Role |
+|-------|------|
+| `planner` | Orchestrator — brainstorming → planning → implementation → review (use handoffs) |
+| `code-reviewer` | Code review against plan + coding standards (read-only) |
+| `content-expander` | Expand subject JSON data (exam questions, concepts, hooks) |
+| `domain-expert` | Review educational content correctness (read-only) |
+| `mindmap-developer` | ReactFlow canvas, nodes, layout |
+| `ui-developer` | React + Tailwind pages and components |
+| `code-quality` | Refactoring, type safety, dead code cleanup |
+| `doc-writer` | Documentation maintenance |
 
 ## Skills
 
-See `.github/skills/`:
-- **expand-json-data** — Anti-timeout pattern for generating large JSON data files with Chinese content.
-- **deploy-to-github** — Pre-flight checks (build verification, documentation sync) before committing and pushing to GitHub.
+See `.github/skills/` — each skill folder contains a SKILL.md with tested instructions. Skills are loaded on-demand by agents.
+
+### Workflow Skills
+- **brainstorming** — Explore intent, propose approaches, get design approval before any code.
+- **writing-plans** — Create fine-grained task plans from approved specs.
+- **executing-plans** / **subagent-driven-development** — Execute plans task-by-task.
+- **finishing-a-development-branch** — Verify → merge/PR/keep/discard options.
+
+### Quality Skills
+- **test-driven-development** — Red-Green-Refactor cycle (once test framework is configured).
+- **requesting-code-review** / **receiving-code-review** — Dispatch and handle code reviews.
+- **verification-before-completion** — Evidence before claims.
+- **systematic-debugging** — Root cause investigation before fixes.
+
+### Utility Skills
+- **expand-json-data** — Anti-timeout pattern for large Chinese JSON content.
+- **deploy-to-github** — Pre-flight checks before push.
+- **dispatching-parallel-agents** / **using-git-worktrees** / **reverse-spec-from-code** / **writing-skills**
